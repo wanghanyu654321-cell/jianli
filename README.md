@@ -9,8 +9,11 @@ This repository stores the evidence-bounded resume pipeline outputs prepared on 
 - `resume-workspace/02-jd/` — Requirement × Evidence Matrix and role-family decisions
 - `resume-workspace/03-baselines/` — R1–R6 role-family baselines and the R7 stretch gap record
 - `resume-workspace/04-status/` — pipeline status and verification boundary
+- `resume-workspace/05-baseline-v2/` — expanded R1/R2/R3 baseline resumes, audits, claim maps and status
 - `skill-installation/SOURCES.md` — pinned GitHub sources, licenses, commits and invocation policy
 
 Raw personal DOCX files, local attachments, credentials, environment files and historical workspaces are intentionally not included. The canonical fact and JD sources remain local and are referenced by source ID.
 
 There is no single-company JD in this snapshot, so this repository does not contain a Single-JD Tailored Resume or a final ATS audit. Add one real JD before running the tailoring stage.
+
+The R1/R2/R3 expansion is recorded as `PARTIAL` because the local canonical source does not provide education/contact fields, the cited Agent repository is not verified in this workspace, and page rendering is unavailable without `soffice.exe`.
