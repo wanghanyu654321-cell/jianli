@@ -1,6 +1,16 @@
 # Claim Ledger
 
-事实真源：`FCT-001`（`简历母版.docx`）。行号来自 `DER-001` 的无损段落抽取，仅用于复核定位。`JD-001` 中的岗位要求不得写入本账本。
+事实真源：`FCT-001`（`简历母版.docx`）。本轮已重新读取当前 DOCX 并重建账本；行号来自本轮覆盖写入的 `DER-001` 无损段落抽取，仅用于复核定位。`JD-001` 中的岗位要求不得写入本账本。
+
+## Rebase metadata
+
+- Source hash before rebase: `037FB4FA3B77157F5DBE201971E3962241DC897FCAF39DC903897A327518528D`
+- Source hash after rebase: `B31C7EC90FFEB48B023E43C37CBACB08817A562B3A42C1148B34DFE3BA4FB6E1`
+- Source reread: `YES`
+- DER-001 extraction: 642 paragraphs, 0 tables, 597 derived text lines.
+- Graduation date: `NOT_PRESENT_IN_FACT_SOURCE`; no education date or school claim is promoted.
+- Timeline re-read: Langzhen `2022.03–2024.07`; Jinyi `2024.11–2025.07`; Renrui `2025.09–2026.06`.
+- Cross-role employment overlap: `PASS`.
 
 | claim_id | 可对外主张 | evidence locator | status | 使用边界 |
 |---|---|---|---|---|
@@ -12,27 +22,27 @@
 | FCT-06 | 接触部分 DAU、CTR、转化、灰度流量和业务水位，可参与版本效果观察和问题汇总 | DER-001:59-67 | FACT_DOCUMENTED | 不写完整线上权限、独立 A/B 分桶或独立策略。 |
 | FCT-07 | 约 3% CTR 记忆无法恢复业务、分母和周期 | DER-001:68-69 | EXCLUDE | 正式简历和公开项目禁用。 |
 | FCT-08 | 理解 Query 预处理/理解/改写→召回→过滤→粗排→精排→重排→SERP→反馈/A/B，使用 L1/L2/L3 相关性分级 | DER-001:70-80 | FACT_DOCUMENTED | “接触并理解”不写成亲自实现搜索链路。 |
-| FCT-09 | 在杭州今宜负责抖音项目代运营/项目运营/BD，2023.11–2025.07，覆盖项目经营、直播、投流、素材、店铺、数据、达人 BD、SOP | DER-001:91-97 | FACT_DOCUMENTED | 九米六业务并入今宜，不拆主体。 |
+| FCT-09 | 在杭州今宜负责抖音项目代运营/项目运营/BD，2024.11–2025.07，覆盖项目经营、直播、投流、素材、店铺、数据、达人 BD、SOP | DER-001:91-97 | FACT_DOCUMENTED | 九米六业务并入今宜，不拆主体。 |
 | FCT-10 | 同一账号接手前月 GMV 约 7 万，接手后首月约 43 万 | DER-001:98-104 | FACT_DOCUMENTED | 写绝对值变化；不写未经事实支持的“翻倍”。 |
 | FCT-11 | 另一独立账号负责期间单月 GMV 峰值约 152 万 | DER-001:105-111 | FACT_DOCUMENTED | 不能与 FCT-10 混写；618/日常峰值暂不归属。 |
 | FCT-12 | 直播项目协同约 6 人，负责策略、目标拆解、排期、培训协同、跟播、投流调整和复盘 | DER-001:112-136 | FACT_DOCUMENTED | 写项目管理/协作，不写 6 人行政直管。 |
 | FCT-13 | 使用巨量千川等投放链路，依据 CTR/CVR/ROI 做素材和投放迭代 | DER-001:137-163 | FACT_DOCUMENTED | 不能扩写为平台算法或投放系统开发。 |
 | FCT-14 | 参与店铺评分、流量/营销/交易数据和大促策略分析 | DER-001:164-175 | FACT_DOCUMENTED | 只写参与和分析，不补充未给出的增长数字。 |
-| FCT-15 | 以 KOC 为主做达人分层和 BD，累计达人合作销售额 10 万+，形成筛选/触达/合作推进 SOP | DER-001:176-197 | FACT_DOCUMENTED | 不能写成全量 KOL 资源或更高销售额。 |
-| FCT-16 | 在浙江朗臻任京东电商运营→宠物项目管理，2021.03–2023.08，连续时间 | DER-001:198-200 | FACT_DOCUMENTED | 不写“返岗”。 |
+| FCT-15 | 以 KOC 为主做达人分层和 BD，累计达人合作销售额 10 万+，形成筛选/触达/合作推进 SOP | DER-001:176-196 | FACT_DOCUMENTED | 不能写成全量 KOL 资源或更高销售额。 |
+| FCT-16 | 在浙江朗臻任京东电商运营→宠物项目管理，2022.03–2024.07，连续时间 | DER-001:197-200 | FACT_DOCUMENTED | 不写“返岗”。 |
 | FCT-17 | 正大小仟牙膏单品类 2022 年 GMV 约 300 万+，2023 618 GMV 约 50 万 | DER-001:201-216 | FACT_DOCUMENTED | 单品类结果，不是品牌总盘。 |
 | FCT-18 | 负责搜索热词/长尾词、标题和详情页属性优化，核心商品搜索排名由百名外到类目前 10 | DER-001:217-226 | FACT_DOCUMENTED | 可写搜索优化结果；不写算法研发。 |
 | FCT-19 | 核心单 SKU 日 GMV 约 1,000+→15,000+，约 15 天完成 | DER-001:227-232 | FACT_DOCUMENTED | 是日销售额/GMV，不是订单量。 |
 | FCT-20 | 使用实时经营数据、京东快车/京准通，协同活动、供应链库存、品牌方和京东小二 | DER-001:233-275 | FACT_DOCUMENTED | 使用“参与/协同”；不补充权限或独立预算权。 |
 | FCT-21 | 胖小虎约 5 个跨平台店铺，年度整体 GMV 约 1,200 万–2,000 万，日均约 4–5 万，双十一月约 200 万 | DER-001:276-307 | FACT_DOCUMENTED | 业务规模与本人直接责任分开写。 |
-| FCT-22 | 对胖小虎 GMV、利润率、DSR、月/季目标和渠道结果直接负责，老板做最终经营审查 | DER-001:276-289 | FACT_DOCUMENTED | 保留责任边界；不写最终经营决策权。 |
+| FCT-22 | 对胖小虎 GMV、利润率、DSR、月/季目标和渠道结果直接负责，老板做最终经营审查 | DER-001:276-288 | FACT_DOCUMENTED | 保留责任边界；不写最终经营决策权。 |
 | FCT-23 | 参与预算分配、生命周期项目推进，并协同约 5 人小红书团队和约 5 人客服团队 | DER-001:308-378 | FACT_DOCUMENTED | 是协同人数，不写行政管理。 |
 | FCT-24 | 引用 `wanghanyu654321-cell/-agent` 的 `job-ready/integration-v1` 项目，定位为企业客服 Agent Proof App | DER-001:379-393 | DOCUMENTED_ONLY | 当前工作区无对应 checkout，未完成 repo-to-resume 核验。 |
 | FCT-25 | 事实源描述 Node.js/FastAPI/PostgreSQL 16/pgvector/React/Docker Compose/Nginx/Pi Runtime 架构与权限边界 | DER-001:394-418 | DOCUMENTED_ONLY | 只能写“项目材料描述/设计与验收负责”；不能据此宣称生产部署。 |
 | FCT-26 | 事实源描述 Runtime 预算、工具、词法检索、Evidence Governance 和 Routing 规则 | DER-001:419-490 | DOCUMENTED_ONLY | Hybrid/RRF/Reranker/正式 Query Rewrite/Model Routing 明确未完成。 |
-| FCT-27 | 事实源给出 40 Frozen Cases、Safety 30/30、Robustness 100/100、Holdout 60/60、Governed Knowledge 46/46、Public Top1 96%、Recall@3 100%、Routed Outcome 100% | DER-001:491-513 | DOCUMENTED_ONLY | 仅现有测试集结果；不是生产流量结果；需 repo/测试证据后再提升状态。 |
-| FCT-28 | 在 Agent 项目中本人负责问题定义、架构边界、验收标准、评测设计、Badcase 归因、方案取舍、测试验收和项目状态判断 | DER-001:514-537 | FACT_DOCUMENTED | 对外写 AI Coding Agent 协作完成实现；不写独立手写全部代码。 |
-| FCT-29 | 水果生鲜创业项目与悦客 AI Coach 项目当前不进入正式主简历 | DER-001:538-541 | EXCLUDE | 保留为背景事实，除非用户明确解冻。 |
+| FCT-27 | 事实源给出 40 Frozen Cases、Safety 30/30、Robustness 100/100、Holdout 60/60、Governed Knowledge 46/46、Public Top1 96%、Recall@3 100%、Routed Outcome 100% | DER-001:491-512 | DOCUMENTED_ONLY | 仅现有测试集结果；不是生产流量结果；需 repo/测试证据后再提升状态。 |
+| FCT-28 | 在 Agent 项目中本人负责问题定义、架构边界、验收标准、评测设计、Badcase 归因、方案取舍、测试验收和项目状态判断，并通过 AI Coding Agent 协作完成实现 | DER-001:514-536 | FACT_DOCUMENTED | 对外写 AI Coding Agent 协作完成实现；不写独立手写全部代码。 |
+| FCT-29 | 水果生鲜创业项目与悦客 AI Coach 项目当前不进入正式主简历 | DER-001:537-540 | EXCLUDE | 保留为背景事实，除非用户明确解冻。 |
 
 ## Evidence status vocabulary
 

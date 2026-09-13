@@ -27,7 +27,7 @@ None. The current workspace has no checkout matching the fact source reference `
 
 ## 6. Strong verb audit
 
-“参与、维护、负责、推动、结合、定义、设计、组织、形成、协作完成” are supported by the mapped claims. “提升” is used only with the documented consistency and GMV changes. No “资深、专家级、多年 AI 经验、独立负责、生产上线” wording is used.
+“参与、维护、负责、推动、结合、定义、设计、组织、形成、协作完成” are supported by the mapped claims. “提升” is used only with the documented consistency and GMV changes. No unsupported seniority, experience-duration, independent-ownership or production-launch wording is used.
 
 ## 7. JD-family relevance
 
@@ -44,3 +44,12 @@ PASS at text-structure level: single-column Markdown structure, conventional hea
 ## 10. Remaining risk
 
 The Agent project remains documented-only until the matching repository or original test evidence is available. Rendered page count is not verified because the local runtime lacks `soffice.exe`.
+
+## Timeline Revalidation
+
+- Fact source hash changed: YES
+- Graduation date re-read: YES (not present in current fact source)
+- Langzhen dates re-read: YES (`2022.03–2024.07`)
+- Cross-role date consistency: PASS
+- Work-before-graduation note: NOT_APPLICABLE (graduation date absent)
+- Employment overlap check: PASS

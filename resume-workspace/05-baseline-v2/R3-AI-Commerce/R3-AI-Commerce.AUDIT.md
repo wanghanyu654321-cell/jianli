@@ -31,7 +31,7 @@ None. No matching local checkout is available for the GitHub reference in the fa
 
 ## 7. JD-family relevance
 
-The baseline explicitly combines e-commerce operations, Search/Query/Relevance, Data Agent Eval and AI/Agent practice, as required by R3. Renrui leads with AI quality; Langzhen leads with GMV/search/ranking; Jinyi leads with Douyin/live commerce/CTR/CVR/ROI/content/KOC.
+The baseline explicitly combines e-commerce operations, Search/Query/Relevance, Data Agent Eval and AI/Agent practice, as required by R3. The recruiter-facing work history order follows the factual chronology rule: Renrui → Jinyi → Langzhen. The evidence emphasis remains GMV/search/ranking for Langzhen and Douyin/live commerce/CTR/CVR/ROI/content/KOC for Jinyi.
 
 ## 8. Missing evidence
 
@@ -44,3 +44,12 @@ PASS at text-structure level: single-column headings, plain bullets, consistent 
 ## 10. Remaining risk
 
 Business scale must remain separate from individual responsibility. Project technology remains project-practice evidence until the matching repository is verified. Rendered page count is unverified because `soffice.exe` is unavailable.
+
+## Timeline Revalidation
+
+- Fact source hash changed: YES
+- Graduation date re-read: YES (not present in current fact source)
+- Langzhen dates re-read: YES (`2022.03–2024.07`)
+- Cross-role date consistency: PASS
+- Work-before-graduation note: NOT_APPLICABLE (graduation date absent)
+- Employment overlap check: PASS

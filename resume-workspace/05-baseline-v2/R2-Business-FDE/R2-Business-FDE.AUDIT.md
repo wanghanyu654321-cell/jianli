@@ -44,3 +44,12 @@ PASS at text-structure level: conventional headings, single-column content, plai
 ## 10. Remaining risk
 
 The Agent project must remain a project practice until repository evidence is available. Rendered page count is unverified because `soffice.exe` is unavailable.
+
+## Timeline Revalidation
+
+- Fact source hash changed: YES
+- Graduation date re-read: YES (not present in current fact source)
+- Langzhen dates re-read: YES (`2022.03–2024.07`)
+- Cross-role date consistency: PASS
+- Work-before-graduation note: NOT_APPLICABLE (graduation date absent)
+- Employment overlap check: PASS
