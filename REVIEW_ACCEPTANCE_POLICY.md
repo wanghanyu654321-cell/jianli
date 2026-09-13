@@ -193,3 +193,13 @@ Required invariant marker: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE`.
 The active timeline is: career start `2022.03`; graduation `2022.06`; 浙江朗臻 `2022.03–2024.07`; 杭州今宜 `2024.11–2025.07`; 杭州人瑞 `2025.09–2026.06`. `WORK_START_BEFORE_GRADUATION = VALID_USER_CONFIRMED_FACT`; do not rewrite this relation as internship, part-time work, recruitment, or early conversion, and do not delete `2022.03–2022.06`.
 
 `TIMELINE_GATE = FAIL` whenever any downstream artifact changes a company name, role path, start month, end month, graduation month, drops one of the three work experiences, or changes the standard reverse chronology 人瑞 → 今宜 → 朗臻.
+
+## Role Baseline Writing Module
+
+`resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md` is the active writing rule for R1, R2 and R3 role-family resumes.
+
+`ROLE FOCUS ≠ EXPERIENCE DELETION`: role focus may change Summary, Bullet emphasis and count, project order, and Skills emphasis. It may not change company count or names, role paths, start/end months, chronology, or the full career timeline. The fixed structure is Header → Target Role → Professional Summary → Core Competencies → Work Experience（人瑞 → 今宜 → 朗臻）→ Selected Project → Education → optional Tools / Additional Skills. All three work experiences must remain present.
+
+R1 must connect Data Agent Eval → Query / Recall / Relevance → QA / Badcase → SOP / Quality Governance → Search / E-commerce Context → Agent Eval Practice. R2 and R3 use the same facts and timeline while changing only emphasis. The role-family weight guidance is R1: 人瑞 45%–50%、今宜 15%–20%、朗臻 15%–20%、Agent 项目 15%–20%；R2: 25%–30%、20%–25%、20%–25%、25%–30%；R3: 25%–30%、25%–30%、30%–35%、10%–15%.
+
+Prohibited: deleting any of the three companies or the Agent project, replacing past work with “其他经历”, using a project in place of work experience, or changing facts to match a target role. Required marker: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE · FULL CAREER HISTORY`.

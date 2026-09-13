@@ -9,6 +9,7 @@
 - `REPO_EVIDENCE` = 当前工作区未发现与事实母版所引用 GitHub 项目相匹配的本地 checkout；项目相关内容暂按 `DOCUMENTED_ONLY / REPO_NOT_VERIFIED` 处理。
 - `CANONICAL_TIMELINE` = `resume-workspace/00-source/CANONICAL_TIMELINE.md`，不可变时间轴。
 - `SOURCE_FREEZE` = `resume-workspace/00-source/SOURCE_FREEZE.md`，当前源指纹冻结。
+- `ROLE_BASELINE_WRITING_MODULE` = `resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md`，R1/R2/R3 岗位族写作与完整职业履历约束。
 - `SKILL_SOURCE` = `SKL-001`、`SKL-002` 及本地实际 `SKILL.md`；只决定流程与审查职责，不产生候选人事实。
 
 ## Confirmed sources
@@ -22,6 +23,7 @@
 | SKL-003 | sushen-resume-maker SKILL.md | 本地 Codex Skill 安装（未上传） | SKILL | local install | Operational | 主编排器的 Claim Ledger、JD Matrix、事实边界规则 | 已读取；只按事实源工作。 |
 | INS-001 | RESUME_BUILD_PIPELINE_V2 | 用户提供的本地规则附件（未上传） | SUPPORT | 2026-09-13 | User instruction | 规定来源隔离、职责分工和停止条件 | 规则文本，不是事实源或 JD 源。 |
 | INS-002 | Resume Output & Tailoring Rules | 用户提供的本地规则附件（未上传） | SUPPORT | 2026-09-13 | User instruction | 规定 Master、Role Baseline、Single-JD 三层输出与页数 | 规则文本，不是事实源或 JD 源。 |
+| POL-001 | ROLE_BASELINE_WRITING_MODULE | `resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md` | POLICY | 2026-09-13 | User instruction | 固定岗位族简历结构、完整职业履历、角色权重和禁止行为 | 适用于 R1/R2/R3；不产生候选人事实。 |
 | DER-001 | 简历母版.txt | `work\source-extracted\简历母版.txt` | SUPPORT | 2026-09-13 generated after canonicalization | Derived | 646 paragraphs, 0 tables, 601 lines；从 FCT-001 派生，不能取代原 DOCX。 |
 | DER-002 | JD母版.txt | `work\source-extracted\JD母版.txt` | SUPPORT | 2026-09-13 generated | Derived | DOCX 段落/表格抽取，便于行号核验 | 从 JD-001 派生，不能取代原 DOCX。 |
 

@@ -14,18 +14,6 @@ Business FDE / AI Delivery
 
 Business Scenario · Requirement Breakdown · Solution Boundary · Acceptance Criteria · Delivery Coordination · Agent Runtime · Workflow / Tool · Eval · Badcase · Safety / Authority · SOP · Cross-team Communication
 
-## Selected AI / Agent Project
-
-### 企业客服 Agent / Support Agent｜Agent Builder 项目
-
-- 围绕企业客服场景定义业务问题和成功边界，负责 Architecture Boundary、Acceptance Criteria、Eval Design、Badcase Attribution、测试验收和项目状态判断。
-- 将用户意图、Runtime、Retrieval、Tool、Authority、Safety 和 Business Success 组织为可验收的业务链路，区分工具意图、工具尝试与业务结果。
-- 设计租户/门店过滤、状态过滤、中文归一化、短语/标签匹配和 Top3 排序等词法检索路径，并以证据准入和多候选歧义处理控制结果使用边界。
-- 围绕 search_faq、search_knowledge、create_ticket、handoff_to_human 等工具梳理 Schema、授权、幂等、超时和持久业务状态。
-- 通过 AI Coding Agent 协作完成实现与 Review，依据验收标准、测试和集成证据判断项目状态。
-
-项目技术栈：Node.js · FastAPI · PostgreSQL 16 · pgvector · React · Docker Compose · Nginx · Pi Agent Runtime
-
 ## Work Experience
 
 ### 杭州人瑞网络科技有限公司｜评测专家｜服务淘天 Data Agent｜2025.09–2026.06
@@ -46,6 +34,18 @@ Business Scenario · Requirement Breakdown · Solution Boundary · Acceptance Cr
 - 在约 5 个跨平台店铺中对 GMV、利润率、DSR、月/季目标和渠道业务结果直接负责，年度整体 GMV 约 1,200 万–2,000 万。
 - 通过项目计划、时间表、资源分配和组织执行推进新品、营销活动、系统优化和滞销品清仓。
 - 协同品牌、平台、供应链、客服和内容团队，围绕商品结构、用户反馈、竞品和渠道数据调整经营方案。
+
+## Selected AI / Agent Project
+
+### 企业客服 Agent / Support Agent｜Agent Builder 项目
+
+- 围绕企业客服场景定义业务问题和成功边界，负责 Architecture Boundary、Acceptance Criteria、Eval Design、Badcase Attribution、测试验收和项目状态判断。
+- 将用户意图、Runtime、Retrieval、Tool、Authority、Safety 和 Business Success 组织为可验收的业务链路，区分工具意图、工具尝试与业务结果。
+- 设计租户/门店过滤、状态过滤、中文归一化、短语/标签匹配和 Top3 排序等词法检索路径，并以证据准入和多候选歧义处理控制结果使用边界。
+- 围绕 search_faq、search_knowledge、create_ticket、handoff_to_human 等工具梳理 Schema、授权、幂等、超时和持久业务状态。
+- 通过 AI Coding Agent 协作完成实现与 Review，依据验收标准、测试和集成证据判断项目状态。
+
+项目技术栈：Node.js · FastAPI · PostgreSQL 16 · pgvector · React · Docker Compose · Nginx · Pi Agent Runtime
 
 ## Education
 

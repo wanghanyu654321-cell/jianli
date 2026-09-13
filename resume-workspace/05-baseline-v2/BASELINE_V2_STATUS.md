@@ -27,6 +27,14 @@
 - Standard reverse chronology across all three resumes: `PASS`
 - Whole-repository old-date scan: `COMPLETED`; historical old-date occurrences remain only in files explicitly marked `STATUS: SUPERSEDED` and are not valid current inputs.
 
+## ROLE_BASELINE_WRITING_MODULE
+
+- Rule source: `resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md`; status `ACTIVE`.
+- R1 V3 alignment: `PASS`; all three work experiences and the Agent project remain present, with R1 emphasis applied.
+- R2 V2 structural alignment: `PASS`; all three work experiences remain present and the Selected Project block follows Work Experience.
+- R3 V2 structural alignment: `PASS`; all three work experiences remain present and the Selected Project block follows Work Experience.
+- Shared invariant: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE · FULL CAREER HISTORY`.
+
 ## BASELINE_V2_GATE
 
 `PARTIAL`
