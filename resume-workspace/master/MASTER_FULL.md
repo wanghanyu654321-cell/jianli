@@ -1,3 +1,5 @@
+> STATUS: SUPERSEDED — historical snapshot retained for audit only. Use `resume-workspace/00-source/CANONICAL_TIMELINE.md` and `resume-workspace/05-baseline-v2/` for current facts.
+
 # Master Resume Full
 
 Canonical master: local source `简历母版.docx` (not uploaded to this public repository)

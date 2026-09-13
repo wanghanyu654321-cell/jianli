@@ -1,3 +1,5 @@
+> STATUS: SUPERSEDED — historical snapshot retained for audit only. Use `resume-workspace/00-source/CANONICAL_TIMELINE.md` and `resume-workspace/05-baseline-v2/` for current facts.
+
 # Agent Application Engineer Gap Record
 
 JD MASTER 将 R7 定义为 Stretch。当前不生成两页岗位族基线，也不把它作为简历训练中心。

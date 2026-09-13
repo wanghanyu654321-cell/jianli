@@ -183,3 +183,13 @@ APPLICATION READY: YES / NO
 **Blueprint 正确 ≠ Resume 完成。**
 
 **历史上下文只能辅助理解，不能替代对当前仓库实际文件的完整阅读。**
+
+## Canonical Timeline Invariant
+
+All Role Baseline, Single-JD, ATS, PDF, DOCX, BossHunter, and Offer Harvester inputs must share the same company names, role paths, employment start and end months, and graduation month from the active canonical fact source. Emphasis may change for a target role, but the timeline facts cannot change.
+
+Required invariant marker: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE`.
+
+The active timeline is: career start `2022.03`; graduation `2022.06`; 浙江朗臻 `2022.03–2024.07`; 杭州今宜 `2024.11–2025.07`; 杭州人瑞 `2025.09–2026.06`. `WORK_START_BEFORE_GRADUATION = VALID_USER_CONFIRMED_FACT`; do not rewrite this relation as internship, part-time work, recruitment, or early conversion, and do not delete `2022.03–2022.06`.
+
+`TIMELINE_GATE = FAIL` whenever any downstream artifact changes a company name, role path, start month, end month, graduation month, drops one of the three work experiences, or changes the standard reverse chronology 人瑞 → 今宜 → 朗臻.

@@ -5,7 +5,7 @@
 - Primary fact source: `FCT-001` / `简历母版.docx`.
 - JD source: `JD-001` / `JD母版.docx`.
 - Claim source: `resume-workspace/01-facts/CLAIM_LEDGER.md`.
-- The resume uses FCT-03,FCT-06,FCT-09–FCT-23 and FCT-24–FCT-28.
+- The resume uses FCT-03,FCT-06,FCT-09–FCT-23 and FCT-24–FCT-30.
 
 ## 2. Claim coverage
 
@@ -45,11 +45,22 @@ PASS at text-structure level: conventional headings, single-column content, plai
 
 The Agent project must remain a project practice until repository evidence is available. Rendered page count is unverified because `soffice.exe` is unavailable.
 
+## Timeline Gate
+
+- Canonical graduation: `2022.06`
+- Canonical career start: `2022.03`
+- Renrui: `2025.09–2026.06`
+- Jinyi: `2024.11–2025.07`
+- Langzhen: `2022.03–2024.07`
+- Ordering: `PASS`
+- Cross-resume consistency: `PASS`
+- Gap preservation: `PASS` (`2024.08–2024.10`; `2025.08`)
+
 ## Timeline Revalidation
 
 - Fact source hash changed: YES
-- Graduation date re-read: YES (not present in current fact source)
+- Graduation date re-read: YES (`2022.06` present in current fact source)
 - Langzhen dates re-read: YES (`2022.03–2024.07`)
 - Cross-role date consistency: PASS
-- Work-before-graduation note: NOT_APPLICABLE (graduation date absent)
+- Work-before-graduation note: PRESENT (`WORK_START_BEFORE_GRADUATION = VALID_USER_CONFIRMED_FACT`)
 - Employment overlap check: PASS
