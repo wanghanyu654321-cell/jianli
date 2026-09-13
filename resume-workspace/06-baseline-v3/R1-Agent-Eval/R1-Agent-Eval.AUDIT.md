@@ -7,6 +7,7 @@
 ## 1. Scope and source gate
 
 - 本轮只编辑 R1 Agent Eval / LLM Quality；R2、R3、R4–R6 未读取或重写。
+- 已应用 Role Baseline Writing Module：岗位焦点只改变强调顺序和 bullet 权重，不删除任何公司、岗位路径或时间段。
 - 唯一事实来源：`FCT-001`、`resume-workspace/00-source/CANONICAL_TIMELINE.md`、`resume-workspace/00-source/SOURCE_FREEZE.md`、`resume-workspace/01-facts/CLAIM_LEDGER.md`。
 - V3 是 editorial rewrite；没有新增事实、数字、Title、职责、项目状态或技术能力。
 - V2 冻结指纹为 `7EAA096A…CDDDEB`；本轮重读本地 FCT-001 时发现文件指纹已变化，时间锚点仍完全一致。该源漂移未被提升为 V3 新主张，正式投递前需单独完成 source rebase。
@@ -48,8 +49,8 @@
 | A. 20-second readability | PASS | 第一屏直接给出 Agent Eval 定位、人瑞场景、任务规模和一致性结果。 |
 | B. Role identification | PASS | Target Role、Summary 和人瑞标题一致指向 Agent Eval / LLM Quality。 |
 | C. Result orientation | PASS | 人瑞规模、一致性变化、SOP 沉淀和搜索排名结果前置。 |
-| D. Information density | PASS | Renrui 6 bullets；Agent 3 bullets；Jinyi/Langzhen 各 2 bullets。 |
-| E. Fact credibility | PASS | 所有主张均绑定 V3 Claim Map，保留 documented-only 边界。 |
+| D. Information density | PASS | Renrui 5 bullets；Agent 3 bullets；Jinyi/Langzhen 各 2 bullets；三段工作经历全部保留。 |
+| E. Fact credibility | PARTIAL | 所有主张均绑定 V3 Claim Map，保留 documented-only 边界；源指纹漂移仍待 rebase。 |
 | F. AI-style control | PASS | 删除职责流水账和“具备/能够/补足/形成理解”等总结句。 |
 | G. Repetition control | PASS | Summary 只复述最强证据，细节下沉到对应经历。 |
 | H. Term density control | PARTIAL | Agent 项目仍保留必要的检索、证据、工具和安全术语，但每个术语都服务于验证场景。 |

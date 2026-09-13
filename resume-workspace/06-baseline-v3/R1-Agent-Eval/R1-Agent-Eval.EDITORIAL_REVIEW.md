@@ -7,12 +7,13 @@
 ## Editorial scope
 
 本轮只做招聘方可读性改写。事实仍只来自 `FCT-001`、`CANONICAL_TIMELINE.md`、`SOURCE_FREEZE.md` 和 `CLAIM_LEDGER.md`；没有使用聊天历史、模型记忆、用户画像或网络信息，也没有新增事实。
+按 Role Baseline Writing Module 执行：ROLE FOCUS 只控制强调和 bullet 权重，三段工作经历、公司、岗位路径和时间轴全部保留。
 
 ## V2 → V3 主要变化
 
 - Professional Summary 压缩为 3 句：先给当前评测身份和 Data Agent 场景，再给团队规模、一致性结果和 SOP 沉淀，最后说明京东搜索经验与当前评测的关系。
 - Core Competencies 从关键词墙改为三组：评测与质量、标准与治理、数据与业务。
-- 人瑞由职责清单重排为六条证据链：评测标准、Badcase/争议、任务规模、一致性结果、SOP/规则治理、指标观察。
+- 人瑞由职责清单重排为五条证据链：评测标准、Badcase/争议、任务规模、一致性与 SOP/规则治理、指标观察。
 - 今宜从三条压缩为两条，只保留 CTR/CVR/ROI、复盘、投流、协作、KOC 分层和 SOP。
 - 朗臻从三条压缩为两条，只保留搜索意图、关键词、商品属性、排名和数据优化结果。
 - Agent 项目从五条压缩为三条，分别回答业务问题与负责范围、如何验证、测试集记录了什么结果。
@@ -22,7 +23,7 @@
 ## Bullet count
 
 - V2 bullet count: `17`（人瑞 6、今宜 3、朗臻 3、Agent 项目 5）
-- V3 bullet count: `13`（人瑞 6、今宜 2、朗臻 2、Agent 项目 3）
+- V3 bullet count: `12`（人瑞 5、今宜 2、朗臻 2、Agent 项目 3）
 
 ## Recruiter Quality Gate
 
