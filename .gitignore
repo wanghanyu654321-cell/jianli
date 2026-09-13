@@ -1,0 +1,10 @@
+# Never commit local source documents, attachments, credentials or generated tool state.
+*.docx
+*.doc
+*.pdf
+.env
+.env.*
+attachments/
+.firecrawl/
+work/
+outputs/
