@@ -4,202 +4,259 @@
 
 目标：防止“目录结构正确、文件命名正确、事实治理做得好”被误判为“简历成品已经完成”。任何审查都必须先验证实际交付物，再评价内容质量。
 
-## 1. Repository First（仓库优先）
+## 1. Repository First
 
-当用户要求“看仓库里的简历怎么样”“审查当前简历进度”“判断是否可以投递”等任务时，审查者必须以指定仓库和指定 commit / branch 的实际文件为第一证据源。
+当用户要求审查当前简历进度、质量或可投递性时，必须以指定 repository + branch + commit 的实际文件为第一证据源。
 
-禁止仅根据：
+禁止仅根据历史聊天、模型记忆、设计方案、文件名、目录名、Status/Audit 自述或生成过程直接判断完成。
 
-- 历史聊天上下文；
-- 模型记忆；
-- 之前的设计方案；
-- 文件名；
-- 目录名；
-- Pipeline Status（流水线状态）中的自述；
-- 生成过程是否规范；
+当前状态入口：
 
-直接判断交付已经完成。
+- `resume-workspace/CURRENT_VERSION_INDEX.md`
+- `resume-workspace/GATE_REGISTRY.json`
 
-历史上下文只能帮助理解验收目标，不能代替实际文件检查。
+这两个文件负责“当前状态”；各版本 Audit 负责“该 artifact 当时的审计记录”。历史 Audit 不得覆盖 current-state registry。
 
-## 2. Mandatory Review Order（强制审查顺序）
+## 2. Mandatory Review Order
 
-任何正式评价必须按以下顺序执行：
+正式评价按以下顺序：
 
-1. 锁定用户指定的 repository（仓库）与 commit / branch。
-2. 枚举本次需要评价的实际交付文件。
-3. 完整读取目标文件，而不是只读取 README、索引、状态文件或摘要。
-4. 找到并读取与该交付物对应的原始 acceptance criteria（验收标准）。
-5. 先判断交付状态：`COMPLETE / PARTIAL / NOT_COMPLETE`。
-6. 只有完成第 5 步后，才评价内容质量、岗位匹配、事实安全、ATS（招聘系统解析）等。
-7. 最后才允许结合历史设计上下文解释“为什么这样写”或给下一步建议。
+1. 锁定 repository / branch / commit；
+2. 读取 `CURRENT_VERSION_INDEX.md` 和 `GATE_REGISTRY.json`；
+3. 枚举本次需要评价的实际 Resume artifact；
+4. 完整读取实际 Resume 正文；
+5. 读取对应 Claim Map / Audit / Policy；
+6. 先判断 Source Currency、Fact/Claim、Timeline、Career History、Career Substance 等基础门禁；
+7. 再评价 Recruiter Quality；
+8. 最后才评价 Single-JD、ATS、Render、Application Ready。
 
-不得跳过第 4–5 步直接给出“很好”“已完成”“可以投递”等结论。
+## 3. Fact Safety ≠ Resume Quality
 
-## 3. Process Quality ≠ Deliverable Quality（流程质量不等于成品质量）
+Fact Safety 是硬约束，不是成品质量的替代指标。
 
-以下内容即使做得很好，也不能单独证明 Resume（简历）成品已经完成：
+以下内容即使通过，也不能单独证明简历成熟：
 
-- Claim Ledger（主张证据账本）完整；
-- Requirement × Evidence Matrix（要求×证据矩阵）正确；
-- 事实边界严格；
-- 岗位族分类合理；
-- 文件目录结构规范；
-- Skill（技能）调用顺序正确；
-- 没有事实漂移；
-- Blueprint（蓝图）选材正确。
+- Claim Ledger 完整；
+- Timeline Gate 通过；
+- Claim Map 完整；
+- JD Matrix 正确；
+- Skill 调度正确；
+- 文件/目录齐全。
 
-审查报告必须分别评价：
+必须独立评价：
 
-- Evidence / Fact Governance（事实与证据治理）
-- Positioning / Role Selection（岗位定位与选材）
-- Resume Deliverable Completeness（简历交付完整度）
-- Application Readiness（真实投递准备度）
+- Source / Fact Currency；
+- Claim Mapping Integrity；
+- Career History；
+- Career Substance；
+- Recruiter Quality；
+- Single-JD / ATS / Render / Application Readiness。
 
-禁止把其中一个维度的高分替代其他维度。
+## 4. Source Epoch and Currency
 
-## 4. Filename Is Not Evidence（文件名不是完成证据）
+每个事实冻结版本应拥有 source epoch。当前仓库最后一次已知冻结 epoch 为：
 
-`R1-Agent-Eval.md`、`R2-Business-FDE.md`、`R3-AI-Commerce.md` 等文件即使位于 `03-baselines/`，也不能仅凭路径或文件名认定为完成的 Role Baseline Resume（岗位族基线简历）。
+`FCT-EPOCH-20260913-7EAA096A`
 
-文件名叫 `Baseline`、`Master`、`Final`、`ATS_PASS`、`Complete` 均不构成验收证据。
+R1 V3 Audit 已记录：本地 `FCT-001` 在该冻结后再次发生非时间轴指纹变化，因此当前 repository source currency 为：
 
-必须检查文件实际内容是否满足对应 Gate（门禁）。
+`STALE_PENDING_REBASE`
 
-## 5. Role Baseline Resume Gate（岗位族基线简历门禁）
+这意味着：
 
-Role Baseline Resume 的目标是：作为真实 Single-JD Tailoring（单条 JD 定制）的稳定起点，而不是岗位选材摘要。
+- 已有 Claim Map 可以继续说明“artifact 与仓库 Claim Ledger 的映射完整性”；
+- 但不能据此宣称“仓库 Claim Ledger 已经代表本地最新 FCT-001”；
+- Source Rebase 完成前 `APPLICATION_READY = NO`。
 
-默认目标长度：约 1.5–2 页；内容不足时不强行填满 2 页，但不得只用极短摘要冒充完整基线。
+## 5. Gate Vocabulary and Dependency
 
-一份岗位族基线至少应具备下列正式简历层内容（具体顺序可按岗位调整）：
+统一状态：
 
-- Header（姓名 / 联系方式 / 城市 / GitHub 等正式投递字段；若真实字段因隐私未入公开仓库，必须明确标记为外部注入字段，而不是静默缺失）；
-- Target Role（目标岗位）；
-- Professional Summary（职业摘要）；
-- Core Competencies / Skills（核心能力 / 技能）；
-- Relevant Work Experience（完整且经岗位筛选的相关工作经历）；
-- Selected Project(s)（必要时加入核心项目）；
-- Education（教育信息，或明确说明由私有事实源在渲染阶段注入）；
-- 足够的 Bullet（要点）密度，使其能够作为真实 JD 定制的母稿。
+- `PASS`
+- `PARTIAL`
+- `FAIL`
+- `BLOCKED`
+- `NOT_RUN`
 
-若文件只有类似：
+`PASS` 必须带完整 Gate 名称。
 
-`Positioning → Experience selections → Skills emphasis → Gates`
+尤其区分：
 
-这种结构，则默认判定为：
+- `CLAIM_MAPPING_INTEGRITY_GATE`：Resume 是否映射到当前仓库 Claim Ledger；
+- `FACT_CURRENCY_GATE`：该 Claim Ledger 是否来自最新有效 FCT source epoch。
 
-`ROLE_BLUEPRINT / PARTIAL`
+前者可以 PASS，而后者因 Source Drift BLOCKED；禁止再用模糊的单一 `Claim Gate PASS` 掩盖上游失配。
 
-而不是完成的 `ROLE_BASELINE_RESUME`。
+## 6. Role Baseline Resume Gate
 
-## 6. Audit Content Must Be Separated（审计内容与投递内容分离）
+Role Baseline 是真实 Single-JD Tailoring 的稳定母稿，不是岗位选材摘要，也不是公司级最终简历。
 
-以下内容属于内部审计，不应直接出现在面向招聘方的正式 Resume（简历）正文中：
+默认包含：
 
-- “不能写成生产部署”；
-- “未确认客户交付”；
-- “不宣称完整线上权限”；
-- “该指标禁用”；
-- “仓库尚未核验”；
-- 其他 Gates（门禁）、Prohibited Claims（禁用主张）、证据状态说明。
+- Header（私有字段可在公开仓库中使用明确 injection marker）；
+- Target Role；
+- Professional Summary；
+- Core Competencies / Skills；
+- Work Experience；
+- Selected Project（可选，Role-dependent）；
+- Education（私有字段可使用明确 injection marker）；
+- 必要时 Tools / Additional Skills。
 
-建议拆分为：
+`Selected Project` 不再是所有 Role Baseline 的硬必选项。
 
-- `*.RESUME.md`：面向招聘方的简历内容；
-- `*.AUDIT.md`：证据边界、禁用表达、事实核验、ATS / Fact Gate 等内部审计信息。
+## 7. Career History Gate
 
-如果两类内容混在同一文件中，必须明确标记为 `PARTIAL` 或 `INTERNAL_DRAFT`，不能称为最终投递版。
+`FULL CAREER HISTORY = HARD INVARIANT`。
 
-## 7. Single-JD Resume Gate（单条 JD 简历门禁）
+正式 Role Baseline 必须保留三段工作经历，并与 `CANONICAL_TIMELINE.md` 一致：
 
-Single-JD Tailored Resume（单条 JD 定制简历）必须基于一条真实、完整或足够完整的目标 JD。
+- 杭州人瑞网络科技有限公司｜评测专家｜服务淘天 Data Agent｜2025.09–2026.06；
+- 杭州今宜商贸有限公司｜抖音项目代运营 / 项目运营 / BD｜2024.11–2025.07；
+- 浙江朗臻网络科技有限公司｜京东电商运营 → 宠物项目管理｜2022.03–2024.07；
+- Graduation: 2022.06；Career Start: 2022.03；
+- 空档：2024.08–2024.10、2025.08。
 
-没有真实 JD 时，可以生成 Role Baseline（岗位族基线），但不能宣称已经完成公司级定制。
+不得把 2022.03–2022.06 改写成实习、兼职、校招或提前转正。
 
-Single-JD Resume 必须经过：
+## 8. Career Substance Gate
 
-`JD Freeze → JD × Evidence Matrix → Tailoring → Content Review → ATS Audit → Final Fact Gate → Render`
+三家公司都“出现”并不等于职业内容完整。
 
-其中事实只能来自已批准的事实源 / Claim Ledger / 已核验 Repo Evidence（仓库证据）。JD 中出现的关键词不能因为“岗位要求有”就直接写进简历。
+每段 Work Experience 必须：
 
-## 8. Review Conclusion Format（审查结论格式）
+- Role Scope Visible；
+- 至少一个 Scale / Result / Ownership 强证据；
+- Title–Substance Consistency 通过。
 
-以后评价仓库里的简历时，结论必须首先回答交付状态，而不是先给感受性评价。
+整份 Resume 必须：
 
-推荐格式：
+- Career Progression Visible。
+
+Career Substance Gate 不规定固定 bullet 数量。不得为了通过 Gate 机械扩写。
+
+## 9. Project Selection Rule
+
+`PROJECT_SELECTION = ROLE_DEPENDENT`。
+
+项目可以根据 Role Family / Single-JD：
+
+- 保留；
+- 前置 / 后置；
+- 压缩；
+- 替换为其他已批准项目；
+- 省略。
+
+Project 永远不能替代三段正式 Work Experience。
+
+Agent Project 当前仍为 `DOCUMENTED_ONLY / REPO_NOT_VERIFIED`；只有当前任务明确进入 repo verification 阶段时才运行 repo-to-resume。
+
+## 10. Evidence Priority
+
+Claim Ledger 回答“能不能写”，Evidence Priority 回答“值不值得写”。
+
+推荐使用离散等级：
+
+- `A_CORE_RESULT`
+- `B_STRONG_SCOPE`
+- `C_SUPPORTING`
+- `D_BACKGROUND`
+- `X_EXCLUDE`
+
+同时按目标 Role / JD 赋予 `HIGH / MEDIUM / LOW` relevance。禁止使用伪精确小数评分制造客观性幻觉。
+
+## 11. Career Story Boundary
+
+Career Story 用于解释能力连续性，不用于推断人生动机或转型因果。
+
+允许表达经历之间的业务/能力语境连接；没有事实源支持时不得写“因为 X 所以转型 Y”“为了进入 AI 行业”等动机性叙事。
+
+## 12. Editorial Rewrite and Mutation Rule
+
+写作顺序：
+
+`Select → Rank → Group → Rewrite → Semantic Claim Check → Compress`
+
+任何 Resume 文本的语义修改都会使此前针对该文本的 Semantic Claim Check 失效；修改后必须重新核验。
+
+Recruiter Review、Single-JD Tailoring 和 ATS 如果导致语义文本变化，同样必须重新过 Claim Check。
+
+## 13. Recruiter Quality Gate
+
+至少独立检查：
+
+- Role Clarity；
+- Career Completeness；
+- Evidence Strength；
+- Information Hierarchy；
+- Narrative Continuity；
+- Human Writing；
+- Term Discipline；
+- Interview Defensibility。
+
+Recruiter Quality PASS 不得由 Fact Safety、ATS sanity 或目录完整性替代。
+
+## 14. Audit Content Separation
+
+Gates、禁用主张、repo 未核验、生产边界等内部信息应放在 `*.AUDIT.md` / Claim Map / Registry 中，不直接写进招聘方面向 Resume 正文。
+
+## 15. Single-JD Resume Gate
+
+没有真实、完整或足够完整的目标 JD 时，只生成 Role Baseline，不宣称公司级最终定制。
+
+真实 JD 到来后的流程：
+
+`JD Freeze → JD × Evidence Matrix → Tailoring → Semantic Claim Check → JD/Recruiter Review → Content Freeze → ATS Audit → Semantic Re-check if modified → Final Artifact Fact Parity → Render`
+
+JD 关键词不能产生候选人事实。
+
+## 16. ATS and Render
+
+ATS 与 Render 只能在内容基本冻结后进行。
+
+最终事实门禁应理解为 `FINAL_ARTIFACT_FACT_PARITY_GATE`：确认最终将被渲染/投递的文本与最后批准的事实/Claim 状态一致。
+
+若 ATS 建议导致任何语义文本修改，必须先重新 Semantic Claim Check，再运行 Final Artifact Fact Parity Gate。
+
+## 17. Private Field Injection
+
+公开仓库缺少姓名、手机号、邮箱、学校等私有字段，不等于 Resume Content Gate 自动失败。
+
+必须区分：
+
+- `BASELINE_CONTENT_READY`
+- `PRIVATE_FIELD_INJECTION`
+- `APPLICATION_PACKAGE_READY`
+
+公开仓库允许使用 `[LOCAL_ONLY_CONTACT]`、`[LOCAL_ONLY_EDUCATION]` 等明确 marker；最终投递前必须注入真实私有字段并重新完成 Final Artifact Fact Parity / Render。
+
+## 18. Review Conclusion Format
+
+推荐：
 
 ```text
 DELIVERABLE STATUS
+R1 / R2 / R3: PARTIAL / COMPLETE / NOT_COMPLETE
 
-R1 Agent Eval: COMPLETE / PARTIAL / NOT_COMPLETE
-R2 Business FDE: COMPLETE / PARTIAL / NOT_COMPLETE
-R3 AI Commerce: COMPLETE / PARTIAL / NOT_COMPLETE
-...
-
-FACT GOVERNANCE: PASS / PARTIAL / FAIL
-ROLE POSITIONING: PASS / PARTIAL / FAIL
-ROLE BASELINE GATE: PASS / PARTIAL / FAIL
+SOURCE CURRENCY: PASS / BLOCKED / FAIL
+CLAIM MAPPING INTEGRITY: PASS / PARTIAL / FAIL
+TIMELINE GATE: PASS / FAIL
+CAREER HISTORY GATE: PASS / FAIL
+CAREER SUBSTANCE GATE: PASS / PARTIAL / FAIL
+RECRUITER QUALITY GATE: PASS / PARTIAL / FAIL
 SINGLE-JD GATE: PASS / NOT_RUN / FAIL
 ATS GATE: PASS / NOT_RUN / FAIL
+RENDER GATE: PASS / NOT_RUN / FAIL
 APPLICATION READY: YES / NO
 ```
 
-然后才能说明优点、缺点和下一步。
+## 19. Highest-Level Principle
 
-## 9. Evidence of Completion（完成证据）
+**事实安全只是底线；招聘方能快速理解并相信候选人的职业价值，才是简历成品。**
 
-任何“完成”结论必须能够回答：
+**完整职业史是硬约束；项目不是。**
 
-- 哪个文件是交付物？
-- 实际读取了什么内容？
-- 对应的验收标准是什么？
-- 哪些 Gate 已通过？
-- 哪些 Gate 尚未运行？
-- 是否可以直接用于招聘方投递？
+**状态必须有唯一真相源；历史 Audit 不能覆盖当前 Registry。**
 
-如果无法回答其中任一关键问题，不得使用“已完成”“最终版”“可以直接投递”等措辞。
+**任何文本 mutation 后，语义核验必须重新计算。**
 
-## 10. Current Repository Interpretation Rule（当前仓库解释规则）
-
-在本规则生效后，`resume-workspace/03-baselines/` 中的 R1–R6 文件必须按实际内容重新过 `Role Baseline Resume Gate`。
-
-在未满足第 5 节完整度要求前，应视为：
-
-`ROLE_BLUEPRINT / PARTIAL`
-
-即：岗位族选材蓝图 / 内容骨架，而不是完整的约 2 页岗位族基线简历。
-
-后续如果这些文件扩展为完整基线，应通过实际内容重新验收后再升级状态；不能只改文件名或 Pipeline Status。
-
-## 11. Highest-Level Principle（最高原则）
-
-**先验证“交付物是不是做完了”，再评价“做得好不好”。**
-
-**目录正确 ≠ 文件完成。**
-
-**事实安全 ≠ 简历完整。**
-
-**Blueprint 正确 ≠ Resume 完成。**
-
-**历史上下文只能辅助理解，不能替代对当前仓库实际文件的完整阅读。**
-
-## Canonical Timeline Invariant
-
-All Role Baseline, Single-JD, ATS, PDF, DOCX, BossHunter, and Offer Harvester inputs must share the same company names, role paths, employment start and end months, and graduation month from the active canonical fact source. Emphasis may change for a target role, but the timeline facts cannot change.
-
-Required invariant marker: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE`.
-
-The active timeline is: career start `2022.03`; graduation `2022.06`; 浙江朗臻 `2022.03–2024.07`; 杭州今宜 `2024.11–2025.07`; 杭州人瑞 `2025.09–2026.06`. `WORK_START_BEFORE_GRADUATION = VALID_USER_CONFIRMED_FACT`; do not rewrite this relation as internship, part-time work, recruitment, or early conversion, and do not delete `2022.03–2022.06`.
-
-`TIMELINE_GATE = FAIL` whenever any downstream artifact changes a company name, role path, start month, end month, graduation month, drops one of the three work experiences, or changes the standard reverse chronology 人瑞 → 今宜 → 朗臻.
-
-## Role Baseline Writing Module
-
-`resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md` is the active writing rule for R1, R2 and R3 role-family resumes.
-
-`ROLE FOCUS ≠ EXPERIENCE DELETION`: role focus may change Summary, Bullet emphasis and count, project order, and Skills emphasis. It may not change company count or names, role paths, start/end months, chronology, or the full career timeline. The fixed structure is Header → Target Role → Professional Summary → Core Competencies → Work Experience（人瑞 → 今宜 → 朗臻）→ Selected Project → Education → optional Tools / Additional Skills. All three work experiences must remain present.
-
-R1 must connect Data Agent Eval → Query / Recall / Relevance → QA / Badcase → SOP / Quality Governance → Search / E-commerce Context → Agent Eval Practice. R2 and R3 use the same facts and timeline while changing only emphasis. The role-family weight guidance is R1: 人瑞 45%–50%、今宜 15%–20%、朗臻 15%–20%、Agent 项目 15%–20%；R2: 25%–30%、20%–25%、20%–25%、25%–30%；R3: 25%–30%、25%–30%、30%–35%、10%–15%.
-
-Prohibited: deleting any of the three companies or the Agent project, replacing past work with “其他经历”, using a project in place of work experience, or changing facts to match a target role. Required marker: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE · FULL CAREER HISTORY`.
+Required invariant marker: `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE · FULL CAREER HISTORY`。
