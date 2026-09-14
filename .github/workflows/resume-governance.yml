@@ -1,0 +1,30 @@
+name: Resume Governance Check
+
+on:
+  push:
+    paths:
+      - 'AGENTS.md'
+      - '.qoder/rules/**'
+      - 'scripts/resume_governance_preflight.py'
+      - 'resume-workspace/**'
+      - 'REVIEW_ACCEPTANCE_POLICY.md'
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - '.qoder/rules/**'
+      - 'scripts/resume_governance_preflight.py'
+      - 'resume-workspace/**'
+      - 'REVIEW_ACCEPTANCE_POLICY.md'
+      - 'README.md'
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate current-state governance
+        run: python scripts/resume_governance_preflight.py
