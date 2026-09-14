@@ -1,13 +1,23 @@
 # Claim Ledger
 
-事实真源：`FCT-001`（`简历母版.docx`）。本轮已重新读取当前 DOCX 并重建账本；行号来自本轮覆盖写入的 `DER-001` 无损段落抽取，仅用于复核定位。`JD-001` 中的岗位要求不得写入本账本。
+事实真源：`FCT-001`（`简历母版.docx`）。本 Ledger 由最后一次仓库已知冻结源派生，不替代原始 DOCX。
 
-## Rebase metadata
+## Source epoch binding
+
+- `derived_from_source_epoch`: `FCT-EPOCH-20260913-7EAA096A`
+- Frozen source SHA256: `7EAA096A7220DE0609E3AACAEA656B4CEEFB006D1419FA01BC07E97FFFCDDDEB`
+- `CLAIM_MAPPING_INTEGRITY`: available for artifacts mapped to this Ledger
+- `FACT_CURRENCY`: `STALE_PENDING_REBASE`
+- Reason: R1 V3 Audit records a later local FCT-001 fingerprint change after this Ledger was built. Timeline anchors remained unchanged, but non-timeline semantic delta has not been rebased.
+
+因此，本 Ledger 当前可以回答“某个现有 artifact 是否映射到 `FCT-EPOCH-20260913-7EAA096A`”，但不能回答“它是否已经覆盖本地最新 FCT-001 的全部变化”。Source Rebase 完成前，不得基于聊天、JD、Skill 或推测向本 Ledger 新增候选人事实。
+
+## Rebase metadata for this epoch
 
 - Source hash before canonicalization: `B31C7EC90FFEB48B023E43C37CBACB08817A562B3A42C1148B34DFE3BA4FB6E1`
 - Source hash after canonicalization: `7EAA096A7220DE0609E3AACAEA656B4CEEFB006D1419FA01BC07E97FFFCDDDEB`
-- Previous historical fingerprint: `037FB4FA3B77157F5DBE201971E3962241DC897FCAF39DC903897A327518528D` (SUPERSEDED)
-- Source reread: `YES`
+- Previous historical fingerprint: `037FB4FA3B77157F5DBE201971E3962241DC897FCAF39DC903897A327518528D` (`SUPERSEDED`)
+- Source reread for this epoch: `YES`
 - Document version: `V3`; DER-001 extraction: 646 paragraphs, 0 tables, 601 derived text lines.
 - Graduation date: `2022.06`; career start: `2022.03`; `WORK_START_BEFORE_GRADUATION = VALID_USER_CONFIRMED_FACT`.
 - Timeline re-read: Langzhen `2022.03–2024.07`; Jinyi `2024.11–2025.07`; Renrui `2025.09–2026.06`.
@@ -49,6 +59,16 @@
 
 ## Evidence status vocabulary
 
-- `FACT_DOCUMENTED`：事实母版明确写出，可按边界表达。
-- `DOCUMENTED_ONLY`：事实母版有描述，但当前没有对应仓库/测试原始证据；不能写成已核验实现或生产结果。
-- `EXCLUDE`：母版明确要求暂不公开或暂不使用。
+- `FACT_DOCUMENTED`：该 frozen epoch 的事实母版明确写出，可按边界表达。
+- `DOCUMENTED_ONLY`：该 frozen epoch 的事实母版有描述，但当前没有对应仓库/测试原始证据；不能写成已核验实现或生产结果。
+- `EXCLUDE`：该 frozen epoch 的母版明确要求暂不公开或暂不使用。
+
+## Rebase behavior
+
+下一轮 Source Rebase 不默认全量改写本表。应先比较新旧 FCT-001 的 semantic delta：
+
+- 未变化 Claim：继承并更新 `derived_from_source_epoch`；
+- 变化 Claim：重新抽取、重新核验 locator / boundary；
+- 新增事实：创建新 Claim；
+- 删除/撤回事实：标记 superseded / excluded，并追踪受影响 Resume artifact；
+- 任何受影响的 Resume text 必须重新 Semantic Claim Check。
