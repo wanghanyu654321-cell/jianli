@@ -1,0 +1,62 @@
+{
+  "registry_status": "CANONICAL_CURRENT_STATE",
+  "repository": "wanghanyu654321-cell/jianli",
+  "branch": "resume/baseline-v2-r1-r3",
+  "source": {
+    "fact_source_id": "FCT-001",
+    "last_frozen_epoch": "FCT-EPOCH-20260913-7EAA096A",
+    "last_frozen_sha256": "7EAA096A7220DE0609E3AACAEA656B4CEEFB006D1419FA01BC07E97FFFCDDDEB",
+    "source_currency": "STALE_PENDING_REBASE",
+    "timeline_gate": "PASS"
+  },
+  "gate_status_vocabulary": [
+    "PASS",
+    "PARTIAL",
+    "FAIL",
+    "BLOCKED",
+    "NOT_RUN"
+  ],
+  "R1": {
+    "artifact": "resume-workspace/06-baseline-v3/R1-Agent-Eval/R1-Agent-Eval.RESUME.md",
+    "fact_currency_gate": "BLOCKED",
+    "claim_mapping_integrity_gate": "PASS",
+    "timeline_gate": "PASS",
+    "career_history_gate": "PASS",
+    "career_substance_gate": "PARTIAL",
+    "recruiter_quality_gate": "PARTIAL",
+    "ats_gate": "NOT_RUN",
+    "render_gate": "NOT_RUN",
+    "application_ready": false
+  },
+  "R2": {
+    "artifact": "resume-workspace/05-baseline-v2/R2-Business-FDE/R2-Business-FDE.RESUME.md",
+    "fact_currency_gate": "BLOCKED",
+    "claim_mapping_integrity_gate": "PASS",
+    "timeline_gate": "PASS",
+    "career_history_gate": "PASS",
+    "career_substance_gate": "PARTIAL",
+    "recruiter_quality_gate": "PARTIAL",
+    "ats_gate": "NOT_RUN",
+    "render_gate": "NOT_RUN",
+    "application_ready": false
+  },
+  "R3": {
+    "artifact": "resume-workspace/05-baseline-v2/R3-AI-Commerce/R3-AI-Commerce.RESUME.md",
+    "fact_currency_gate": "BLOCKED",
+    "claim_mapping_integrity_gate": "PASS",
+    "timeline_gate": "PASS",
+    "career_history_gate": "PASS",
+    "career_substance_gate": "PASS",
+    "recruiter_quality_gate": "PARTIAL",
+    "ats_gate": "NOT_RUN",
+    "render_gate": "NOT_RUN",
+    "application_ready": false
+  },
+  "single_jd_gate": "NOT_RUN",
+  "notes": [
+    "Claim mapping integrity means the artifact maps to the repository Claim Ledger; it does not imply that the Claim Ledger is current with the latest local FCT-001.",
+    "Fact currency is blocked until the latest local FCT-001 is rebased and affected derived artifacts are revalidated.",
+    "Project selection is role-dependent and is not a career-history invariant.",
+    "Any semantic text mutation invalidates the previous semantic claim check for the changed text."
+  ]
+}
