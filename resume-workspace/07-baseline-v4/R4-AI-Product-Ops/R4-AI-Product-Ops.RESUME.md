@@ -8,25 +8,25 @@
 
 ## Professional Summary
 
-具备从用户 / 执行者反馈中发现问题、结合数据与业务 Context 判断原因并推动产品 / 规则 / 流程优化的经验。
+具备从用户 / 场景反馈中发现问题、结合数据与业务 Context 判断原因并推动产品 / 规则 / 流程优化的经验。
 
 当前在人瑞服务淘天 Data Agent，除 Query、召回和商品相关性评测外，也参与新任务规则理解、Context 补充、BPO 培训、QA、复杂 Badcase 和版本效果观察；在执行质量出现偏差时，更关注“用户 / 执行者为什么会这样理解”，再推动规则、说明和流程收敛。
 
-此前在电商场景中长期接触消费者需求、产品定位、内容表达、搜索数据和经营指标：朗臻阶段直接通过消费者反馈补充产品需求判断，并参与产品开发；今宜阶段根据市场变化调整商品定位，通过短视频、直播和数据反馈持续迭代产品表达。企业客服 Agent 项目进一步补充 Acceptance、Eval 和 Workflow 视角。
+此前在电商场景中长期接触消费者需求、产品定位、内容表达、搜索数据和经营指标：朗臻阶段直接通过消费者反馈补充产品需求判断，并参与产品开发；今宜阶段根据市场变化调整商品定位，通过短视频、直播和数据反馈持续迭代产品表达。企业客服 Agent 作品进一步补充 **Scenario / Customer Need → Product Definition → Product Scope → Workflow / MVP → Development → QA / Optimization → Launch Readiness** 的 AI 产品实践。
 
 ## Core Competencies
 
-**User / Scenario Understanding**  
-用户需求｜执行者 Context｜场景分析｜产品反馈
+**Customer / Scenario**  
+Customer Need｜Service Scenario｜Dialogue / Workflow｜Requirement Discovery
 
-**Product Operations**  
-规则运营｜质量运营｜流程优化｜版本观察｜问题闭环
+**AI Product Definition**  
+Product Scope｜Knowledge / RAG｜Prompt / Instruction｜Workflow｜Human-in-the-loop
 
-**Data / Experiment**  
-CTR / CVR / ROI｜对比验证｜QA｜Badcase｜Root Cause
+**Product Delivery**  
+MVP｜Priority｜PRD Structure｜AI Coding Collaboration｜Acceptance
 
-**AI Product Context**  
-Data Agent｜Query / Relevance｜Agent Eval｜Acceptance｜Workflow
+**Product Optimization**  
+QA｜Data Diagnosis｜Badcase｜Regression｜Optimization｜Launch Readiness
 
 ## Work Experience
 
@@ -58,12 +58,19 @@ Data Agent｜Query / Relevance｜Agent Eval｜Acceptance｜Workflow
 
 ## Selected Project
 
-### 企业客服 Agent｜Agent Builder 项目
+### 企业客服 Agent｜场景需求 → 产品定义 → MVP
 
-- **Product Definition：** 负责 Problem Definition、方案边界和阶段性验收标准，将业务需求转化为明确的 Agent 行为目标。
-- **Eval / Acceptance：** 设计不同场景下的测试和验收方式，通过 Badcase 和 Regression 判断方案是否真正解决目标问题。
-- **Workflow / Boundary：** 关注权限、Evidence、工具调用和 Routing 等关键行为边界，避免系统能力与实际使用场景脱节。
-- **Regression：** 沉淀 **40 个 Frozen Cases**作为固定验证基线，为后续版本调整提供质量参照。
+**项目背景：** 从小型门店 / 企业客服 Workflow 出发，高频知识咨询、服务状态查询、预约意向、售后 Ticket 和异常升级存在大量重复操作，一线人员需要频繁在查询、业务处理和人工转交之间切换。完整 CRM 对轻量门店偏重，而通用 Chatbot 又无法处理真实权限、业务状态与异常流程，因此产品被定位为一个**受控客服 Agent，而不是 CRM 替代品或无限对话机器人**。
+
+- **Customer Need / Target User：** 将主要场景收敛到一线客服 / 店员及管理侧，核心问题是减少重复查询与操作，同时保证复杂、歧义和高风险问题可以稳定进入人工流程。
+- **Product Definition：** 将需求拆成 **Knowledge / FAQ、Availability、Booking Intent、Ticket / Handoff、Needs Attention、Audit / StoreOps** 等模块，并进一步区分“用户想解决什么、Agent 可以提出什么、系统真正执行什么、什么时候需要人工”。
+- **Product Boundary：** 不重建完整 CRM，也不让模型自由执行所有业务动作；Agent 聚焦意图理解、Knowledge / RAG、业务查询与有限 Workflow 编排，身份、权限、关键业务状态和异常处理仍由受控系统 / 人工承担。
+- **MVP / Priority：** 优先保证 Knowledge、受控业务查询、Ticket / Handoff 和异常升级等核心链路，再补 Booking Intent、Needs Attention 和管理侧能力；功能优先级按场景价值、风险和是否可明确验收决定。
+- **Requirement → Development：** 将场景、用户流程、功能边界和 Acceptance Criteria 按产品需求 / PRD 结构组织，再通过 AI Coding Agent 协作实现；开发中用真实 Workflow / Case 检查需求是否被正确实现。
+- **QA / Optimization：** 根据 QA / Badcase 判断问题来自需求定义、Knowledge / RAG、Prompt、Workflow 还是 Authority，再回到对应产品层优化，并通过 Regression 检查改动结果。
+- **Launch Readiness：** 当前已形成可运行 Demo，处于 **Demo / POC 与上线前验证阶段**。
+
+**场景价值：** 产品不是单纯追求“客服自动化率”，而是让 Agent 在清晰产品边界内承担适合自动化的重复流程，同时确保异常和高风险任务有稳定的人机协同路径。
 
 ## Education
 
