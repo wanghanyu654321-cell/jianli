@@ -5,8 +5,8 @@
   "source": {
     "fact_source_id": "FCT-001",
     "fact_master_mirror": "resume-workspace/01-facts/FACT_MASTER_CURRENT.md",
-    "current_epoch": "FCT-EPOCH-20260916-04094915",
-    "git_blob_sha": "040949158e76a356caf81f4185da2c4a17528e04",
+    "current_epoch": "FCT-EPOCH-20260916-FE4CB619",
+    "git_blob_sha": "fe4cb619cccf99f98813f7dec683b8022ff4f2e5",
     "scope_rule": "CURRENT_MAINLINE_PLUS_USER_CONFIRMED_CONTEXT_ONLY",
     "source_currency": "CURRENT",
     "claim_ledger_current": true,
@@ -14,8 +14,8 @@
   },
   "gate_status_vocabulary": ["PASS", "PARTIAL", "FAIL", "BLOCKED", "NOT_RUN"],
   "R1": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/R1-Agent-Eval/R1-Agent-Eval.RESUME.md",
-    "artifact_epoch_state": "CURRENT_EPOCH_V5_RECRUITER_REVIEWED",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/R1-Agent-Eval/R1-Agent-Eval.RESUME.md",
+    "artifact_epoch_state": "CURRENT_EPOCH_V6_RECRUITER_REAUDITED",
     "fact_currency_gate": "PASS",
     "claim_mapping_integrity_gate": "PARTIAL",
     "timeline_gate": "PASS",
@@ -27,8 +27,8 @@
     "application_ready": false
   },
   "R2": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/R2-Business-FDE/R2-Business-FDE.RESUME.md",
-    "artifact_epoch_state": "CURRENT_EPOCH_V5_RECRUITER_REVIEWED",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/R2-Business-FDE/R2-Business-FDE.RESUME.md",
+    "artifact_epoch_state": "CURRENT_EPOCH_V6_RECRUITER_REAUDITED",
     "fact_currency_gate": "PASS",
     "claim_mapping_integrity_gate": "PARTIAL",
     "timeline_gate": "PASS",
@@ -40,8 +40,8 @@
     "application_ready": false
   },
   "R3": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/R3-AI-Commerce/R3-AI-Commerce.RESUME.md",
-    "artifact_epoch_state": "CURRENT_EPOCH_V5_RECRUITER_REVIEWED",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/R3-AI-Commerce/R3-AI-Commerce.RESUME.md",
+    "artifact_epoch_state": "CURRENT_EPOCH_V6_RECRUITER_REAUDITED",
     "fact_currency_gate": "PASS",
     "claim_mapping_integrity_gate": "PARTIAL",
     "timeline_gate": "PASS",
@@ -53,8 +53,8 @@
     "application_ready": false
   },
   "R4": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/R4-AI-Product-Ops/R4-AI-Product-Ops.RESUME.md",
-    "artifact_epoch_state": "CURRENT_EPOCH_V5_RECRUITER_REVIEWED",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/R4-AI-Product-Ops/R4-AI-Product-Ops.RESUME.md",
+    "artifact_epoch_state": "CURRENT_EPOCH_V6_RECRUITER_REAUDITED_PRD_PENDING",
     "fact_currency_gate": "PASS",
     "claim_mapping_integrity_gate": "PARTIAL",
     "timeline_gate": "PASS",
@@ -66,8 +66,8 @@
     "application_ready": false
   },
   "R5": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/R5-Agent-Solution/R5-Agent-Solution.RESUME.md",
-    "artifact_epoch_state": "CURRENT_EPOCH_V5_RECRUITER_REVIEWED",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/R5-Agent-Solution/R5-Agent-Solution.RESUME.md",
+    "artifact_epoch_state": "CURRENT_EPOCH_V6_RECRUITER_REAUDITED",
     "fact_currency_gate": "PASS",
     "claim_mapping_integrity_gate": "PARTIAL",
     "timeline_gate": "PASS",
@@ -79,8 +79,8 @@
     "application_ready": false
   },
   "R6": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/R6-AI-Solution/R6-AI-Solution.RESUME.md",
-    "artifact_epoch_state": "CURRENT_EPOCH_V5_RECRUITER_REVIEWED",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/R6-AI-Solution/R6-AI-Solution.RESUME.md",
+    "artifact_epoch_state": "CURRENT_EPOCH_V6_RECRUITER_REAUDITED_DEMO_POC_DIRECT",
     "fact_currency_gate": "PASS",
     "claim_mapping_integrity_gate": "PARTIAL",
     "timeline_gate": "PASS",
@@ -92,17 +92,21 @@
     "application_ready": false
   },
   "recruiter_review": {
-    "artifact": "resume-workspace/08-baseline-v5-recruiter-reviewed/RECRUITER_REVIEW.md",
+    "artifact": "resume-workspace/09-baseline-v6-recruiter-reaudit/RECRUITER_REVIEW.md",
     "status": "PASS",
     "scope": "ROLE_FAMILY_LEVEL_NOT_SINGLE_JD"
   },
+  "pending_assets": {
+    "agent_prd": "PENDING_ASSET",
+    "production_go_live": "PENDING_ICP_AND_LAUNCH"
+  },
   "single_jd_gate": "NOT_RUN",
   "notes": [
-    "R1-R6 V5 baselines were rewritten against current fact epoch FCT-EPOCH-20260916-04094915.",
-    "V5 uses recruiter-oriented evidence ranking and middle-layer desensitization: preserve problem/judgment/solution type/outcome while hiding replicable implementation detail.",
-    "R4 is intentionally positioned as AI Product Quality Ops / Intelligent Service rather than unsupported traditional PM ownership.",
-    "R5 is intentionally positioned as Agent Solution / Prompt+Eval rather than deep Agent engineering.",
-    "R6 is intentionally positioned as business-oriented AI Solution / Solution Consultant transition and does not claim AI presales closing, Demo/POC or customer Go-live.",
+    "Current fact epoch is FCT-EPOCH-20260916-FE4CB619.",
+    "Agent project is user-confirmed as actual-landing work with a runnable Demo, current Demo/POC delivery and pre-launch validation; it is waiting for ICP-related approval steps before formal launch.",
+    "Demo/POC is no longer treated as a gap for R2/R4/R5/R6, but production live, enterprise customer commercial deployment and complex integration remain separate evidence boundaries.",
+    "R4 is now positioned as AI Product Ops / Agent Product / Intelligent Service; formal PRD remains a pending asset and must not be claimed as completed.",
+    "R6 is now positioned as AI Solution / Solution Consultant / Agent Delivery rather than a no-POC presales transition baseline.",
     "Per-bullet formal claim mapping has not yet been recorded, therefore claim_mapping_integrity_gate remains PARTIAL.",
     "Single-JD tailoring, ATS and rendering are not yet run; application_ready remains false."
   ]
