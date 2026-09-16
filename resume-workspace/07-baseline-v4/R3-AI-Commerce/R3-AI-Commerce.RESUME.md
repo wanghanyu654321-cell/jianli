@@ -12,21 +12,21 @@
 
 在朗臻从单品及搜索运营逐步承担宠物项目经营，参与市场机会判断、商品搜索优化、消费者需求反馈、产品开发协作、平台商务、库存与供应链推进，并对约 **5 个跨平台店铺**的 GMV、利润率、DSR 和渠道结果承担直接责任；在今宜参与抖音新盘 0→1，从产品定位、短视频 / 直播表达、投流、达人冷启动到经营数据复盘形成完整闭环。
 
-后续在淘天 Data Agent 评测中进一步接触 Query、召回、商品相关性、搜索链路和版本指标，使传统经营经验延伸到 **电商 Query / Relevance / Agent 场景**，能够从用户需求、商品语义和经营结果多个视角理解智能电商问题。
+后续在淘天 Data Agent 评测中进一步接触 Query、召回、商品相关性、搜索链路和版本指标，使传统经营经验延伸到 **电商 Query / Relevance / Agent 场景**；企业客服 Agent 作品进一步补充 Knowledge / RAG、Workflow、Tool、Eval 与智能服务应用实践，但不替代正式 Commerce 经营经历。
 
 ## Core Competencies
 
 **Commerce Strategy**  
-市场判断｜0→1｜商品定位｜GMV / Profit｜渠道经营
+Market / Category｜Merchant / Seller｜0→1｜商品定位｜GMV / Profit
 
-**Search / Content / Ads**  
-Search / Query｜商品相关性｜短视频 / 直播｜巨量千川｜CTR / CVR / ROI
+**Search / Content / Marketing**  
+Search / Query / Relevance｜Content / Live｜Ads｜CTR / CVR / ROI
 
 **Commerce Operations**  
-多店经营｜达人 BD｜平台合作｜库存 / 供应链｜项目推进
+Store｜Service｜BD｜Supply｜SOP｜项目推进
 
 **AI / Data Context**  
-Data Agent｜Query / Recall / Relevance｜版本指标｜Badcase / QA
+Data Agent｜Agent Workflow｜Knowledge / RAG｜Query / Recall｜Badcase / QA
 
 ## Work Experience
 
@@ -61,12 +61,12 @@ Data Agent｜Query / Recall / Relevance｜版本指标｜Badcase / QA
 
 ## Selected Project
 
-### 企业客服 Agent｜Agent Builder 项目
+### 企业客服 Agent｜Agent Builder 作品项目
 
-- 负责 Problem Definition、Solution Boundary、Eval Design 和 Acceptance Criteria，将业务需求转成可以测试和验收的 Agent 行为要求。
-- 参与 Evidence、检索、Tool、Routing 和权限等边界设计，关注 Agent 在复杂业务条件下的行为可控性。
-- 通过 Frozen Cases、Badcase Attribution 和回归验证持续判断方案调整是否破坏已有行为。
-- 项目用于补充 AI Agent / 智能服务场景经验，不替代正式电商经营经历。
+**项目背景：** 面向小型门店重复客服与服务流程搭建 Agent，高频知识咨询、服务状态查询、预约意向、Ticket / Handoff 和异常升级中存在大量重复操作；项目目标是让有明确 Knowledge / Evidence 和规则边界的问题尽量自动处理，并将歧义、权限或异常场景稳定转回人工，而不是单纯增加一个聊天入口。
+
+- 涉及 Knowledge / RAG、Query、Evidence、Tool、Workflow、Ticket / Handoff、Eval 与 Acceptance，并已形成可运行 Demo。
+- 当前处于 **Demo / POC 与上线前验证阶段**；后续根据具体 AI Commerce JD 再决定重点展开 Merchant Agent、Search / Relevance、Seller Service 或 AI Product 方向。
 
 ## Education
 
