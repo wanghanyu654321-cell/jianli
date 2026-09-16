@@ -32,7 +32,13 @@ Badcase｜Eval｜Regression｜Acceptance Harness｜Integration Gate
 
 ### 数字前台 Agent｜场景驱动的 Agent Application Engineering
 
-**项目背景：** 面向小型门店 / 服务型商家的线上第一接待与私域承接场景，产品被收敛为一条明确业务链：**在线接待 → Knowledge / FAQ 回复 → 私域线索与预约意向承接 → 轻 CRM Booking / 状态留痕 → Ticket / Handoff → 人工跟进**。项目目标不是实现一个通用对话 Demo，更不是扩展为全能数字员工，而是让 Agent 真正进入受控数字前台 Workflow；因此工程设计围绕几个真实问题展开：**检索到的信息能不能用、模型有没有权执行、预约 / Ticket 等业务状态有没有真实发生、Instruction 应该改哪一层、候选方案是否满足 Runtime 与稳定性约束。**
+**项目背景：** 面向小型门店 / 服务型商家的线上第一接待与私域承接场景，产品被收敛为一条明确业务链：
+
+**在线接待 → Knowledge / FAQ 回复 → 私域线索与预约意向承接 → 轻 CRM Booking / 状态留痕 → Ticket / Handoff → 人工跟进。**
+
+项目目标不是实现一个通用对话 Demo，更不是扩展为全能数字员工，而是让 Agent 真正进入受控数字前台 Workflow；因此工程设计围绕几个真实问题展开：
+
+**检索到的信息能不能用、模型有没有权执行、预约 / Ticket 等业务状态有没有真实发生、Instruction 应该改哪一层、候选方案是否满足 Runtime 与稳定性约束。**
 
 **技术环境：** Node.js｜FastAPI｜PostgreSQL 16｜pgvector｜React｜Docker Compose
 
