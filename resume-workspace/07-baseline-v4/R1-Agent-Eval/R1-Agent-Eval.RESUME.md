@@ -12,21 +12,21 @@
 
 在质量治理中，更关注“为什么会产生错误”而不只统计错误本身。会结合抽检结果、执行表现和人员反馈区分业务 Context 缺失、规则理解偏差、边界不清或执行方式等不同问题，并推动规则说明、示例、培训和执行流程持续收敛。所在团队 10+ 人，每周处理约 **5,000–10,000 条任务**，个人日处理约 **100–120 条**，累计沉淀 **10+ 份 SOP / 规则 / 执行文档**；部分任务一致性由约 **80% 提升至 95%**，复杂任务由约 **60% 提升至 85%**。
 
-同时接触 DAU、CTR、转化、灰度流量和业务水位等线上指标，参与按时间维度观察版本效果及异常变化。在企业客服 Agent 项目中进一步承担 **Problem Definition、Eval Design、Acceptance Criteria、Badcase Attribution、Regression 与测试验收**。此前电商经历则补充了 Search / Query Intent、商品语义和真实经营场景，使评测判断能够同时理解模型输出、用户需求和业务 Context。
+同时接触 DAU、CTR、转化、灰度流量和业务水位等线上指标，参与按时间维度观察版本效果及异常变化。企业客服 Agent 作品进一步将 Eval 用于 **Agent 升级与版本判断**：围绕 RAG、Evidence、Tool Calling、Routing、权限与 Agent Behavior 设计 Dataset / Negative Controls，通过 Badcase Attribution 定位应修改 Prompt / Instruction、Retrieval、Tool 还是 Workflow，再用 Regression 判断版本是否真正提升；同时通过 Acceptance Harness 检查评测数据、配置和执行完整性，避免测试本身制造 False-PASS。此前电商经历则补充了 Search / Query Intent、商品语义和真实经营场景，使评测判断能够同时理解模型输出、用户需求和业务 Context。
 
 ## Core Competencies
 
-**Agent Eval / LLM Quality**  
-Query Understanding｜Recall / Relevance｜Data Agent Output Review｜Complex Badcase｜QA｜Dispute Case
+**Eval Design / Quality**  
+Eval Design｜Case / Dataset｜QA｜Badcase｜Root Cause｜Metrics｜Data Quality
 
-**Quality Governance / Root Cause**  
-Rule Alignment｜Context Translation｜Quality Review｜Root Cause Analysis｜Boundary Convergence｜Training / SOP
+**Agent / RAG Evaluation**  
+Query / Recall / Relevance｜RAG / Evidence｜Tool Calling｜Routing｜Agent Behavior
 
-**Eval Design / Regression**  
-Acceptance Criteria｜Case Design｜Frozen Cases｜Holdout｜Regression｜Test Validation
+**Regression / Harness**  
+Frozen Cases｜Negative Controls｜Regression｜Holdout｜Acceptance Harness｜Eval Integrity
 
-**Search / Business Context**  
-Query Intent｜商品相关性｜Search Funnel｜CTR / CVR / ROI｜版本指标观察｜电商业务 Context
+**Business / Data Context**  
+Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜版本指标观察
 
 ## Work Experience
 
@@ -63,15 +63,17 @@ Query Intent｜商品相关性｜Search Funnel｜CTR / CVR / ROI｜版本指标�
 
 ## Selected Project
 
-### 企业客服 Agent｜Agent Builder 项目
+### 企业客服 Agent｜Eval → Agent Upgrade → Acceptance Harness
 
-- **Problem Definition / Eval Scope：** 围绕企业客服 Agent 负责 Problem Definition、架构边界、Acceptance Criteria 和 Eval Design，将业务需求进一步转化为可以通过测试验证的 Agent 行为要求，而不是只以功能“能否运行”作为验收标准。
-- **Agent 行为边界：** 参与权限、Evidence、检索、工具调用、Runtime 和 Routing 等关键约束设计，重点关注 Agent 在信息不足、候选不明确或权限受限时能否按照既定边界工作，避免在缺少可靠依据时继续扩大行为范围。
-- **Case Design / Edge Case：** 围绕正常请求、无候选、单候选、多候选歧义、安全与权限等不同状态设计测试场景，使 Eval 同时覆盖正常行为、失败场景和边界行为，而不仅验证少量 Happy Path。
-- **Badcase Attribution：** 对测试失败结果进行归因，区分检索、证据、Routing、权限或最终行为等不同问题来源，并据此决定是调整方案、补充 Case 还是继续观察，使 Badcase 成为方案迭代依据而不是单纯失败记录。
-- **Acceptance / Regression：** 沉淀 **40 个 Frozen Cases**作为固定回归基线，并结合 Holdout 检查后续调整是否破坏已有行为；测试和验收同时服务于项目状态判断，即当前方案究竟达到什么阶段、还有哪些问题尚未解决。
-- **测试结果：** 当前测试集记录 Safety **30/30**、Robustness **100/100**、Holdout **60/60**、Governed Knowledge **46/46**、Public Top1 **96%**、Recall@3 **100%**、Routed Outcome **100%**，用于描述现有测试集表现，不外推为生产流量结果。
-- **实现协作：** 通过 AI Coding Agent 协作实现与 Review，本人负责问题定义、架构与方案取舍、Eval / Acceptance、Badcase 分析、测试及项目状态判断，使技术实现始终围绕明确的业务和验收边界推进。
+**项目背景：** 面向小型门店 / 企业客服场景，高频知识咨询、服务状态查询、预约意向、售后 Ticket 和异常升级存在大量重复工作；完整 CRM 对轻量场景偏重，而仅接入 LLM Chatbot 又无法保证回答依据、门店数据隔离、业务权限、真实状态和异常转人工。项目因此验证 Agent 能否在明确的 Evidence、Authority 与 Human-in-the-loop 边界下承接有限客服 Workflow。随着 RAG、Tool 与权限逐步增加，又进一步需要回答：一次修改究竟有没有让 Agent 真正变好，以及用于判断好坏的 Eval 本身是否可信。
+
+- **Eval Design / Dataset：** 将质量判断从最终答案扩展到 RAG Evidence、Routing、Tool / Authority、No-answer、Ambiguous 和权限行为；冻结 **40 个 Cases（24 answerable / 8 no-answer / 8 ambiguous）**，并加入 tenant / store isolation、未批准及失效 Evidence 等 Negative Controls，使“应该回答”和“应该停止”都有明确标准。
+- **Badcase / Root Cause：** Eval 失败后不直接调 Prompt，而是区分问题来自 **Prompt / Instruction、RAG / Evidence、Routing、Tool / Authority 还是 Workflow**，再修改对应层；实际迭代 Prompt、System Instruction 与 Tool Instruction，并比较修改前后行为。
+- **Regression / Metrics：** 通过 Frozen Cases、Holdout 和固定指标重新检查目标 Badcase，同时验证正常回答、No-answer、歧义及权限边界是否出现 Regression，用于判断修改属于整体提升、局部修复还是表面改善。
+- **Eval Integrity / Harness：** 当发现 Case Population 混淆、Measurement 未被真实结果支持时先修 Eval；Acceptance Harness 进一步检查 Case 缺失 / 重复、Config / Corpus Drift、Evidence 变化及 Completion State，降低评测流程产生 False-PASS 的风险。
+- **Version Decision：** 将 Eval Metrics、Badcase、Regression 与 Harness Integrity 共同用于阶段性 Acceptance，决定当前版本继续迭代、进入 POC，还是保持 Blocked。
+
+**场景价值：** 不只知道 Agent 哪里错，还能建立一条 **Eval → Attribution → Modification → Regression → Harness → Version Decision** 的持续升级链路；当前已形成可运行 Demo，处于 Demo / POC 与上线前验证阶段。
 
 ## Education
 
