@@ -12,7 +12,7 @@
 
 在朗臻期间直接参与京东小二合同条件、毛利结构、平台资源和活动合作讨论，并与 To-B 工厂 / 产品开发侧推进产品需求；在今宜项目中则负责业务目标对齐、直接达人 BD、合作条件及冷启动阶段利润取舍。后续 Data Agent 工作进一步强化了复杂规则解释、上下游 Context 转译和问题反馈能力。
 
-企业客服 Agent 作品进一步补充 **Customer Need → Solution Scope → Technical Constraint → Demo / POC → Acceptance / Delivery**。通过 AI Coding Agent 实际参与实现与 Review，使方案沟通能够深入到 Prompt、RAG、API / Database、Tool Calling、Authority、Eval / Harness 等工程约束，同时能将这些约束重新翻译成业务方可以理解的 Solution Boundary，形成 Business + Technical Communication 的双向能力。
+数字前台 Agent 作品进一步补充 **Customer Need → Solution Scope → Technical Constraint → Demo / POC → Acceptance / Delivery**。项目围绕线上第一接待、私域线索与预约意向承接、轻 CRM Booking / 状态留痕和人工 Handoff 展开；通过 AI Coding Agent 实际参与实现与 Review，使方案沟通能够深入到 Prompt、RAG、API / Database、Tool Calling、Authority、Eval / Harness 等工程约束，同时能将这些约束重新翻译成业务方可以理解的 Solution Boundary，形成 Business + Technical Communication 的双向能力。
 
 ## Core Competencies
 
@@ -59,18 +59,18 @@ Prompt｜RAG｜API / Database｜Tool Calling｜Eval / Harness｜AI Coding
 
 ## Selected Project
 
-### 企业客服 Agent｜Customer Need → Solution → Demo / POC
+### 数字前台 Agent｜Customer Need → Solution → Demo / POC
 
-**项目背景：** 面向小型门店 / 企业客服场景，高频知识咨询、服务状态查询、预约意向、Ticket / Handoff 和异常升级存在大量重复工作。从 Solution 视角，业务真正需要的不是“一个聊天机器人”，而是减少重复客服工作，同时又不能让 AI 在 Evidence、权限和真实业务状态不明确时自由行动。因此需要把模糊的“AI 客服”诉求继续拆成**哪些场景值得自动化、哪些必须人工、系统需要什么技术边界，以及 POC 成功如何判断**。
+**项目背景：** 面向小型门店 / 服务型商家的线上接待与私域承接场景，业务真正需要的不是“一个聊天机器人”，而是把线上第一接待、重复咨询回复、线索 / 预约意向承接和后续人工跟进连成一条可落地流程。项目因此被收敛为一个**数字前台 Agent**：负责第一轮在线接待、Knowledge / FAQ 回复、私域线索与预约意向承接，并通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；不替代完整 CRM，也不扩展为全能数字员工。Solution 需要继续回答：哪些场景值得自动化、哪些必须人工、系统需要什么技术边界，以及 POC 成功如何判断。
 
-- **Customer Need / Scope：** 从高频咨询、Availability、Booking Intent、Ticket / Handoff 和异常升级中识别重复流程，同时判断哪些动作涉及权限、真实业务状态或较高风险，据此收敛 Agent Scope。
-- **Solution Design：** 将需求组织为 Knowledge / RAG、业务查询、Ticket / Handoff、Needs Attention、Tool / Authority 和 Human Handoff 等 Solution 模块，使业务诉求能够落到具体 Workflow。
+- **Customer Need / Scope：** 从线上高频咨询、Availability、Booking Intent、轻 CRM 预约 / 状态留痕、Ticket / Handoff 和异常升级中识别重复流程，同时判断哪些动作涉及权限、真实业务状态或较高风险，据此收敛 Agent Scope。
+- **Solution Design：** 将需求组织为**线上接待与 Knowledge / RAG、预约意向与轻 CRM、Ticket / Handoff、Needs Attention、Tool / Authority 和 Human Handoff** 等 Solution 模块，使业务诉求能够落到具体 Workflow。
 - **Trade-off Communication：** Evidence 不足、权限限制、Runtime 或自动化率等问题不只作为技术限制描述，而是继续解释成业务风险与方案边界，例如为什么某些场景宁可 Handoff 也不能让模型猜答。
 - **Demo / POC Acceptance：** 将“效果不错”拆成正常回答、No-answer、Ambiguous、权限隔离、真实状态写入和关键 Integration 等可验证条件，让 POC 有明确成功标准。
 - **Technical Communication：** 通过 AI Coding Agent 实际参与 Agent 实现 / Review，能够与工程侧继续讨论 Prompt、RAG、API、Database、Tool Calling、Authority、Runtime、Eval / Harness 等具体问题，并理解不同方案的实现取舍；同时能将技术限制重新翻译成业务可理解的 Solution Boundary。
 - **Delivery：** 已形成可运行 Demo，目前处于 **Demo / POC 与上线前验证阶段**，通过 Acceptance、Regression 和项目状态判断支撑后续交付。
 
-**场景价值：** 能够从业务问题开始，一直讨论到具体 Agent / RAG / Tool / Eval 机制，再把技术结果重新带回业务和 POC 验收，而不是只停留在需求收集或技术名词层。
+**场景价值：** 能够从“线上接待与私域承接”的业务问题开始，一直讨论到具体 Agent / RAG / Tool / Eval 机制，再把技术结果重新带回业务和 POC 验收，而不是只停留在需求收集或技术名词层。
 
 ## Education
 
