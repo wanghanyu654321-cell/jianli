@@ -22,21 +22,24 @@
 
 ## Current Resume Artifacts
 
+当前 R1–R6 已基于 current fact epoch 完成第一轮岗位族重写，统一放入 `resume-workspace/07-baseline-v4/`。这一轮定位为 **current-fact draft**：已完成角色区分和中层脱敏，但尚未执行后续 Skills 优化、逐条 Claim Mapping、Recruiter Review、ATS 或 Render。
+
 | role | current artifact | content generation | current state |
 |---|---|---|---|
-| R1 Agent Eval / LLM Quality | `resume-workspace/06-baseline-v3/R1-Agent-Eval/R1-Agent-Eval.RESUME.md` | V3 editorial rewrite based on pre-current fact set | `PARTIAL_NEEDS_REWRITE` |
-| R2 Business FDE / AI Delivery | `resume-workspace/05-baseline-v2/R2-Business-FDE/R2-Business-FDE.RESUME.md` | V2 | `PARTIAL_NEEDS_REWRITE` |
-| R3 AI Commerce | `resume-workspace/05-baseline-v2/R3-AI-Commerce/R3-AI-Commerce.RESUME.md` | V2 | `PARTIAL_NEEDS_REWRITE` |
-| R4 AI Product Ops / Intelligent Service | historical baseline only | pre-current fact epoch | `NEEDS_REWRITE` |
-| R5 Prompt / Agent Solution | historical baseline only | pre-current fact epoch | `NEEDS_REWRITE` |
-| R6 MaaS / AI Solution / Pre-sales | historical baseline only | pre-current fact epoch | `NEEDS_REWRITE` |
+| R1 Agent Eval / LLM Quality | `resume-workspace/07-baseline-v4/R1-Agent-Eval/R1-Agent-Eval.RESUME.md` | V4 current-fact rewrite | `DRAFT_PENDING_SKILL_OPTIMIZATION` |
+| R2 Business FDE / AI Delivery | `resume-workspace/07-baseline-v4/R2-Business-FDE/R2-Business-FDE.RESUME.md` | V4 current-fact rewrite | `DRAFT_PENDING_SKILL_OPTIMIZATION` |
+| R3 AI Commerce | `resume-workspace/07-baseline-v4/R3-AI-Commerce/R3-AI-Commerce.RESUME.md` | V4 current-fact rewrite | `DRAFT_PENDING_SKILL_OPTIMIZATION` |
+| R4 AI Product Ops / Intelligent Service | `resume-workspace/07-baseline-v4/R4-AI-Product-Ops/R4-AI-Product-Ops.RESUME.md` | V4 current-fact rewrite | `DRAFT_DIRECTION_NOT_FINAL` |
+| R5 Agent Solution / Prompt Engineering | `resume-workspace/07-baseline-v4/R5-Agent-Solution/R5-Agent-Solution.RESUME.md` | V4 current-fact rewrite | `DRAFT_DIRECTION_NOT_FINAL` |
+| R6 MaaS / AI Solution / Pre-sales | `resume-workspace/07-baseline-v4/R6-AI-Solution/R6-AI-Solution.RESUME.md` | V4 current-fact rewrite | `DRAFT_PENDING_SKILL_OPTIMIZATION` |
 
 ## Superseded / Historical Paths
 
 - `resume-workspace/03-baselines/`: historical role blueprints; superseded for current resume review.
+- `resume-workspace/05-baseline-v2/`: historical V2 role baselines.
+- `resume-workspace/06-baseline-v3/`: prior R1 V3 artifact; superseded by current-fact V4 R1 draft.
 - `resume-workspace/master/MASTER_FULL.md`: historical pipeline index; not current fact authority.
 - `resume-workspace/04-status/PIPELINE_STATUS.md`: historical status snapshot.
-- `resume-workspace/05-baseline-v2/R1-Agent-Eval/`: superseded by R1 V3 for prior recruiter-facing review, but R1 V3 itself now requires current-epoch rewrite/revalidation.
 - Prior Source Epochs remain audit history only.
 
 ## Downstream Eligibility
@@ -45,9 +48,11 @@
 - Source currency: `PASS`
 - Claim Ledger currentness: `PASS`
 - Timeline gate: `PASS`
-- Role-family rewrite R1–R6: `ALLOWED`
-- Existing role artifact claim parity with current fact epoch: `BLOCKED_PENDING_REWRITE`
-- Single-JD tailoring: `BLOCKED` until a real JD exists and selected role baseline is rewritten/revalidated against current fact epoch
+- R1–R6 current-fact first rewrite: `DONE_AS_DRAFT`
+- Per-role Semantic Claim Mapping: `NOT_RUN`
+- Skills optimization / recruiter-oriented refinement: `NEXT`
+- R4 / R5 direction confirmation: `PENDING`
+- Single-JD tailoring: `BLOCKED` until selected role baseline completes review and a real JD exists
 - Final ATS: `NOT_RUN`
 - Final Render: `NOT_RUN`
 - Application Ready: `NO`
@@ -60,11 +65,12 @@
 4. `ROLE FOCUS ≠ EXPERIENCE DELETION`.
 5. `ROLE MAY REINTERPRET CAPABILITY. ROLE MAY NOT REWRITE HISTORY.`
 6. `SOP` is a possible output of solved recurring problems, not the mandatory endpoint of every Proof Unit.
-7. Team/business results and personal results must remain scoped separately.
-8. Any resume text mutation after semantic claim check requires a new semantic claim check.
+7. `RESUME DESENSITIZATION = PRESERVE REASONING, HIDE REPLICABLE IMPLEMENTATION DETAIL`：保留问题、判断、方案类型和结果，不展开内部规则、完整操作顺序、阈值、话术或可直接复刻的执行 recipe。
+8. Team/business results and personal results must remain scoped separately.
+9. Any resume text mutation after semantic claim check requires a new semantic claim check.
 
 ## Next Execution Order
 
-`R1–R6 role evidence repartition → role-specific rewrite → per-role Claim Mapping / Career Substance / Recruiter Review → real Single-JD → ATS → final fact parity → render`
+`Skills review / optimization → per-role Claim Mapping → Career Substance / Recruiter Review → R4/R5 direction confirmation → role baseline convergence → real Single-JD → ATS → final fact parity → render`
 
-当前重写目标不是把六份简历写成六套事实，而是让同一当前事实池通过不同 Core Proof / Supporting Evidence / Background Breadth 排序形成更高区分度。
+当前目标不是继续扩充事实，而是在同一当前事实池下，通过 Skills 对 R1–R6 的证据选择、信息密度、招聘语言、岗位区分度和脱敏尺度做第二轮优化。
