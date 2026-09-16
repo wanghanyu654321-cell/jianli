@@ -12,21 +12,21 @@
 
 在朗臻期间直接参与京东小二合同条件、毛利结构、平台资源和活动合作讨论，并与 To-B 工厂 / 产品开发侧推进产品需求；在今宜项目中则负责业务目标对齐、直接达人 BD、合作条件及冷启动阶段利润取舍。后续 Data Agent 工作进一步强化了复杂规则解释、上下游 Context 转译和问题反馈能力。
 
-同时在企业客服 Agent 项目中负责 **Problem Definition、Solution Boundary、Acceptance Criteria、Eval Design 和方案取舍**，具备 Agent Workflow、权限 / Evidence / Tool / Routing 等方案概念基础。当前优势更偏向 **Business + Solution Translation**，能够在商业需求与技术方案之间做结构化沟通与边界判断。
+企业客服 Agent 作品进一步补充 **Customer Need → Solution Scope → Technical Constraint → Demo / POC → Acceptance / Delivery**。通过 AI Coding Agent 实际参与实现与 Review，使方案沟通能够深入到 Prompt、RAG、API / Database、Tool Calling、Authority、Eval / Harness 等工程约束，同时能将这些约束重新翻译成业务方可以理解的 Solution Boundary，形成 Business + Technical Communication 的双向能力。
 
 ## Core Competencies
 
-**Business / Solution Discovery**  
-业务目标对齐｜需求理解｜Context Gathering｜Constraint Analysis｜Solution Framing
-
-**Commercial Coordination**  
-B2B 沟通｜平台合作｜Margin / Resource Trade-off｜BD｜条件协商
+**Customer / Solution Discovery**  
+Customer Need｜Scenario Discovery｜Requirement Qualification｜Solution Framing
 
 **AI Solution**  
-Agent Workflow｜Solution Boundary｜Tool / Evidence / Authority｜Eval｜Acceptance
+Agent Workflow｜RAG / Knowledge｜Tool / Authority｜Human Handoff
 
-**Stakeholder Management**  
-业务负责人｜平台｜工厂 / 产品侧｜执行团队｜跨角色协作
+**Demo / POC / Delivery**  
+Demo / POC｜Acceptance｜Integration｜Delivery Handoff｜Pre-launch
+
+**Technical Communication**  
+Prompt｜RAG｜API / Database｜Tool Calling｜Eval / Harness｜AI Coding
 
 ## Work Experience
 
@@ -59,14 +59,18 @@ Agent Workflow｜Solution Boundary｜Tool / Evidence / Authority｜Eval｜Accept
 
 ## Selected Project
 
-### 企业客服 Agent｜Agent Builder 项目
+### 企业客服 Agent｜Customer Need → Solution → Demo / POC
 
-- **Business → Solution Translation：** 围绕企业客服场景负责 Problem Definition，将业务要求进一步拆解为 Agent 职责、行为边界、关键 Workflow 和阶段性验收要求。
-- **Solution Boundary：** 参与权限、Evidence、检索、Tool、Runtime 和 Routing 等关键约束设计，重点明确系统能做什么、不能做什么，以及不同输入状态下应采取什么类型的处理方式。
-- **方案取舍：** 在功能、行为可控性、证据可靠性和实现复杂度之间做方案判断，不以“功能越多越好”为目标，而以当前阶段能否稳定满足业务和验收要求为依据。
-- **Eval / Acceptance：** 负责 Acceptance Criteria、Eval Design、Badcase Attribution 和测试验收，通过正常、异常和边界场景验证方案是否达到阶段要求。
-- **Regression：** 沉淀 **40 个 Frozen Cases**并结合 Holdout 做回归检查，为后续方案调整提供稳定验证基线。
-- **实现协作：** 通过 AI Coding Agent 协作实现与 Review，本人主要承担业务问题定义、Solution Boundary、方案取舍、Eval / Acceptance 和项目状态判断。
+**项目背景：** 面向小型门店 / 企业客服场景，高频知识咨询、服务状态查询、预约意向、Ticket / Handoff 和异常升级存在大量重复工作。从 Solution 视角，业务真正需要的不是“一个聊天机器人”，而是减少重复客服工作，同时又不能让 AI 在 Evidence、权限和真实业务状态不明确时自由行动。因此需要把模糊的“AI 客服”诉求继续拆成**哪些场景值得自动化、哪些必须人工、系统需要什么技术边界，以及 POC 成功如何判断**。
+
+- **Customer Need / Scope：** 从高频咨询、Availability、Booking Intent、Ticket / Handoff 和异常升级中识别重复流程，同时判断哪些动作涉及权限、真实业务状态或较高风险，据此收敛 Agent Scope。
+- **Solution Design：** 将需求组织为 Knowledge / RAG、业务查询、Ticket / Handoff、Needs Attention、Tool / Authority 和 Human Handoff 等 Solution 模块，使业务诉求能够落到具体 Workflow。
+- **Trade-off Communication：** Evidence 不足、权限限制、Runtime 或自动化率等问题不只作为技术限制描述，而是继续解释成业务风险与方案边界，例如为什么某些场景宁可 Handoff 也不能让模型猜答。
+- **Demo / POC Acceptance：** 将“效果不错”拆成正常回答、No-answer、Ambiguous、权限隔离、真实状态写入和关键 Integration 等可验证条件，让 POC 有明确成功标准。
+- **Technical Communication：** 通过 AI Coding Agent 实际参与 Agent 实现 / Review，能够与工程侧继续讨论 Prompt、RAG、API、Database、Tool Calling、Authority、Runtime、Eval / Harness 等具体问题，并理解不同方案的实现取舍；同时能将技术限制重新翻译成业务可理解的 Solution Boundary。
+- **Delivery：** 已形成可运行 Demo，目前处于 **Demo / POC 与上线前验证阶段**，通过 Acceptance、Regression 和项目状态判断支撑后续交付。
+
+**场景价值：** 能够从业务问题开始，一直讨论到具体 Agent / RAG / Tool / Eval 机制，再把技术结果重新带回业务和 POC 验收，而不是只停留在需求收集或技术名词层。
 
 ## Education
 
