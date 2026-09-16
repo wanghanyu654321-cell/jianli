@@ -4,18 +4,18 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260916-04094915`
-- Current Git blob SHA: `040949158e76a356caf81f4185da2c4a17528e04`
-- Previous repository epoch: `FCT-EPOCH-20260916-6D82DB08`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260916-FE4CB619`
+- Current Git blob SHA: `fe4cb619cccf99f98813f7dec683b8022ff4f2e5`
+- Previous repository epoch: `FCT-EPOCH-20260916-04094915`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
-- `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; current R1–R6 V4 drafts predate this enrichment epoch and require semantic revalidation / Skills optimization before being considered current against it.
+- `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve Demo / POC / pre-launch boundaries.
 
 本 Ledger 只映射当前 `FACT_MASTER_CURRENT.md` 中的事实，不从旧快照、旧 exclusion、JD、Skill、推测或未确认记忆恢复额外内容。
 
 | claim_id | 可对外主张 | evidence locator | status | 使用边界 |
 |---|---|---|---|---|
-| FCT-01 | 当前求职方向可围绕 FDE/AI 应用交付、Agent Eval、MaaS/AI Solution、AI 电商和 AI 产品运营做不同强调 | FCTM-XR-01~04 | FACT_DOCUMENTED | 仅作为求职方向与能力解释，不代表每个方向都有正式职位经历。 |
+| FCT-01 | 当前求职方向可围绕 FDE/AI 应用交付、Agent Eval、MaaS/AI Solution、AI 电商和 AI 产品运营做不同强调 | FCTM-XR-01~05 | FACT_DOCUMENTED | 仅作为求职方向与能力解释，不代表每个方向都有正式职位经历。 |
 | FCT-02 | 杭州人瑞评测专家，服务淘天 Data Agent，2025.09–2026.06 | FCTM-TL-02, FCTM-RR-01 | FACT_DOCUMENTED | Title 与服务场景保持。 |
 | FCT-03 | 参与 Query、Data Agent 输出、召回结果、商品相关性、Badcase、QA、争议 Case 和规则治理 | FCTM-RR-01 | FACT_DOCUMENTED | 争议 Case 无法直接裁定时提交正式员工；不写最终业务裁决权。 |
 | FCT-04 | 人瑞团队 10+ 人、每周约 5,000–10,000 条，个人日处理约 100–120 条，常规抽检约 10% | FCTM-RR-02 | FACT_DOCUMENTED | 团队规模与个人工作量分开。 |
@@ -38,7 +38,7 @@
 | FCT-21 | 胖小虎约 5 个跨平台店铺，年度整体 GMV 约 1,200 万–2,000 万，日常约 4–5 万，双 11 月约 200 万 | FCTM-LZ-17 | FACT_DOCUMENTED | 业务盘面与个人贡献分开。 |
 | FCT-22 | 对胖小虎 GMV、利润率、DSR、月/季目标和渠道结果直接负责 | FCTM-LZ-17 | FACT_DOCUMENTED | 老板做最终经营审查。 |
 | FCT-23 | 参与预算分配、商品/项目生命周期推进，并协同约 5 人小红书团队和约 5 人客服团队 | FCTM-LZ-19~21 | FACT_DOCUMENTED | 协同人数不等于行政直管；不写最终公司级预算权。 |
-| FCT-24 | 企业客服 Agent / Support Agent 项目定位为 synthetic portfolio / proof application，证据定位为 `wanghanyu654321-cell/-agent` / `job-ready/integration-v1`；已独立核验顶层 README 与部分 Eval 资产 | FCTM-AG-00, FCTM-AG-05 | REPO_PARTIALLY_VERIFIED | 仅部分仓库证据完成核验；不升级为生产/客户项目。 |
+| FCT-24 | 企业客服 Agent / Support Agent 项目证据定位为 `wanghanyu654321-cell/-agent` / `job-ready/integration-v1`；已独立核验顶层 README 与部分 Eval 资产，仓库 README 仍保留 synthetic portfolio / proof application 口径 | FCTM-AG-00 | REPO_PARTIALLY_VERIFIED | 仓库证据口径与用户确认的当前交付状态分层记录；不以 README 自动否定后续 Demo/POC/pre-launch 事实，也不据此宣称生产上线。 |
 | FCT-25 | 项目材料描述 Node.js/FastAPI/PostgreSQL16/pgvector/React/Docker Compose/Nginx/Pi Runtime 和权限边界；README 已核到其中多项 | FCTM-AG-02 | REPO_PARTIALLY_VERIFIED | 不据此宣称生产部署；未逐项核验的技术仍按项目材料使用。 |
 | FCT-26 | 项目材料描述 Runtime/Tool-call Budget、工具、词法检索、Evidence Governance、Routing 与 Safety/Authority 边界 | FCTM-AG-03 | DOCUMENTED_ONLY | Hybrid/RRF/Reranker/Formal Query Rewrite/Model Routing 未完整完成。 |
 | FCT-27 | 项目有 40 Frozen Cases；已核验评测集 24 answerable/8 no-answer/8 ambiguous，并包含 gold/version/provenance、negative controls 与 deterministic metrics；另有 Safety 30/30、Robustness 100/100、Holdout 60/60、Governed Knowledge 46/46、Public Top1 96%、Recall@3 100%、Routed Outcome 100% 等记录 | FCTM-AG-04 | REPO_PARTIALLY_VERIFIED | 测试/评测资产不是生产流量；Holdout 60/60 不等于 60 个独立样本；retrieval-quality 未批准 overall PASS threshold。 |
@@ -68,15 +68,18 @@
 | FCT-52 | 本人可阅读简单 SQL 并做基础查询取数；所服务 Data Agent 具备自动生成 SQL 指令能力，日常业务数据通常脱敏 | FCTM-RR-21 | FACT_DOCUMENTED | 不写 SQL 开发/数据工程；Data Agent 自动 SQL 不是本人实现。 |
 | FCT-53 | 人瑞反馈规则/产品/系统问题后，部分事项会继续跟进修改结果并参与补充验证 | FCTM-RR-22 | FACT_DOCUMENTED | 通常是补充/反馈/验证角色，不写产品 Owner 或最终上线负责人。 |
 | FCT-54 | 人瑞团队评测资产包括任务说明、评测标准/判断说明、Case/示例、FAQ、问题清单等，本人负责或参与其中一部分 | FCTM-RR-23 | FACT_DOCUMENTED | 团队资产与个人负责范围分开。 |
-| FCT-55 | Agent 项目实际迭代过 Prompt、System Instruction、Tool Instruction，并结合 Badcase/测试结果/通过情况比较版本差异 | FCTM-AG-06 | FACT_DOCUMENTED | 可写 Prompt/Instruction iteration；不写真实客户 Prompt 调优交付。 |
+| FCT-55 | Agent 项目实际迭代过 Prompt、System Instruction、Tool Instruction，并结合 Badcase/测试结果/通过情况比较版本差异 | FCTM-AG-06 | FACT_DOCUMENTED | 可写 Prompt/Instruction iteration；不写未经确认的付费客户 Prompt 调优。 |
 | FCT-56 | 朗臻和今宜都有需求/事项清单、优先级判断、项目排期与阶段检查 | FCTM-LZ-22, FCTM-JY-25, FCTM-XR-04 | FACT_DOCUMENTED | 不自动升级成 PRD/Roadmap Owner。 |
-| FCT-57 | 朗臻会向老板做运营/项目方案与进展汇报；今宜代运营会向合作方做运营方案/项目进展汇报 | FCTM-LZ-23, FCTM-JY-26, FCTM-XR-04 | FACT_DOCUMENTED | 属于运营/项目方案沟通，不写 AI Demo/POC/技术售前或真实 AI 客户交付。 |
+| FCT-57 | 朗臻会向老板做运营/项目方案与进展汇报；今宜代运营会向合作方做运营方案/项目进展汇报 | FCTM-LZ-23, FCTM-JY-26, FCTM-XR-04 | FACT_DOCUMENTED | 属于运营/项目方案沟通，不写 AI 技术售前或商业成交。 |
+| FCT-58 | Agent 项目基于实际落地目标推进，已形成可运行 Demo，当前进行 Demo / POC 交付与上线前验证，等待 ICP 认证 / 备案后推进正式上线 | FCTM-AG-05, FCTM-AG-07, FCTM-XR-05 | FACT_DOCUMENTED | 可写 Demo/POC delivery、pre-launch、ICP pending；正式上线前不写 production live；不自动写企业客户 POC、付费客户、售前成交或规模化生产流量。 |
+| FCT-59 | Agent 项目具备正式 PRD 所需的实际产品上下文，但正式 PRD 尚未作为已完成并核验资产进入事实母版 | FCTM-AG-08, EX-03 | PENDING_ASSET | 可写需求定义、Workflow、Boundary、Acceptance；PRD 实际完成前不得写“已完成 PRD / 负责 PRD 交付”。 |
 
 ## Evidence status vocabulary
 
 - `FACT_DOCUMENTED`：当前 `FCT-001 / FACT_MASTER_CURRENT.md` 明确支持，可按边界表达。
 - `REPO_PARTIALLY_VERIFIED`：对应项目主张已有一部分仓库原始证据被独立核验，但不能外推到未核验技术、生产状态或客户状态。
 - `DOCUMENTED_ONLY`：事实母版有描述，但对应仓库/生产/客户原始证据尚未逐项独立核验；不能升级成已核验实现或生产结果。
+- `PENDING_ASSET`：当前上下文支持该资产方向，但资产本身尚未完成或核验；不得提前按已完成事实使用。
 - `EXCLUDE`：明确禁止进入正式简历或尚未确认。
 
 ## Rebase behavior
