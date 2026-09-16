@@ -95,7 +95,7 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 允许：
 - 朗臻 / 今宜的 0→1 场景体现市场、用户、内容、商业与交付约束下的问题解决；
 - 人瑞体现规则理解、Context 转译、QA、Root Cause 和执行链路收敛；
-- Agent Builder 体现 Problem Definition、Boundary、Workflow、Eval、Acceptance。
+- Agent Builder 体现 Problem Definition、Boundary、Workflow、Eval、Acceptance、Demo / POC 与上线准备。
 
 允许归纳稳定逻辑：
 `理解目标/上下文 → 获取信号 → 定位问题 → 优先可控因素 → 设计方案 → 验证 → 收敛`
@@ -108,24 +108,24 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 
 优先级：
 1. 人瑞：Eval、Query/Recall/Relevance、QA、Badcase、Root Cause、规则治理、BPO Context、抽检闭环、一致性与版本指标观察；
-2. Agent Builder：Eval Design、Frozen Cases、Acceptance、Evidence/Authority、Regression / Badcase；
+2. Agent Builder：Eval Design、Frozen Cases、Acceptance、Evidence/Authority、Regression / Badcase；Demo / POC 说明 Eval 服务于实际交付验证；
 3. 朗臻：Search / Query Intent、复杂业务 Context 和数据判断作为补充；
 4. 今宜：控制变量、CTR/CVR 诊断、流程复盘作为 Supporting Evidence。
 
-避免：把商业经营结果抢占 Eval 主线；把 Agent 项目写成生产系统。
+避免：把商业经营结果抢占 Eval 主线；把上线准备写成已生产运行。
 
 ## 9. R2 Business FDE / AI Delivery
 
 优先级：
 1. 朗臻：市场发现、消费者需求、产品需求落细、工厂/平台/供应链协同、商业 Trade-off；
 2. 今宜：0→1 目标对齐、定位、内容/投流诊断、跨角色推进、冷启动商业策略；
-3. Agent Builder：Problem Definition、Solution Boundary、Workflow、Eval、Acceptance；
+3. Agent Builder：Problem Definition、Solution Boundary、Workflow、Demo / POC、Eval、Acceptance、pre-launch；
 4. 人瑞：上游文档→自己跑 Case→对齐→下发→QA 的 Delivery 链路。
 
 招聘方应看到：
-`Ambiguous Business Problem → Requirement / Context → Solution → Coordination → Validation / Acceptance`
+`Ambiguous Business Problem → Requirement / Context → Solution → Demo / POC → Coordination → Validation / Acceptance`
 
-禁止：无事实支持的真实客户 AI 交付、CRM/ERP/WMS Integration、正式 POC / Go-live。
+允许直接写当前 Agent 项目的 Demo / POC Delivery 与上线准备；禁止无事实支持的正式 production Go-live、真实企业客户验收主体、CRM/ERP/WMS 客户集成和规模化生产部署。
 
 ## 10. R3 AI Commerce
 
@@ -133,43 +133,45 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 1. 朗臻：Market Discovery、Search、产品开发、GMV/利润率/DSR、多店经营、平台商务、供应链；
 2. 今宜：新盘 0→1、产品定位、内容实验、双机位、投流、达人冷启动、GMV；
 3. 人瑞：电商 Query / 商品相关性 / Data Agent 场景；
-4. Agent Project：低到中等 Supporting，按真实 JD 决定。
+4. Agent Project：Supporting，用于证明 AI 应用 Demo / POC 和落地能力，但不冒充生产 Commerce Agent。
 
 主线应能覆盖：
 `市场/需求 → 产品 → Search/Content → Ads → Store/Live → BD → Supply → Data/Review`
 
 禁止为“AI Commerce”强行给传统经营动作添加 AI 因果。
 
-## 11. R4 AI Product Ops / Intelligent Service
+## 11. R4 AI Product Ops / Agent Product / Intelligent Service
 
 优先级：
 1. 人瑞：用户/执行者 Context、规则边界、QA、Root Cause、版本效果、反馈闭环；
-2. 今宜：产品定位、用户注意力/内容实验、指标诊断、直播承接；
-3. 朗臻：直接消费者沟通、需求验证、产品开发输入、多方协作；
-4. Agent Builder：Acceptance / Eval / Workflow 作为产品质量方法补充。
+2. Agent Builder：实际落地目标、Problem Definition、Solution / Product Boundary、Workflow、Acceptance、Demo / POC、pre-launch；
+3. 今宜：产品定位、用户注意力/内容实验、指标诊断、直播承接；
+4. 朗臻：直接消费者沟通、需求验证、产品开发输入、多方协作。
 
-强调：场景、用户/执行者理解、产品反馈、流程优化和指标观察。
+强调：场景、用户/执行者理解、产品反馈、流程优化、指标观察、Agent 产品边界和上线前验证。
+
+PRD 边界：当前项目具备真实产品上下文，但正式 PRD 尚未作为已完成资产核验。PRD 实际产出前不得写“已完成 PRD / PRD Owner”；Roadmap Owner、正式上线后产品指标和完整生命周期 Owner 仍需独立证据。
 
 ## 12. R5 Prompt / Agent Solution
 
 项目可前置，但仍需保留完整正式工作史。
 
 优先级：
-1. Agent Builder：Problem Definition、Workflow、Tool/Runtime Boundary、Evidence Governance、Routing、Eval、Acceptance；
+1. Agent Builder：Problem Definition、Workflow、Tool/Runtime Boundary、Evidence Governance、Routing、Prompt/System/Tool Instruction、Eval、Acceptance、Demo / POC、pre-launch；
 2. 人瑞：规则转译、Context、执行 mental model、Badcase、边界收敛；
 3. 朗臻/今宜：真实业务需求分析和方案验证，证明 Solution 能落到业务场景。
 
-禁止：把未完成 Hybrid/RRF/Reranker/Formal Query Rewrite/Model Routing 写成完成；不写独立全栈工程实现。
+禁止：把未完成 Hybrid/RRF/Reranker/Formal Query Rewrite/Model Routing 写成完成；不写独立全栈工程实现；不把 Demo / POC 上线准备升级成生产 Agent 运维或企业客户商业部署。
 
-## 13. R6 MaaS / AI Solution / Pre-sales
+## 13. R6 AI Solution / Solution Consultant / Agent Delivery
 
 优先级：
 1. 朗臻：京东小二合同/毛利/合作方式、推广费与扣点 Trade-off、工厂需求落细、供应/平台多方约束；
-2. 今宜：项目目标对齐、直接 BD、达人合作条件、阶段性利润让渡和冷启动；
-3. Agent Builder：Solution Boundary、技术栈理解、Acceptance / Eval、权限和 Evidence；
-4. 人瑞：复杂规则解释、进度/风险同步和上下游转译。
+2. 今宜：项目目标对齐、直接 BD、达人合作条件、阶段性利润让渡、合作方方案汇报和冷启动；
+3. Agent Builder：Solution Boundary、技术栈理解、Demo / POC Delivery、Acceptance / Eval、权限和 Evidence、pre-launch；
+4. 人瑞：复杂规则解释、进度/问题同步和上下游转译。
 
-可证明真实的 B2B / 商业方案沟通与约束权衡，但不得升级成已有 AI 售前成交、Demo/POC、客户 Go-live 或企业系统集成经验。
+可证明真实的 B2B / 商业方案沟通，以及当前 Agent 项目的直接 Demo / POC 交付与上线准备。不得升级成未确认的真实企业客户 POC 甲方/验收、AI 售前成交、投标/采购结果、正式 production Go-live 或复杂企业系统集成经验。
 
 ## 14. Role-family emphasis guidance
 
@@ -179,10 +181,10 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 |---|---|---|---|---|
 | R1 Agent Eval | core | supporting | supporting | core |
 | R2 Business FDE | core/supporting | core | core | core |
-| R3 AI Commerce | supporting | core | core | background/supporting |
-| R4 AI Product Ops | core | core/supporting | supporting | supporting |
+| R3 AI Commerce | supporting | core | core | supporting |
+| R4 AI Product / Ops | core | supporting | supporting | core |
 | R5 Agent Solution | core | supporting | supporting | core-first |
-| R6 MaaS / AI Solution | supporting | core | core | core/supporting |
+| R6 AI Solution / Agent Delivery | supporting | core | core | core |
 
 不得据此推导固定 Bullet 条数。
 
@@ -198,7 +200,7 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 ## 16. Recruiter-facing vs Audit language
 
 招聘方正文不放内部审计标签和解释性免责，例如：
-- `DOCUMENTED_ONLY / REPO_NOT_VERIFIED`；
+- `DOCUMENTED_ONLY / REPO_NOT_VERIFIED / REPO_PARTIALLY_VERIFIED`；
 - “不表述为……”；
 - Claim ID / Gate 状态。
 
@@ -215,7 +217,9 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 - 为满足篇幅规则机械补/删 Bullet；
 - 为显得专业而堆叠 taxonomy、AI 术语或未确认技术；
 - 把弱相关经历等同于无价值经历；
-- 把 0→1 写成空洞人格评价而没有具体起点、判断和建立内容。
+- 把 0→1 写成空洞人格评价而没有具体起点、判断和建立内容；
+- 把 Demo / POC / pre-launch 写成已经 production live；
+- 在正式 PRD 尚未产出时写“已完成 PRD”。
 
 ## 18. Acceptance criteria
 
@@ -227,7 +231,8 @@ Career Story Map 用于解释不同经历之间可验证的能力连续性，不
 - 同一事实池产生清晰岗位区分度；
 - 职业连续性可理解但不制造因果；
 - Project 选择服务岗位价值；
-- 候选人实际做过的事情不被压扁或改写。
+- 候选人实际做过的事情不被压扁或改写；
+- Demo / POC / pre-launch 与 production / customer / commercial 状态分层准确。
 
 最终原则：
 `DIFFERENT EMPHASIS · SAME FACTS · SAME TIMELINE · FULL CAREER HISTORY`
