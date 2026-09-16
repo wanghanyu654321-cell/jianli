@@ -4,15 +4,15 @@
 
 - `FACT_SOURCE_OF_TRUTH` = `FCT-001`。
 - 当前 GitHub mirror = `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`。
-- Current source epoch = `FCT-EPOCH-20260916-04094915`。
-- Current Git blob SHA = `040949158e76a356caf81f4185da2c4a17528e04`。
+- Current source epoch = `FCT-EPOCH-20260916-FE4CB619`。
+- Current Git blob SHA = `fe4cb619cccf99f98813f7dec683b8022ff4f2e5`。
 - `SOURCE_CURRENCY = CURRENT`。
 - 当前 GitHub 事实母版只保存“当前主线已确认事实 + 用户明确补充确认的新上下文”；不会因为旧仓库、旧 Claim、旧快照里出现过某内容就自动恢复。
 - 本地 `简历母版.docx` 与 GitHub mirror 如存在差异，不自动互相覆盖；先以用户最新明确确认的事实校准。
 - Known external DOCX fingerprint before this mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`。
-- Previous repository epoch = `FCT-EPOCH-20260916-6D82DB08`。
+- Previous repository epoch = `FCT-EPOCH-20260916-04094915`。
 - `JD_SOURCE_OF_TRUTH` = `JD-001`，岗位族市场源；真实 Single-JD 仍需单条在招 JD。
-- `CLAIM_LEDGER` = `resume-workspace/01-facts/CLAIM_LEDGER.md`，当前绑定 `FCT-EPOCH-20260916-04094915`。
+- `CLAIM_LEDGER` = `resume-workspace/01-facts/CLAIM_LEDGER.md`，当前绑定 `FCT-EPOCH-20260916-FE4CB619`。
 - `CANONICAL_TIMELINE` = `resume-workspace/00-source/CANONICAL_TIMELINE.md`。
 - `SOURCE_FREEZE` = `resume-workspace/00-source/SOURCE_FREEZE.md`。
 - `CURRENT_VERSION_INDEX` = `resume-workspace/CURRENT_VERSION_INDEX.md`。
@@ -31,15 +31,22 @@
 | INS-002 | Resume Output & Tailoring Rules | 用户提供的本地规则附件（未上传） | SUPPORT | User instruction | Master / Role Baseline / Single-JD 输出规则 | 不产生事实。 |
 | SKL-001/002/003 | Resume Skills / manifests | 本地安装资源 | SKILL | Operational | 工作流、审查职责 | 不产生事实。 |
 
-## Repository evidence status
+## Repository evidence and delivery status
 
-企业客服 Agent / Support Agent 当前采用分层核验状态：
+企业客服 Agent / Support Agent 当前采用“仓库证据状态”和“用户确认的最新交付状态”分层记录：
 
 - Repository / ref：`wanghanyu654321-cell/-agent` / `job-ready/integration-v1` 已确认可访问；
-- 已独立查看顶层 `README.md` 与 `evals/job-ready-rag` 目录及 README，Eval 资产和部分交付边界标记为 `REPO_PARTIALLY_VERIFIED`；
-- 已核验的 Eval 资产包括 40 Cases 的 `24 answerable / 8 no-answer / 8 ambiguous` 结构、gold / expected version / provenance、negative controls 与 deterministic metrics；
-- 未逐项查看或未由仓库原始证据独立确认的架构 / 技术主张仍按 `DOCUMENTED_ONLY` 使用；
-- 项目仍明确是 synthetic portfolio / proof application，不是 production customer deployment。
+- 已独立查看顶层 `README.md` 与 `evals/job-ready-rag`，Eval 资产和部分交付边界标记为 `REPO_PARTIALLY_VERIFIED`；
+- 已核验 40 Cases 的 `24 answerable / 8 no-answer / 8 ambiguous` 结构、gold / expected version / provenance、negative controls 与 deterministic metrics；
+- README 仍保留 synthetic portfolio / proof application 口径，这是仓库当前文档证据；
+- 用户最新确认：项目基于实际落地目标推进，已形成可运行 Demo，当前进行 Demo / POC 交付与上线前验证，等待 ICP 相关认证手续完成后推进正式上线；
+- 上述最新交付状态可以作为候选人事实使用，但不外推成已生产上线、规模化真实用户、企业采购成交或真实客户生产验收。
+
+## PRD status
+
+- 项目已有实际产品落地上下文、Problem Definition、Workflow、Boundary、Acceptance 等内容；
+- 正式 PRD 尚未作为已完成并核验资产进入 Fact Master；
+- PRD 实际产出前，不得在 Resume 中写“已完成 PRD / 负责 PRD 交付”。
 
 ## Source resolution rule
 
@@ -52,4 +59,4 @@
 7. Source Rebase 必须先做 semantic delta，再更新 Claim Ledger 和受影响 Resume artifact。
 8. Role 可以重新解释能力、改变证据排序与展开深度，但不得改写历史：`ROLE MAY REINTERPRET CAPABILITY. ROLE MAY NOT REWRITE HISTORY.`
 
-当前结论：事实母版已完成真实 JD 能力缺口核对后的第一轮证据补充；R1–R6 V4 drafts 写于上一 epoch，需要基于新事实重新做 Skills 优化、Claim Mapping 和 Recruiter Review。
+当前结论：事实母版已纳入 Agent Demo / POC 交付与上线准备状态；R1–R6 已重写为 V6 recruiter re-audit 版本，后续继续进入真实 Single-JD。
