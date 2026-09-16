@@ -12,7 +12,7 @@
 
 在质量治理中，更关注“为什么会产生错误”而不只统计错误本身。会结合抽检结果、执行表现和人员反馈区分业务 Context 缺失、规则理解偏差、边界不清或执行方式等不同问题，并推动规则说明、示例、培训和执行流程持续收敛。单项任务下游 BPO 执行人数 **10+ 人**，每周处理约 **5,000–10,000 条任务**，累计沉淀 **10+ 份 SOP / 规则 / 执行文档**；部分任务一致性由约 **80% 提升至 95%**，复杂任务由约 **60% 提升至 85%**。
 
-同时接触 DAU、CTR、转化、灰度流量和业务水位等线上指标，参与按时间维度观察版本效果及异常变化。企业客服 Agent 作品进一步将 Eval 用于 **Agent 升级与版本判断**：围绕 RAG、Evidence、Tool Calling、Routing、权限与 Agent Behavior 设计 Dataset / Negative Controls，通过 Badcase Attribution 定位应修改 Prompt / Instruction、Retrieval、Tool 还是 Workflow，再用 Regression 判断版本是否真正提升；同时通过 Acceptance Harness 检查评测数据、配置和执行完整性，避免测试本身制造 False-PASS。此前电商经历则补充了 Search / Query Intent、商品语义和真实经营场景，使评测判断能够同时理解模型输出、用户需求和业务 Context。
+同时接触 DAU、CTR、转化、灰度流量和业务水位等线上指标，参与按时间维度观察版本效果及异常变化。数字前台 Agent 作品进一步将 Eval 用于 **Agent 升级与版本判断**：围绕线上接待、私域线索与预约意向承接中的 RAG、Evidence、Tool Calling、Routing、权限与 Agent Behavior 设计 Dataset / Negative Controls，通过 Badcase Attribution 定位应修改 Prompt / Instruction、Retrieval、Tool 还是 Workflow，再用 Regression 判断版本是否真正提升；同时通过 Acceptance Harness 检查评测数据、配置和执行完整性，避免测试本身制造 False-PASS。此前电商经历则补充了 Search / Query Intent、商品语义和真实经营场景，使评测判断能够同时理解模型输出、用户需求和业务 Context。
 
 ## Core Competencies
 
@@ -63,9 +63,9 @@ Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜版本指标观
 
 ## Selected Project
 
-### 企业客服 Agent｜Eval → Agent Upgrade → Acceptance Harness
+### 数字前台 Agent｜Eval → Agent Upgrade → Acceptance Harness
 
-**项目背景：** 面向小型门店 / 企业客服场景，高频知识咨询、服务状态查询、预约意向、售后 Ticket 和异常升级存在大量重复工作；完整 CRM 对轻量场景偏重，而仅接入 LLM Chatbot 又无法保证回答依据、门店数据隔离、业务权限、真实状态和异常转人工。项目因此验证 Agent 能否在明确的 Evidence、Authority 与 Human-in-the-loop 边界下承接有限客服 Workflow。随着 RAG、Tool 与权限逐步增加，又进一步需要回答：一次修改究竟有没有让 Agent 真正变好，以及用于判断好坏的 Eval 本身是否可信。
+**项目背景：** 面向小型门店 / 服务型商家的线上第一接待与私域承接场景，产品被收敛为一条明确业务链：**在线接待 → Knowledge / FAQ 回复 → 私域线索与预约意向承接 → 轻 CRM Booking / 状态留痕 → Ticket / Handoff → 人工跟进**。它不替代完整 CRM，也不扩展为全能数字员工。随着 RAG、Tool 与权限逐步增加，项目需要进一步回答：一次修改究竟有没有让数字前台真正变好，以及用于判断好坏的 Eval 本身是否可信。
 
 - **Eval Design / Dataset：** 将质量判断从最终答案扩展到 RAG Evidence、Routing、Tool / Authority、No-answer、Ambiguous 和权限行为；冻结 **40 个 Cases（24 answerable / 8 no-answer / 8 ambiguous）**，并加入 tenant / store isolation、未批准及失效 Evidence 等 Negative Controls，使“应该回答”和“应该停止”都有明确标准。
 - **Badcase / Root Cause：** Eval 失败后不直接调 Prompt，而是区分问题来自 **Prompt / Instruction、RAG / Evidence、Routing、Tool / Authority 还是 Workflow**，再修改对应层；实际迭代 Prompt、System Instruction 与 Tool Instruction，并比较修改前后行为。
@@ -73,7 +73,7 @@ Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜版本指标观
 - **Eval Integrity / Harness：** 当发现 Case Population 混淆、Measurement 未被真实结果支持时先修 Eval；Acceptance Harness 进一步检查 Case 缺失 / 重复、Config / Corpus Drift、Evidence 变化及 Completion State，降低评测流程产生 False-PASS 的风险。
 - **Version Decision：** 将 Eval Metrics、Badcase、Regression 与 Harness Integrity 共同用于阶段性 Acceptance，决定当前版本继续迭代、进入 POC，还是保持 Blocked。
 
-**场景价值：** 不只知道 Agent 哪里错，还能建立一条 **Eval → Attribution → Modification → Regression → Harness → Version Decision** 的持续升级链路；当前已形成可运行 Demo，处于 Demo / POC 与上线前验证阶段。
+**场景价值：** 不只知道数字前台 Agent 哪里错，还能建立一条 **Eval → Attribution → Modification → Regression → Harness → Version Decision** 的持续升级链路；当前已形成可运行 Demo，处于 Demo / POC 与上线前验证阶段。
 
 ## Education
 
