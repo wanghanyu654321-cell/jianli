@@ -8,38 +8,43 @@
 
 ## Professional Summary
 
-具备以业务问题为起点设计 Agent 行为边界、Workflow、Eval 与 Acceptance 的项目实践，并有真实 Data Agent 质量治理经验作为业务侧支撑。
+具备从真实 Customer Problem / Scenario 出发设计 Agent Workflow 与工程机制的作品实践，并有真实 Data Agent 质量治理经验作为业务侧支撑。
 
-在企业客服 Agent 项目中负责 **Problem Definition、架构与方案边界、Acceptance Criteria、Eval Design、Badcase Attribution、测试验收和项目状态判断**，关注的不只是 Agent 能否生成答案，而是其在 Evidence 不足、候选不明确、权限受限及异常场景下能否遵守预期行为边界。通过 Frozen Cases、Holdout 和回归测试持续验证方案稳定性。
+企业客服 Agent 使用 **Node.js、FastAPI、PostgreSQL / pgvector、React、Docker** 等技术环境，围绕 RAG / Knowledge、Prompt / Instruction、Tool Calling、Authority、业务状态、Runtime、Integration 与 Eval 解决具体 Failure Mode。技术组件不是独立展示项，而是服务于“为什么会错、怎么修、怎么验证”的完整工程链。
 
 在人瑞 Data Agent 工作中进一步积累 Query、Recall、Relevance、规则转译、执行人员 mental model、复杂 Badcase 和边界收敛经验；能够从实际执行错误反推规则 / Context / Workflow 问题。此前电商经历提供 Search、用户需求、商品语义和业务结果背景，使 Agent Solution 不脱离真实业务场景。
 
 ## Core Competencies
 
-**Agent Solution**  
-Problem Definition｜Agent Workflow｜Solution Boundary｜Tool Use｜Routing
+**Agent / RAG**  
+RAG｜Retrieval｜Knowledge｜Evidence Governance｜pgvector
 
-**Prompt / Context / Evidence**  
-Context Design｜Evidence Governance｜Authority Boundary｜Instruction / Rule Translation
+**Prompt / Workflow**  
+Prompt｜System Instruction｜Tool Instruction｜Workflow｜Tuning
 
-**Eval / Quality**  
-Acceptance Criteria｜Case Design｜Frozen Cases｜Holdout｜Regression｜Badcase Attribution
+**Tool / Integration**  
+Tool Calling｜Authority｜API｜Node.js｜FastAPI｜PostgreSQL｜Docker
 
-**Business Context**  
-Data Agent｜Query / Relevance｜Search｜电商场景｜业务需求理解
+**Eval / Quality Gate**  
+Badcase｜Eval｜Regression｜Acceptance Harness｜Integration Gate
 
 ## Selected Project
 
-### 企业客服 Agent｜Agent Builder 项目
+### 企业客服 Agent｜场景驱动的 Agent Application Engineering
 
-- **Problem Definition：** 围绕企业客服场景负责问题定义，明确 Agent 需要解决的问题、行为范围和阶段性目标，避免从技术组件出发反向寻找场景。
-- **Agent Workflow / Solution Boundary：** 负责架构与方案边界设计，项目涉及 Tool、检索、Evidence、Routing、Runtime Budget 和权限等关键约束，用于明确 Agent 在不同输入和信息状态下的行为范围。
-- **Context / Evidence Governance：** 重点关注哪些信息可以作为回答依据、哪些情况证据不足以及何时需要收敛行为，使 Agent 的输出建立在受控 Evidence 和 Authority 范围内，而非无限自由生成。
-- **Eval Design：** 负责 Acceptance Criteria 和测试场景设计，覆盖正常任务、异常输入、候选不足、歧义及安全 / 权限等不同类型，评估 Agent 是否在不同条件下保持预期行为。
-- **Badcase Attribution：** 对失败结果区分检索、Evidence、Routing、权限或最终行为等不同问题来源，并据此决定继续调整方案、规则还是测试覆盖。
-- **Regression：** 沉淀 **40 个 Frozen Cases**作为固定回归基线，同时结合 Holdout 检查后续变化是否破坏已有行为。
-- **测试结果：** 当前测试集记录 Safety **30/30**、Robustness **100/100**、Holdout **60/60**、Governed Knowledge **46/46**、Public Top1 **96%**、Recall@3 **100%**、Routed Outcome **100%**。
-- **实现协作：** 通过 AI Coding Agent 协作进行实现和 Review，本人重点负责 Problem Definition、Solution Trade-off、Eval / Acceptance、Badcase 分析和项目状态判断。
+**项目背景：** 面向小型门店 / 企业客服场景，高频知识咨询、服务状态查询、预约意向、Ticket / Handoff 与异常升级存在大量重复工作。项目目标不是实现一个通用对话 Demo，而是让 Agent 真正进入受控客服 Workflow；因此工程设计围绕几个真实问题展开：**检索到的信息能不能用、模型有没有权执行、业务状态有没有真实发生、Instruction 应该改哪一层、候选方案是否满足 Runtime 与稳定性约束。**
+
+**技术环境：** Node.js｜FastAPI｜PostgreSQL 16｜pgvector｜React｜Docker Compose
+
+- **RAG / Evidence：** “检索得到”不等于“当前业务可以回答”。Retrieval 只产生 Candidate Evidence，再结合 tenant / store、Status / Version 及 ambiguity 完成 Answer Authorization；无可靠 Evidence 或无法唯一判断时 fallback。
+- **Tool Calling / Authority：** 模型负责理解和提出动作，但 Tool Calling 与服务端 Identity、Scope、Capability 分离，防止 Prompt / LLM 输出直接获得业务授权。
+- **Durable Business State：** Ticket / Handoff 等操作只有真实持久化并完成 scoped read-back 后才确认成功，解决模型文本中的“已完成”与真实系统状态不一致的问题。
+- **Prompt / Instruction Tuning：** 实际迭代 Prompt、System Instruction 与 Tool Instruction，但先根据 Badcase 区分失败来自 Instruction、Knowledge / RAG、Tool、Routing 还是 Workflow，再修改对应层。
+- **Runtime Trade-off：** 候选 Semantic Selector 经真实调用发现延迟无法满足既定 Runtime Budget，因此未强行进入主链；Database 权限、Provider Timeout 等问题同样区分实现缺陷、架构约束和环境阻塞后再处理。
+- **API / Integration：** 通过 HTTP、Node ↔ FastAPI、PostgreSQL / pgvector、权限隔离、业务持久化和 Docker 验证跨服务 Workflow，而不只证明局部代码或 UI 可运行。
+- **Eval / Quality Gate：** Frozen Cases、Regression 与 Acceptance Harness 用于验证 Prompt / RAG / Tool / Workflow 修改是否破坏已有 Agent 行为，使工程迭代具备固定质量门槛。
+
+**场景价值：** 将客服业务中的具体 Failure Mode 转成对应工程机制，并用 Integration 与 Eval 判断方案是否真正成立；当前已形成可运行 Demo，处于 Demo / POC 与上线前验证阶段。
 
 ## Work Experience
 
