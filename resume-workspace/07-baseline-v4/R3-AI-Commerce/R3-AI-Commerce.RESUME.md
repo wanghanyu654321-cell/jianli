@@ -12,7 +12,7 @@
 
 在朗臻从单品及搜索运营逐步承担宠物项目经营，参与市场机会判断、商品搜索优化、消费者需求反馈、产品开发协作、平台商务、库存与供应链推进，并对约 **5 个跨平台店铺**的 GMV、利润率、DSR 和渠道结果承担直接责任；在今宜参与抖音新盘 0→1，从产品定位、短视频 / 直播表达、投流、达人冷启动到经营数据复盘形成完整闭环。
 
-后续在淘天 Data Agent 评测中进一步接触 Query、召回、商品相关性、搜索链路和版本指标，使传统经营经验延伸到 **电商 Query / Relevance / Agent 场景**；企业客服 Agent 作品进一步补充 Knowledge / RAG、Workflow、Tool、Eval 与智能服务应用实践，但不替代正式 Commerce 经营经历。
+后续在淘天 Data Agent 评测中进一步接触 Query、召回、商品相关性、搜索链路和版本指标，使传统经营经验延伸到 **电商 Query / Relevance / Agent 场景**；数字前台 Agent 作品进一步补充线上接待、私域线索承接、Knowledge / RAG、轻 CRM 预约、Workflow、Tool、Eval 与智能服务应用实践，但不替代正式 Commerce 经营经历。
 
 ## Core Competencies
 
@@ -61,11 +61,11 @@ Data Agent｜Agent Workflow｜Knowledge / RAG｜Query / Recall｜Badcase / QA
 
 ## Selected Project
 
-### 企业客服 Agent｜Agent Builder 作品项目
+### 数字前台 Agent｜线上接待与轻 CRM 预约
 
-**项目背景：** 面向小型门店重复客服与服务流程搭建 Agent，高频知识咨询、服务状态查询、预约意向、Ticket / Handoff 和异常升级中存在大量重复操作；项目目标是让有明确 Knowledge / Evidence 和规则边界的问题尽量自动处理，并将歧义、权限或异常场景稳定转回人工，而不是单纯增加一个聊天入口。
+**项目背景：** 面向小型门店 / 服务型商家的线上第一接待场景，用户从私域或线上入口进入后会产生高频咨询、服务状态查询、预约意向和异常问题。项目将产品收敛为一个**数字前台 Agent**：负责第一轮在线接待、Knowledge / FAQ 回复、私域线索与预约意向承接，再通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；不替代完整 CRM，也不扩展为全能数字员工。
 
-- 涉及 Knowledge / RAG、Query、Evidence、Tool、Workflow、Ticket / Handoff、Eval 与 Acceptance，并已形成可运行 Demo。
+- 涉及线上接待、Knowledge / RAG、Query、Evidence、Booking Intent、轻 CRM 预约、Tool、Ticket / Handoff、Eval 与 Acceptance，并已形成可运行 Demo。
 - 当前处于 **Demo / POC 与上线前验证阶段**；后续根据具体 AI Commerce JD 再决定重点展开 Merchant Agent、Search / Relevance、Seller Service 或 AI Product 方向。
 
 ## Education
