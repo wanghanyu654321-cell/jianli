@@ -61,10 +61,12 @@ Prompt｜RAG｜API / Database｜Tool Calling｜Eval / Harness｜AI Coding
 
 ### 数字前台 Agent｜Customer Need → Solution → Demo / POC
 
-**项目背景：** 面向小型门店 / 服务型商家的线上接待与私域承接场景，业务真正需要的不是“一个聊天机器人”，而是把线上第一接待、重复咨询回复、线索 / 预约意向承接和后续人工跟进连成一条可落地流程。项目因此被收敛为一个**数字前台 Agent**：负责第一轮在线接待、Knowledge / FAQ 回复、私域线索与预约意向承接，并通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；不替代完整 CRM，也不扩展为全能数字员工。Solution 需要继续回答：哪些场景值得自动化、哪些必须人工、系统需要什么技术边界，以及 POC 成功如何判断。
+**项目背景：** 面向小型门店 / 服务型商家的线上接待与私域承接场景，业务真正需要的不是“一个聊天机器人”，而是把线上第一接待、重复咨询回复、线索 / 预约意向承接和后续人工跟进连成一条可落地流程。
+
+项目因此被收敛为一个 **数字前台 Agent**：负责第一轮在线接待、Knowledge / FAQ 回复、私域线索与预约意向承接，并通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；不替代完整 CRM，也不扩展为全能数字员工。Solution 需要继续回答：哪些场景值得自动化、哪些必须人工、系统需要什么技术边界，以及 POC 成功如何判断。
 
 - **Customer Need / Scope：** 从线上高频咨询、Availability、Booking Intent、轻 CRM 预约 / 状态留痕、Ticket / Handoff 和异常升级中识别重复流程，同时判断哪些动作涉及权限、真实业务状态或较高风险，据此收敛 Agent Scope。
-- **Solution Design：** 将需求组织为**线上接待与 Knowledge / RAG、预约意向与轻 CRM、Ticket / Handoff、Needs Attention、Tool / Authority 和 Human Handoff** 等 Solution 模块，使业务诉求能够落到具体 Workflow。
+- **Solution Design：** 将需求组织为 **线上接待与 Knowledge / RAG、预约意向与轻 CRM、Ticket / Handoff、Needs Attention、Tool / Authority 和 Human Handoff** 等 Solution 模块，使业务诉求能够落到具体 Workflow。
 - **Trade-off Communication：** Evidence 不足、权限限制、Runtime 或自动化率等问题不只作为技术限制描述，而是继续解释成业务风险与方案边界，例如为什么某些场景宁可 Handoff 也不能让模型猜答。
 - **Demo / POC Acceptance：** 将“效果不错”拆成正常回答、No-answer、Ambiguous、权限隔离、真实状态写入和关键 Integration 等可验证条件，让 POC 有明确成功标准。
 - **Technical Communication：** 通过 AI Coding Agent 实际参与 Agent 实现 / Review，能够与工程侧继续讨论 Prompt、RAG、API、Database、Tool Calling、Authority、Runtime、Eval / Harness 等具体问题，并理解不同方案的实现取舍；同时能将技术限制重新翻译成业务可理解的 Solution Boundary。
