@@ -65,7 +65,11 @@ Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜版本指标观
 
 ### 数字前台 Agent｜Eval → Agent Upgrade → Acceptance Harness
 
-**项目背景：** 面向小型门店 / 服务型商家的线上第一接待与私域承接场景，产品被收敛为一条明确业务链：**在线接待 → Knowledge / FAQ 回复 → 私域线索与预约意向承接 → 轻 CRM Booking / 状态留痕 → Ticket / Handoff → 人工跟进**。它不替代完整 CRM，也不扩展为全能数字员工。随着 RAG、Tool 与权限逐步增加，项目需要进一步回答：一次修改究竟有没有让数字前台真正变好，以及用于判断好坏的 Eval 本身是否可信。
+**项目背景：** 面向小型门店 / 服务型商家的线上第一接待与私域承接场景，用户从私域或线上入口进入后会产生高频咨询、服务状态查询、预约意向和异常问题；纯人工接待存在重复回复与线索承接压力，而完整 CRM 对轻量门店偏重。因此产品被收敛为一条明确业务链：
+
+**在线接待 → Knowledge / FAQ 回复 → 私域线索与预约意向承接 → 轻 CRM Booking / 状态留痕 → Ticket / Handoff → 人工跟进。**
+
+数字前台不替代完整 CRM，也不扩展为全能数字员工。随着 RAG、Tool 与权限逐步增加，又进一步需要回答：一次修改究竟有没有让 Agent 真正变好，以及用于判断好坏的 Eval 本身是否可信。
 
 - **Eval Design / Dataset：** 将质量判断从最终答案扩展到 RAG Evidence、Routing、Tool / Authority、No-answer、Ambiguous 和权限行为；冻结 **40 个 Cases（24 answerable / 8 no-answer / 8 ambiguous）**，并加入 tenant / store isolation、未批准及失效 Evidence 等 Negative Controls，使“应该回答”和“应该停止”都有明确标准。
 - **Badcase / Root Cause：** Eval 失败后不直接调 Prompt，而是区分问题来自 **Prompt / Instruction、RAG / Evidence、Routing、Tool / Authority 还是 Workflow**，再修改对应层；实际迭代 Prompt、System Instruction 与 Tool Instruction，并比较修改前后行为。
