@@ -1,48 +1,48 @@
 # Source Index
 
-扫描范围：用户确认的本地对话资料目录（源文件未上传），以及本次工作区的生成物。初始扫描日期：2026-09-13。
-
 ## Current governance notice
 
-- `FACT_SOURCE_OF_TRUTH` = `FCT-001`，唯一候选人事实源。
-- Repository last frozen source epoch = `FCT-EPOCH-20260913-7EAA096A`。
-- Repository last frozen fingerprint = `7EAA096A…CDDDEB`。
-- `SOURCE_CURRENCY = STALE_PENDING_REBASE`：R1 V3 Audit 记录在上述 freeze 之后，本地 FCT-001 又发生了非时间轴指纹变化；最新本地 fingerprint 尚未写回仓库。
+- `FACT_SOURCE_OF_TRUTH` = `FCT-001`。
+- 当前 GitHub canonical representation = `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`。
+- Current source epoch = `FCT-EPOCH-20260916-D0C724C3`。
+- Canonical Git blob SHA = `d0c724c31d2742f35a7870fb2f37c93a153cd47a`。
+- `SOURCE_CURRENCY = CURRENT`。
+- 本地 `简历母版.docx` 是 FCT-001 的此前外部表示；2026-09-16 用户明确确认将本轮新增事实补入 GitHub 后，GitHub 工作流以 `FACT_MASTER_CURRENT.md` 为当前事实母版。若本地 DOCX 尚未同步，不得用旧外部副本覆盖当前 epoch 已确认事实。
+- Known later external DOCX fingerprint before repository canonicalization: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`。
+- Previous repository frozen epoch = `FCT-EPOCH-20260913-7EAA096A`；previous SHA256 = `7EAA096A7220DE0609E3AACAEA656B4CEEFB006D1419FA01BC07E97FFFCDDDEB`。
 - `JD_SOURCE_OF_TRUTH` = `JD-001`，唯一岗位市场源；不能替代真实 Single-JD。
-- `REPO_EVIDENCE` = 当前工作区未发现与事实母版所引用 GitHub 项目相匹配的本地 checkout；项目相关内容暂按 `DOCUMENTED_ONLY / REPO_NOT_VERIFIED` 处理。
+- `CLAIM_LEDGER` = `resume-workspace/01-facts/CLAIM_LEDGER.md`，当前绑定 `FCT-EPOCH-20260916-D0C724C3`。
 - `CANONICAL_TIMELINE` = `resume-workspace/00-source/CANONICAL_TIMELINE.md`。
-- `SOURCE_FREEZE` = `resume-workspace/00-source/SOURCE_FREEZE.md`，现表示“最后一次仓库已知冻结 epoch”，不是最新本地源已完成冻结的声明。
-- `CURRENT_VERSION_INDEX` = `resume-workspace/CURRENT_VERSION_INDEX.md`，当前版本唯一入口。
-- `GATE_REGISTRY` = `resume-workspace/GATE_REGISTRY.json`，当前 Gate 状态唯一注册表。
+- `SOURCE_FREEZE` = `resume-workspace/00-source/SOURCE_FREEZE.md`。
+- `CURRENT_VERSION_INDEX` = `resume-workspace/CURRENT_VERSION_INDEX.md`。
+- `GATE_REGISTRY` = `resume-workspace/GATE_REGISTRY.json`。
 - `ROLE_BASELINE_WRITING_MODULE` = `resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md`。
-- `SKILL_SOURCE` = `SKL-001`、`SKL-002` 及本地实际 `SKILL.md`；只决定流程与审查职责，不产生候选人事实。
 
 ## Confirmed sources
 
-| source_id | filename | path | type | authority | purpose | current note |
+| source_id | representation | path | type | authority | purpose | current note |
 |---|---|---|---|---|---|---|
-| FCT-001 | 简历母版.docx | 本地源文件（未上传） | FACT | Highest | 候选人事实、责任边界、数字口径、项目状态 | Last repository freeze: `FCT-EPOCH-20260913-7EAA096A`; later local drift recorded; rebase pending. |
-| JD-001 | JD母版.docx | 本地源文件（未上传） | JD | Highest for market requirements | 岗位族、Core/Stretch 分层、能力矩阵、关键词与城市用途 | 标题为“JD MASTER V3”；不能替代单条真实 JD。 |
-| SKL-001 | 简历Skills安装报告.md | 本地安装报告（未上传） | SKILL | Operational | 来源、固定 commit、入口、依赖、冒烟证据 | 7 组、19 个入口；不是候选人事实。 |
-| SKL-002 | resume-skills-source-manifest.json | 本地安装清单（未上传） | SKILL | Operational | 机器可读来源、版本、哈希和安装路径 | 以完整 SHA 固定；不是候选人事实。 |
-| SKL-003 | sushen-resume-maker SKILL.md | 本地 Codex Skill 安装（未上传） | SKILL | Operational | Claim Ledger、JD Matrix、事实边界规则 | 只按事实源工作。 |
-| INS-001 | RESUME_BUILD_PIPELINE_V2 | 用户提供的本地规则附件（未上传） | SUPPORT | User instruction | 来源隔离、职责分工和停止条件 | 规则文本，不是事实源或 JD 源。 |
-| INS-002 | Resume Output & Tailoring Rules | 用户提供的本地规则附件（未上传） | SUPPORT | User instruction | Master、Role Baseline、Single-JD 三层输出与页数 | 规则文本，不是事实源或 JD 源。 |
-| POL-001 | ROLE_BASELINE_WRITING_MODULE | `resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md` | POLICY | User instruction | 岗位族简历结构、完整职业履历、证据优先级、项目选择和写作约束 | `PROJECT_SELECTION = ROLE_DEPENDENT`；不产生候选人事实。 |
-| DER-001 | 简历母版.txt | local `work/source-extracted/简历母版.txt` | SUPPORT | Derived | 从 FCT-001 派生的文本定位 | Repository Claim Ledger currently maps to last frozen epoch; latest local source rebase pending. |
-| DER-002 | JD母版.txt | local `work/source-extracted/JD母版.txt` | SUPPORT | Derived | 从 JD-001 派生，便于行号核验 | 不能取代原 DOCX。 |
+| FCT-001 | FACT_MASTER_CURRENT.md | `resume-workspace/01-facts/FACT_MASTER_CURRENT.md` | FACT | Highest | 候选人事实、责任边界、数字口径、项目状态 | `CURRENT`；2026-09-16 repository canonicalization。 |
+| FCT-001-PREV | 简历母版.docx | 本地源文件（未上传） | FACT_ARCHIVE | Historical upstream representation | 历史事实母版 | 尚未声明已同步当前 GitHub epoch；不得覆盖当前已确认事实。 |
+| JD-001 | JD母版.docx | 本地源文件（未上传） | JD | Highest for market requirements | 岗位族、Core/Stretch、能力矩阵、关键词 | 不能替代单条真实 JD。 |
+| POL-001 | ROLE_BASELINE_WRITING_MODULE | `resume-workspace/00-source/ROLE_BASELINE_WRITING_MODULE.md` | POLICY | User instruction | 岗位族结构、证据优先级、写作约束 | 不产生候选人事实。 |
+| INS-001 | RESUME_BUILD_PIPELINE_V2 | 用户提供的本地规则附件（未上传） | SUPPORT | User instruction | 来源隔离、职责分工、停止条件 | 不产生事实。 |
+| INS-002 | Resume Output & Tailoring Rules | 用户提供的本地规则附件（未上传） | SUPPORT | User instruction | Master / Role Baseline / Single-JD 输出规则 | 不产生事实。 |
+| SKL-001/002/003 | Resume Skills / manifests | 本地安装资源 | SKILL | Operational | 工作流、审查职责 | 不产生事实。 |
 
-## Repository evidence scan
+## Repository evidence status
 
-事实源引用 `wanghanyu654321-cell/-agent` 与 `job-ready/integration-v1`。当前记录未发现对应 checkout；同目录其他仓库不能冒充客服 Agent 仓库。因此项目证据仍维持 `DOCUMENTED_ONLY / REPO_NOT_VERIFIED`，除非当前任务明确进入 Repo Verification 阶段。
+企业客服 Agent / Support Agent 的工程项目继续保持 `DOCUMENTED_ONLY / REPO_NOT_VERIFIED`。事实母版中出现技术栈、测试结果或设计边界，不等于仓库实现或生产状态已经独立核验。
 
 ## Source resolution rule
 
-1. FCT-001 永远高于 DER、Claim Ledger、Resume、聊天上下文和模型记忆。
-2. JD-001 只能产生岗位要求、能力矩阵和关键词，不产生候选人事实。
-3. Skill / Policy 只产生流程约束，不产生候选人事实。
-4. 每次 FCT-001 指纹发生变化都必须创建新的 Source Epoch；旧 epoch 继续保留为历史证据，不得静默覆盖。
-5. 下游 artifact 必须能够说明其 `derived_from_source_epoch`；如果 artifact 的 epoch 早于当前本地事实源而 rebase 未完成，则 `FACT_CURRENCY_GATE = BLOCKED`。
-6. Source Rebase 必须优先做 semantic delta，再重建受影响 DER / Claim Ledger / Claim Map，避免无差别重写。
+1. 当前 `FCT-001 / FACT_MASTER_CURRENT.md` 高于旧 DER、旧 Claim Ledger、Role Resume、JD、Skill、模型推测和未确认记忆。
+2. `CANONICAL_TIMELINE.md` 与 FCT-001 的时间轴必须一致；时间线冲突时 `TIMELINE_GATE = FAIL`。
+3. JD 只能产生岗位要求、能力矩阵和关键词，不产生候选人事实。
+4. Skill / Policy 只产生流程约束，不产生候选人事实。
+5. 新事实进入 FCT-001 前必须由用户明确确认；模糊回忆保留在待确认 / exclude 区，不得自动升级。
+6. FCT-001 每次发生语义变化都创建新的 Source Epoch；旧 epoch 保留为历史证据。
+7. Source Rebase 必须先做 semantic delta，再更新 Claim Ledger 和受影响 Resume artifact。
+8. Role 可以重新解释能力、改变证据排序与展开深度，但不得改写历史：`ROLE MAY REINTERPRET CAPABILITY. ROLE MAY NOT REWRITE HISTORY.`
 
-当前结论：Canonical Timeline 仍按 V3 Audit 记录保持一致；非时间轴事实源漂移仍待 rebase。
+当前结论：事实源已完成 2026-09-16 GitHub canonicalization；现有 R1–R3 Resume artifact 尚未按新 epoch 完成语义重验，R4–R6 后续重写也必须从当前 FCT-001 生成。
