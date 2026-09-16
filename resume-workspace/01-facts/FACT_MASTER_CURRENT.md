@@ -765,7 +765,7 @@ Source ID：`FCT-001`
 
 边界：
 - 部分仓库核验不等于所有技术栈、架构主张和生产状态均已独立核验；
-- 项目仍是 synthetic portfolio / proof application，不升级为真实客户生产部署。
+- 仓库 README 仍保留 synthetic portfolio / proof application 的证据口径；项目当前交付状态另见 FCTM-AG-05 / FCTM-AG-07。
 
 ### FCTM-AG-01｜本人责任
 本人负责：
@@ -837,15 +837,21 @@ Source ID：`FCT-001`
 - 仅代表当前项目测试 / 评测资产，不是生产流量结果；
 - 不把未独立批准的 retrieval-quality threshold 写成整体 PASS。
 
-### FCTM-AG-05｜项目状态边界
-当前状态：`SYNTHETIC PORTFOLIO / PROOF APPLICATION`，其中部分 Eval 资产已完成仓库核验。
+### FCTM-AG-05｜项目当前交付状态与边界
+用户最新确认：该项目并非只用于展示，而是基于实际落地目标推进；当前阶段已经形成可运行 Demo，并在进行 Demo / POC 交付与上线前验证，目前等待 ICP 认证 / 备案完成后推进正式上线。
 
-不得升级为：
-- 已生产上线；
-- 已真实客户交付；
-- 已商业部署；
-- 已完成真实 CRM / ERP / WMS 客户集成；
-- 已真实客户验收。
+当前可以对外表达：
+- 基于实际落地目标推进；
+- 已形成 Demo；
+- 正在进行 Demo / POC 交付与验证；
+- 处于正式上线前阶段；
+- 当前上线阻塞项之一为 ICP 认证 / 备案。
+
+边界：
+- 在正式上线前，不写“已生产上线”；
+- 不写已有规模化真实用户流量；
+- 未确认付费客户、企业采购、售前成交或真实客户生产验收，不自动补充；
+- Demo / POC 交付不自动等于企业客户 POC、商业成交或规模化部署。
 
 ### FCTM-AG-06｜Prompt / System / Tool Instruction 迭代
 项目中实际调整过：
@@ -857,7 +863,28 @@ Source ID：`FCT-001`
 
 边界：
 - 可写 Prompt / Instruction iteration 与评测闭环；
-- 不写真实客户 Prompt 调优交付或生产 Prompt Owner。
+- 不写未经确认的付费客户 Prompt 调优或生产 Prompt Owner。
+
+### FCTM-AG-07｜Demo / POC 交付与上线准备
+项目当前交付路径可概括为：
+`实际落地目标 → Solution / Workflow / Boundary → Demo → POC 验证 / 交付 → 上线准备 → ICP 认证 / 备案 → 正式上线`
+
+本人在该链路中继续负责 Problem Definition、Solution Boundary、Acceptance / Eval、Badcase、测试验收和项目状态判断，并通过 AI Coding Agent 协作推进实现。
+
+边界：
+- 可作为 R2 / R4 / R5 / R6 的直接项目交付证据；
+- 当前仍属于上线前状态，不写已完成生产 Go-live；
+- 未确认真实企业客户、商业合同和规模化生产使用时，不作对应主张。
+
+### FCTM-AG-08｜PRD 状态
+该 Agent 项目基于实际落地目标推进，具备整理正式 PRD 的真实产品上下文，包括目标场景、功能范围、Workflow、异常 / 边界场景、优先级与 Acceptance Criteria。
+
+截至当前确认：正式 PRD 尚未作为“已完成并核验的项目资产”进入事实母版。
+
+边界：
+- 可以写已有需求定义、Solution Boundary、Workflow、Acceptance 等事实；
+- 在 PRD 实际产出前，不写“已完成 PRD / 负责 PRD 交付”；
+- PRD 完成并核验后可作为 R4 产品证据进一步补充。
 
 ---
 
@@ -898,7 +925,14 @@ SOP 是某些反复问题被验证后形成的沉淀，不是所有经历的必�
 
 边界：
 - 这是运营 / 项目经营中的 Delivery 与 Stakeholder Communication 证据；
-- 不自动迁移成真实 AI 客户交付、Demo / POC 或产品 Roadmap Owner 经历。
+- 不自动迁移成真实 AI 客户交付、产品 Roadmap Owner 或商业售前成交经历。
+
+### FCTM-XR-05｜Agent 项目已提供 AI Demo / POC 与上线准备证据
+当前主线 Agent 项目已经从单纯项目证明扩展到实际落地目标下的 Demo / POC 交付与上线准备，可为 Business FDE、AI Product、Agent Solution 和 AI Solution 岗位提供更直接的项目交付证据。
+
+边界：
+- 该能力迁移不等于已经具备成熟企业售前成交、付费客户交付或生产规模化经验；
+- 正式上线前仍需保持 pre-production / pre-go-live 边界。
 
 ---
 
@@ -916,3 +950,6 @@ SOP 是某些反复问题被验证后形成的沉淀，不是所有经历的必�
 - 具体 rolling average / 时间窗口指标名称。
 
 已确认的仅是：DAU、CTR、转化相关指标、灰度流量、业务水位，以及按时间维度观察趋势 / 版本变化。
+
+### EX-03｜Agent 项目正式 PRD
+项目具备实际落地目标与完整产品上下文，但正式 PRD 尚未被确认为已完成资产。完成并核验前，正式简历不得写“已完成 PRD”或“独立负责 PRD 交付”。
