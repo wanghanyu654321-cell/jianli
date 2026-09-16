@@ -20,10 +20,10 @@
     "NOT_RUN"
   ],
   "R1": {
-    "artifact": "resume-workspace/06-baseline-v3/R1-Agent-Eval/R1-Agent-Eval.RESUME.md",
-    "artifact_epoch_state": "PRE_CURRENT_FACT_EPOCH",
-    "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "BLOCKED",
+    "artifact": "resume-workspace/07-baseline-v4/R1-Agent-Eval/R1-Agent-Eval.RESUME.md",
+    "artifact_epoch_state": "CURRENT_FACT_EPOCH_DRAFT",
+    "fact_currency_gate": "PASS",
+    "claim_mapping_integrity_gate": "NOT_RUN",
     "timeline_gate": "PASS",
     "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
@@ -33,10 +33,10 @@
     "application_ready": false
   },
   "R2": {
-    "artifact": "resume-workspace/05-baseline-v2/R2-Business-FDE/R2-Business-FDE.RESUME.md",
-    "artifact_epoch_state": "PRE_CURRENT_FACT_EPOCH",
-    "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "BLOCKED",
+    "artifact": "resume-workspace/07-baseline-v4/R2-Business-FDE/R2-Business-FDE.RESUME.md",
+    "artifact_epoch_state": "CURRENT_FACT_EPOCH_DRAFT",
+    "fact_currency_gate": "PASS",
+    "claim_mapping_integrity_gate": "NOT_RUN",
     "timeline_gate": "PASS",
     "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
@@ -46,10 +46,10 @@
     "application_ready": false
   },
   "R3": {
-    "artifact": "resume-workspace/05-baseline-v2/R3-AI-Commerce/R3-AI-Commerce.RESUME.md",
-    "artifact_epoch_state": "PRE_CURRENT_FACT_EPOCH",
-    "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "BLOCKED",
+    "artifact": "resume-workspace/07-baseline-v4/R3-AI-Commerce/R3-AI-Commerce.RESUME.md",
+    "artifact_epoch_state": "CURRENT_FACT_EPOCH_DRAFT",
+    "fact_currency_gate": "PASS",
+    "claim_mapping_integrity_gate": "NOT_RUN",
     "timeline_gate": "PASS",
     "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
@@ -59,12 +59,12 @@
     "application_ready": false
   },
   "R4": {
-    "artifact": "resume-workspace/03-baselines/R4-AI-Product-Ops.md",
-    "artifact_epoch_state": "HISTORICAL_PRE_CURRENT_FACT_EPOCH",
-    "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "BLOCKED",
+    "artifact": "resume-workspace/07-baseline-v4/R4-AI-Product-Ops/R4-AI-Product-Ops.RESUME.md",
+    "artifact_epoch_state": "CURRENT_FACT_EPOCH_DRAFT_DIRECTION_NOT_FINAL",
+    "fact_currency_gate": "PASS",
+    "claim_mapping_integrity_gate": "NOT_RUN",
     "timeline_gate": "PASS",
-    "career_history_gate": "PARTIAL",
+    "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
     "recruiter_quality_gate": "PARTIAL",
     "ats_gate": "NOT_RUN",
@@ -72,12 +72,12 @@
     "application_ready": false
   },
   "R5": {
-    "artifact": "resume-workspace/03-baselines/R5-Prompt-Agent-Solution.md",
-    "artifact_epoch_state": "HISTORICAL_PRE_CURRENT_FACT_EPOCH",
-    "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "BLOCKED",
+    "artifact": "resume-workspace/07-baseline-v4/R5-Agent-Solution/R5-Agent-Solution.RESUME.md",
+    "artifact_epoch_state": "CURRENT_FACT_EPOCH_DRAFT_DIRECTION_NOT_FINAL",
+    "fact_currency_gate": "PASS",
+    "claim_mapping_integrity_gate": "NOT_RUN",
     "timeline_gate": "PASS",
-    "career_history_gate": "PARTIAL",
+    "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
     "recruiter_quality_gate": "PARTIAL",
     "ats_gate": "NOT_RUN",
@@ -85,12 +85,12 @@
     "application_ready": false
   },
   "R6": {
-    "artifact": "resume-workspace/03-baselines/R6-MaaS-AI-Solution.md",
-    "artifact_epoch_state": "HISTORICAL_PRE_CURRENT_FACT_EPOCH",
-    "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "BLOCKED",
+    "artifact": "resume-workspace/07-baseline-v4/R6-AI-Solution/R6-AI-Solution.RESUME.md",
+    "artifact_epoch_state": "CURRENT_FACT_EPOCH_DRAFT",
+    "fact_currency_gate": "PASS",
+    "claim_mapping_integrity_gate": "NOT_RUN",
     "timeline_gate": "PASS",
-    "career_history_gate": "PARTIAL",
+    "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
     "recruiter_quality_gate": "PARTIAL",
     "ats_gate": "NOT_RUN",
@@ -99,11 +99,11 @@
   },
   "single_jd_gate": "NOT_RUN",
   "notes": [
-    "The fact-master scope is current mainline facts plus user-confirmed context only; old snapshots or historical side items must not be auto-restored.",
-    "The fact source mirror and Claim Ledger are current at FCT-EPOCH-20260916-6D82DB08.",
-    "Existing role artifacts predate the current fact epoch and must be rewritten or semantically revalidated before their fact-currency and claim-mapping gates can pass.",
+    "R1-R6 V4 drafts were written from the current fact-master epoch FCT-EPOCH-20260916-6D82DB08.",
+    "These are current-fact drafts, not application-ready artifacts; per-role semantic claim mapping and recruiter/skills review have not yet run.",
+    "R4 and R5 role directions are explicitly not final and require further review during the skills optimization pass.",
+    "Resume desensitization preserves problem context, judgment logic, solution type and outcome while omitting internal rules, full operational recipes, thresholds and other directly replicable implementation detail.",
     "R1-R6 must use one fact pool with role-specific evidence priority, ordering, depth and keywords; they must not create different histories.",
-    "SOP is not a mandatory endpoint of every proof unit; preserve problem-specific solution shapes.",
     "Any semantic text mutation invalidates the previous semantic claim check for the changed text."
   ]
 }
