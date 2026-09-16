@@ -4,9 +4,10 @@
   "branch": "resume/baseline-v2-r1-r3",
   "source": {
     "fact_source_id": "FCT-001",
-    "canonical_fact_master": "resume-workspace/01-facts/FACT_MASTER_CURRENT.md",
-    "current_epoch": "FCT-EPOCH-20260916-D0C724C3",
-    "canonical_git_blob_sha": "d0c724c31d2742f35a7870fb2f37c93a153cd47a",
+    "fact_master_mirror": "resume-workspace/01-facts/FACT_MASTER_CURRENT.md",
+    "current_epoch": "FCT-EPOCH-20260916-6D82DB08",
+    "git_blob_sha": "6d82db084b0bef7ec1967982ebb36213942fd571",
+    "scope_rule": "CURRENT_MAINLINE_PLUS_USER_CONFIRMED_CONTEXT_ONLY",
     "source_currency": "CURRENT",
     "claim_ledger_current": true,
     "timeline_gate": "PASS"
@@ -98,10 +99,10 @@
   },
   "single_jd_gate": "NOT_RUN",
   "notes": [
-    "The fact source and Claim Ledger are current at FCT-EPOCH-20260916-D0C724C3.",
+    "The fact-master scope is current mainline facts plus user-confirmed context only; old snapshots or historical side items must not be auto-restored.",
+    "The fact source mirror and Claim Ledger are current at FCT-EPOCH-20260916-6D82DB08.",
     "Existing role artifacts predate the current fact epoch and must be rewritten or semantically revalidated before their fact-currency and claim-mapping gates can pass.",
     "R1-R6 must use one fact pool with role-specific evidence priority, ordering, depth and keywords; they must not create different histories.",
-    "Project selection is role-dependent and is not a career-history invariant.",
     "SOP is not a mandatory endpoint of every proof unit; preserve problem-specific solution shapes.",
     "Any semantic text mutation invalidates the previous semantic claim check for the changed text."
   ]
