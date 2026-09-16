@@ -4,9 +4,11 @@
   "branch": "resume/baseline-v2-r1-r3",
   "source": {
     "fact_source_id": "FCT-001",
-    "last_frozen_epoch": "FCT-EPOCH-20260913-7EAA096A",
-    "last_frozen_sha256": "7EAA096A7220DE0609E3AACAEA656B4CEEFB006D1419FA01BC07E97FFFCDDDEB",
-    "source_currency": "STALE_PENDING_REBASE",
+    "canonical_fact_master": "resume-workspace/01-facts/FACT_MASTER_CURRENT.md",
+    "current_epoch": "FCT-EPOCH-20260916-D0C724C3",
+    "canonical_git_blob_sha": "d0c724c31d2742f35a7870fb2f37c93a153cd47a",
+    "source_currency": "CURRENT",
+    "claim_ledger_current": true,
     "timeline_gate": "PASS"
   },
   "gate_status_vocabulary": [
@@ -18,8 +20,9 @@
   ],
   "R1": {
     "artifact": "resume-workspace/06-baseline-v3/R1-Agent-Eval/R1-Agent-Eval.RESUME.md",
+    "artifact_epoch_state": "PRE_CURRENT_FACT_EPOCH",
     "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "PASS",
+    "claim_mapping_integrity_gate": "BLOCKED",
     "timeline_gate": "PASS",
     "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
@@ -30,8 +33,9 @@
   },
   "R2": {
     "artifact": "resume-workspace/05-baseline-v2/R2-Business-FDE/R2-Business-FDE.RESUME.md",
+    "artifact_epoch_state": "PRE_CURRENT_FACT_EPOCH",
     "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "PASS",
+    "claim_mapping_integrity_gate": "BLOCKED",
     "timeline_gate": "PASS",
     "career_history_gate": "PASS",
     "career_substance_gate": "PARTIAL",
@@ -42,11 +46,51 @@
   },
   "R3": {
     "artifact": "resume-workspace/05-baseline-v2/R3-AI-Commerce/R3-AI-Commerce.RESUME.md",
+    "artifact_epoch_state": "PRE_CURRENT_FACT_EPOCH",
     "fact_currency_gate": "BLOCKED",
-    "claim_mapping_integrity_gate": "PASS",
+    "claim_mapping_integrity_gate": "BLOCKED",
     "timeline_gate": "PASS",
     "career_history_gate": "PASS",
-    "career_substance_gate": "PASS",
+    "career_substance_gate": "PARTIAL",
+    "recruiter_quality_gate": "PARTIAL",
+    "ats_gate": "NOT_RUN",
+    "render_gate": "NOT_RUN",
+    "application_ready": false
+  },
+  "R4": {
+    "artifact": "resume-workspace/03-baselines/R4-AI-Product-Ops.md",
+    "artifact_epoch_state": "HISTORICAL_PRE_CURRENT_FACT_EPOCH",
+    "fact_currency_gate": "BLOCKED",
+    "claim_mapping_integrity_gate": "BLOCKED",
+    "timeline_gate": "PASS",
+    "career_history_gate": "PARTIAL",
+    "career_substance_gate": "PARTIAL",
+    "recruiter_quality_gate": "PARTIAL",
+    "ats_gate": "NOT_RUN",
+    "render_gate": "NOT_RUN",
+    "application_ready": false
+  },
+  "R5": {
+    "artifact": "resume-workspace/03-baselines/R5-Prompt-Agent-Solution.md",
+    "artifact_epoch_state": "HISTORICAL_PRE_CURRENT_FACT_EPOCH",
+    "fact_currency_gate": "BLOCKED",
+    "claim_mapping_integrity_gate": "BLOCKED",
+    "timeline_gate": "PASS",
+    "career_history_gate": "PARTIAL",
+    "career_substance_gate": "PARTIAL",
+    "recruiter_quality_gate": "PARTIAL",
+    "ats_gate": "NOT_RUN",
+    "render_gate": "NOT_RUN",
+    "application_ready": false
+  },
+  "R6": {
+    "artifact": "resume-workspace/03-baselines/R6-MaaS-AI-Solution.md",
+    "artifact_epoch_state": "HISTORICAL_PRE_CURRENT_FACT_EPOCH",
+    "fact_currency_gate": "BLOCKED",
+    "claim_mapping_integrity_gate": "BLOCKED",
+    "timeline_gate": "PASS",
+    "career_history_gate": "PARTIAL",
+    "career_substance_gate": "PARTIAL",
     "recruiter_quality_gate": "PARTIAL",
     "ats_gate": "NOT_RUN",
     "render_gate": "NOT_RUN",
@@ -54,9 +98,11 @@
   },
   "single_jd_gate": "NOT_RUN",
   "notes": [
-    "Claim mapping integrity means the artifact maps to the repository Claim Ledger; it does not imply that the Claim Ledger is current with the latest local FCT-001.",
-    "Fact currency is blocked until the latest local FCT-001 is rebased and affected derived artifacts are revalidated.",
+    "The fact source and Claim Ledger are current at FCT-EPOCH-20260916-D0C724C3.",
+    "Existing role artifacts predate the current fact epoch and must be rewritten or semantically revalidated before their fact-currency and claim-mapping gates can pass.",
+    "R1-R6 must use one fact pool with role-specific evidence priority, ordering, depth and keywords; they must not create different histories.",
     "Project selection is role-dependent and is not a career-history invariant.",
+    "SOP is not a mandatory endpoint of every proof unit; preserve problem-specific solution shapes.",
     "Any semantic text mutation invalidates the previous semantic claim check for the changed text."
   ]
 }
