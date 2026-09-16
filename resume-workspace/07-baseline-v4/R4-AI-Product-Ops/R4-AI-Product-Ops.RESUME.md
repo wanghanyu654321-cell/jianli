@@ -45,7 +45,7 @@ QA｜Data Diagnosis｜Badcase｜Regression｜Optimization｜Launch Readiness
 - **内容实验与反馈：** 通过短视频素材和直播数据观察不同表达方式的效果，并将验证有效的内容方向迁移到直播场景，参与双机位方案设计。
 - **指标诊断：** 本人承担投流职责，结合 **CTR、CVR、ROI**及直播承接表现判断问题更偏向内容、流量还是转化，并通过对比验证持续调整产品表达和执行方案。
 - **项目结果：** 协同约 **6 人直播团队**推进内容、主播、投流和复盘；同一新盘账号月 GMV 从约 **7 万**提升至**接手首月约 43 万**。
-- **经营反馈：** 参与店铺评分、流量、营销、交易数据和大促策略分析，形成“业务表现 → 问题判断 → 调整 → 再观察”的持续运营习惯。
+- **经营反馈：** 结合店铺、流量、营销和交易数据持续观察产品表达、内容和经营结果之间的变化。
 
 ### 浙江朗臻网络科技有限公司｜电商运营 → 宠物项目运营管理｜2022.03–2024.07
 
@@ -59,7 +59,9 @@ QA｜Data Diagnosis｜Badcase｜Regression｜Optimization｜Launch Readiness
 
 ### 数字前台 Agent｜场景需求 → 产品定义 → MVP
 
-**项目背景：** 从小型门店 / 服务型商家的线上第一接待场景出发，用户从私域或线上入口进入后会产生高频咨询、服务状态查询、预约意向和异常问题；纯人工接待存在重复回复与线索承接压力，而完整 CRM 对轻量门店偏重。产品因此被收敛为一个**数字前台 Agent**：负责第一轮在线接待、Knowledge / FAQ 回复、私域线索与预约意向承接，并通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；既不重建完整 CRM，也不扩展为全能数字员工。
+**项目背景：** 从小型门店 / 服务型商家的线上第一接待场景出发，用户从私域或线上入口进入后会产生高频咨询、服务状态查询、预约意向和异常问题；纯人工接待存在重复回复与线索承接压力，而完整 CRM 对轻量门店偏重。
+
+产品因此被收敛为一个 **数字前台 Agent**：负责第一轮在线接待、Knowledge / FAQ 回复、私域线索与预约意向承接，并通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；既不重建完整 CRM，也不扩展为全能数字员工。
 
 - **Customer Need / Target User：** 将主要场景收敛到一线客服 / 店员及管理侧，核心问题是提高线上第一接待效率、承接私域咨询与预约意向，同时保证复杂、歧义和高风险问题可以稳定进入人工流程。
 - **Product Definition：** 将产品按用户旅程拆为四层：**线上接待：Knowledge / FAQ、Availability；转化承接：Booking Intent、轻 CRM 预约 / 状态留痕；人工协同：Ticket / Handoff、Needs Attention；管理侧：Audit / StoreOps**，并进一步区分“用户想解决什么、Agent 可以提出什么、系统真正执行什么、什么时候需要人工”。
@@ -69,7 +71,7 @@ QA｜Data Diagnosis｜Badcase｜Regression｜Optimization｜Launch Readiness
 - **QA / Optimization：** 根据 QA / Badcase 判断问题来自需求定义、Knowledge / RAG、Prompt、Workflow 还是 Authority，再回到对应产品层优化，并通过 Regression 检查改动结果。
 - **Launch Readiness：** 当前已形成可运行 Demo，处于 **Demo / POC 与上线前验证阶段**。
 
-**场景价值：** 产品聚焦**线上第一接待 → 私域线索承接 → 预约 / 轻 CRM → 人工协同**这一条业务链，在清晰边界内承担适合自动化的重复流程，同时确保异常和高风险任务有稳定的人机协同路径。
+**场景价值：** 产品聚焦 **线上第一接待 → 私域线索承接 → 预约 / 轻 CRM → 人工协同** 这一条业务链，在清晰边界内承担适合自动化的重复流程，同时确保异常和高风险任务有稳定的人机协同路径。
 
 ## Education
 
