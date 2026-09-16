@@ -10,7 +10,7 @@
 
 具备从复杂业务问题中识别需求、拆解约束、推进方案并持续验证的工作经验。早期在电商与项目经营中长期处理市场、产品、渠道、平台商务、供应链及跨团队协作问题；后续在淘天 Data Agent 场景中进一步承担上游规则理解、业务 Context 对齐、执行转译、质量治理和反馈闭环，使抽象业务要求能够被下游稳定执行。
 
-企业客服 Agent 项目重点不是完成一次可演示 Demo，而是围绕真实落地继续补齐 **Scenario / Workflow、RAG 与 Evidence Governance、Tool / Authority、安全边界、真实业务状态、Integration、Acceptance 与 Regression / Harness**。整体推进路径从业务问题与系统边界出发，将重复客服流程推进到可运行 Demo、Demo / POC 交付和上线前验证，并保留固定 Eval / Harness 作为后续版本治理机制，使系统不仅能交付，也能持续验证和维护。
+数字前台 Agent 项目重点不是完成一次可演示 Demo，而是围绕**线上第一接待 → Knowledge / FAQ 回复 → 私域线索与预约意向承接 → 轻 CRM 预约 / 状态留痕 → Ticket / Handoff → 人工跟进**这条业务链，继续补齐 **Scenario / Workflow、RAG 与 Evidence Governance、Tool / Authority、安全边界、真实业务状态、Integration、Acceptance 与 Regression / Harness**。整体推进路径从业务问题与系统边界出发，将线上接待流程推进到可运行 Demo、Demo / POC 交付和上线前验证，并保留固定 Eval / Harness 作为后续版本治理机制，使系统不仅能交付，也能持续验证和维护。
 
 此前在朗臻与今宜均经历明显 0→1 场景，涉及消费者需求、产品定位、平台合作、内容 / 投流、达人 BD、供应链和团队协作，可在信息不完整、流程未成熟的环境中持续推进方案落地。
 
@@ -59,18 +59,18 @@ Eval｜Badcase｜Acceptance｜Regression｜Acceptance Harness｜Version Governan
 
 ## Selected Project
 
-### 企业客服 Agent｜Demo → POC → 可落地系统
+### 数字前台 Agent｜Demo → POC → 可落地数字前台
 
-**项目背景：** 面向小型门店 / 企业客服场景，高频知识咨询、服务状态查询、预约意向、Ticket / Handoff 和异常升级存在大量重复工作。一套能聊天的 LLM Demo 很快可以形成，但真实落地还需要解决知识依据是否可信、不同门店是否隔离、模型有没有权限、业务动作是否真实发生、失败时如何转人工，以及后续版本如何持续维护。因此项目按真实上线条件推进，而不是以“页面能聊”作为结束标准。
+**项目背景：** 面向小型门店 / 服务型商家的线上接待与私域承接场景，用户从私域或线上入口进入后，会产生高频咨询、服务状态查询、预约意向和异常问题；纯人工接待存在重复回复与线索承接压力，而完整 CRM 对轻量门店偏重。项目因此将产品收敛为一个**数字前台 Agent**：承担第一轮在线接待、Knowledge / FAQ 回复、线索与预约意向承接，并通过轻量 CRM Workflow 进入 Booking、Ticket / Handoff 和人工跟进；不替代完整 CRM，也不扩展为全能数字员工。真正落地还需要解决知识依据是否可信、不同门店是否隔离、模型有没有权限、业务动作是否真实发生、失败时如何转人工，以及后续版本如何持续维护。
 
-- **Scenario → Workflow：** 将需求收敛为 Knowledge、Availability、Booking Intent、Ticket / Handoff、Needs Attention 等核心 Workflow，并区分自动处理、人工确认与必须升级的场景，避免为展示能力无限扩大 Agent Scope。
+- **Scenario → Workflow：** 将需求收敛为线上接待、Knowledge / FAQ、Availability、Booking Intent、轻 CRM 预约 / 状态留痕、Ticket / Handoff、Needs Attention 等核心 Workflow，并区分自动处理、人工确认与必须升级的场景，避免为展示能力无限扩大 Agent Scope。
 - **RAG / Safety Governance：** Retrieval 只产生 Candidate Evidence，再结合 tenant / store Scope、Status / Version、Identity 与 Capability 决定回答、fallback 或 Handoff；Evidence 不足、候选歧义或权限不满足时不让模型继续自由生成。
-- **真实业务状态：** Ticket / Handoff 等动作不能以模型文本中的“已完成”作为业务事实，而需要真实持久化并通过 scoped read-back 验证，使 Agent 输出与企业真实状态分离。
+- **真实业务状态：** Booking、Ticket / Handoff 等动作不能以模型文本中的“已完成”作为业务事实，而需要真实持久化并通过 scoped read-back 验证，使 Agent 输出与企业真实状态分离。
 - **Integration：** 验证范围从 UI 扩展到 HTTP、Node ↔ FastAPI、PostgreSQL / pgvector、权限隔离、业务持久化和 Docker 等关键链路，用 Integration Gates 判断系统是否真正能够进入业务流程。
 - **可维护性：** Frozen Eval、Regression 和 Acceptance Harness 不只服务开发期测试，也作为后续版本治理机制；Prompt、Knowledge / RAG、Tool 或 Workflow 变化后重新跑固定基线，降低 POC 后功能扩展导致行为边界逐步漂移的风险。
 - **Delivery：** 已形成可运行 Demo，目前处于 **Demo / POC 交付与上线前验证阶段**，等待 ICP 相关手续完成后推进正式上线。
 
-**场景价值：** 将一次性 Agent Demo 继续推进成具备**安全边界、真实业务状态、跨服务验证、验收标准和后续维护机制**的业务系统。
+**场景价值：** 将一次性聊天 Demo 继续推进成具备**线上接待、私域线索承接、轻 CRM 预约、安全边界、真实业务状态、验收标准和后续维护机制**的数字前台。
 
 ## Education
 
