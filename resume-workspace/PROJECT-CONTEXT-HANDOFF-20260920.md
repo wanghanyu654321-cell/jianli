@@ -1734,6 +1734,17 @@ R1 恢复 V5 完整母版逻辑后，ONLINE-MAIN 已按纠偏后的 V5 能力链
 - ONLINE 仍然只是派生版本，不能反向压缩 R1–R6；
 - 用户批准当前简历前，BossHunter 继续冻结。
 
+## 25.1D ONLINE 标题语言冻结规则
+
+- ONLINE 的项目标题固定优先描述实际场景 / 解决的问题；当前使用：`数字前台 Agent｜门店微信接待 / 知识问答 / 预约线索 / 人工接管`。
+- “个人 Agent 项目”是来源属性，不放进项目标题，可在正文单独标识。
+- Bullet 标题优先中国 JD / HR 常见职能词；不使用“成长路径 / 项目经营”这类解释性标题。
+- 成长路径必须在正文保留，但标题使用 `项目运营管理` 等招聘语言。
+- 单一主概念优先；只有两个词都是独立高价值 JD 关键词时才使用 `/`。
+- ONLINE 当前朗臻标题口径：`项目运营管理`、`搜索增长 / SEO`、`小红书运营`、`项目管理`、`平台商务`。
+- ONLINE 当前今宜标题口径：`新盘 0→1`、`千川投流`、`内容运营`、`项目推进`、`达人 BD`。
+- 不因标题简化删除正文中的 0→1、管理、沟通、协调、新媒体、供应链、产品协作或业务结果。
+
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
 `wanghanyu654321-cell/-agent` 作为工程证据源，可证明仓库内已经实际实现并验证的 Runtime / Authority / Governed Knowledge / Durable State / Eval Harness / Regression / CI / PostgreSQL / FastAPI / pgvector / Docker 等能力。
