@@ -4,7 +4,7 @@ Branch: `resume/v5-final-polish`
 
 > 用于完整审阅；各角色权威文件仍为对应 RESUME.md。
 > 在线主简历第一优先方向：AI 评测 / Agent 评测；第二优先方向：FDE / AI 解决方案交付。
-> Current fact epoch: `FCT-EPOCH-20260920-DE68CC7D`。
+> Current fact epoch: `FCT-EPOCH-20260920-CF6422BF`。
 
 
 ---
