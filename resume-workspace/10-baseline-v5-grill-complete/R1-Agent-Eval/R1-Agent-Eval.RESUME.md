@@ -65,9 +65,9 @@ Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜A/B / 灰度观
 **技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / 知识库｜Prompt / 指令｜工具调用｜Agent 运行时｜评测 / 回归测试 / 测试框架
 
 - **Eval Dataset：** 将质量判断从最终答案扩展到知识依据、路由、工具权限、无答案、歧义和权限行为；在 **40 个冻结案例（24 个可回答 / 8 个无答案 / 8 个歧义）**基础上，进一步保留 Safety、**100-case Robustness**、**60-case Blind Holdout**、Knowledge 与 Retrieval / Runtime 等分层回归，不把单一综合分数作为版本判断。
-- **Negative Cases / 权限边界：** 加入租户 / 门店隔离、未批准知识、失效 / 退役版本等负向测试用例，验证“检索到了”不等于“当前有资格回答”；即使检索成功，只要范围、状态、版本或歧义条件不成立，仍要求拒答或转人工。
-- **Bad Case 根因分析：** 评测失败后不直接调整 Prompt，而先判断是否拿到正确知识、知识是否允许使用、工具权限是否成立、业务动作是否执行、业务流程是否正确；只有底层链路正常而模型行为仍偏差时，才优先调整 Prompt / 指令。
+- **Negative Cases：** 加入租户 / 门店隔离、未批准知识、失效 / 退役版本等负向测试用例，验证“检索到了”不等于“当前有资格回答”；即使检索成功，只要范围、状态、版本或歧义条件不成立，仍要求拒答或转人工。
+- **Bad Case / Root Cause：** 评测失败后不直接调整 Prompt，而先判断是否拿到正确知识、知识是否允许使用、工具权限是否成立、业务动作是否执行、业务流程是否正确；只有底层链路正常而模型行为仍偏差时，才优先调整 Prompt / 指令。
 - **Regression / Holdout：** 修复目标 Bad Case 后重新跑冻结测试集与 Blind Holdout，同时检查正常回答、无答案、歧义、权限和 Safety 行为是否退化，用来区分整体提升、局部修复和针对已知样本的表面改善；门店 POC 后产生的咨询、预约 / 线索、人工接管和异常 Case 逐步回收到 Regression Set。
-- **Tool Use / Action Acceptance：** Ticket / 人工接管等业务动作不以模型文本或单次 Tool Call 作为成功证明，而按 **权限通过 → 状态写入 → 持久化 → scoped read-back → 验收** 判断，避免把“模型说完成”或工具返回成功误判为业务动作已经完成。
-- **Trace / Trajectory Eval：** 首 Token 延迟、工具调用数量、KV Cache 等运行指标可通过埋点记录，但轨迹评测还需要 Agent 框架提供结构化 Trace，至少能看到意图、规划 / 决策节点、工具选择、工具结果和错误处理。开放题不存在唯一标准路径，因此先按轨迹相似度判断是否进入可比集合，再结合关键节点标记、路径差异和最终结果做评分反馈；明显错误看工具执行，隐性问题还要看工具选择。
+- **Action Acceptance：** Ticket / 人工接管等业务动作不以模型文本或单次 Tool Call 作为成功证明，而按 **权限通过 → 状态写入 → 持久化 → scoped read-back → 验收** 判断，避免把“模型说完成”或工具返回成功误判为业务动作已经完成。
+- **Trajectory Eval：** 首 Token 延迟、工具调用数量、KV Cache 等运行指标可通过埋点记录，但轨迹评测还需要 Agent 框架提供结构化 Trace，至少能看到意图、规划 / 决策节点、工具选择、工具结果和错误处理。开放题不存在唯一标准路径，因此先按轨迹相似度判断是否进入可比集合，再结合关键节点标记、路径差异和最终结果做评分反馈；明显错误看工具执行，隐性问题还要看工具选择。
 - **Eval Harness / CI：** 将 Case、Config、Runtime、Evaluator 与 Report 分开管理，检查测试集 / 配置 / 知识版本、Case 完整性和运行状态；评测回归接入 CI，缺失 Case、重复 Case、配置不匹配或运行中断时不进入版本通过判断，并由 Safety、Knowledge、Retrieval、Harness、Runtime 等独立 Gate 保留 PASS / FAIL / BLOCKED 结果。
