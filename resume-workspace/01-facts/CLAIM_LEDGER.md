@@ -4,9 +4,9 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-71B03893`
-- Current Git blob SHA: `71b038939952ee61854734385b51dfa4055470ba`
-- Previous repository epoch: `FCT-EPOCH-20260916-FE4CB619`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-B8B57E32`
+- Current Git blob SHA: `b8b57e32728822fefe2e8a87e1de0678b546dbb3`
+- Previous repository epoch: `FCT-EPOCH-20260920-71B03893`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
 - `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve real WeChat deployment / store POC / actual-use boundaries without upgrading them into unverified production-scale or commercial outcomes.
