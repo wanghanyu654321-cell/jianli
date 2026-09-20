@@ -1648,3 +1648,86 @@ Codex / Hermes 都不是当前前置。
 **Fact → Claim → Role Baseline → Online Main → JD Tailor → Application → Interview**
 
 而不是某个模型的记忆。
+
+
+---
+
+# 25. 2026-09-20 当前执行顺序覆盖｜ANTI-DRIFT OVERRIDE
+
+本节是当前执行顺序的最新明确确认；如与本文件前文的历史探索顺序冲突，以本节为准。
+
+当前冻结顺序：
+
+1. **先修文档歧义**
+   - 区分 canonical registry 与 working candidate；
+   - 清理旧 epoch / 旧 branch / 旧 repo-verification 状态造成的误导；
+   - 对齐 `jianli` 与 `-agent` 的工程证据边界；
+   - 不修改 Resume 正文，不做 10 秒 HR 审计，不做 BossHunter 优化。
+2. **再做 10 秒 HR / 平台首屏审计**
+   - 对象优先为 ONLINE-MAIN + R1；
+   - 只处理第一视觉、Bullet 标题、阅读成本、AI 总结腔、最新 Eval 证据密度；
+   - 不借审计重构 R1–R6，不压缩母版事实。
+3. **最后做 BossHunter 优化调用**
+   - 先使用 vanilla BossHunter 当前 Local Agent Tool API；
+   - 再用真实 JD Frozen Set 评估 False Pass / False Reject / Route Error / Fact Hallucination；
+   - 只针对观察到的失败补 OUR_POLICY / Router，不先 fork 或重写内部 Prompt。
+
+当前阶段：**STEP 1 — 文档歧义修复**。
+
+在 STEP 1 完成前，不提前执行 STEP 2 / STEP 3。
+
+## 25.1 Canonical 与 Candidate 的唯一解释
+
+- `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
+- `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-DE68CC7D`。
+- candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
+- 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
+- V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
+  **source_epoch → artifact_status → promotion_state**。
+
+## 25.2 Agent Repo 与 Resume Fact 的边界
+
+`wanghanyu654321-cell/-agent` 作为工程证据源，可证明仓库内已经实际实现并验证的 Runtime / Authority / Governed Knowledge / Durable State / Eval Harness / Regression / CI / PostgreSQL / FastAPI / pgvector / Docker 等能力。
+
+Resume 的微信部署、实体本地生活门店 POC、开始实际使用等事实，属于经用户确认后进入 FACT MASTER / CLAIM LEDGER 的候选人事实。
+
+两类证据不得互相越权：
+
+- 工程 repo 未独立记录 business POC，不等于可以删除已确认 Resume Fact；
+- Resume 有 POC / 实际使用，不等于可以把工程 repo 升级为 commercial customer deployment / Pilot acceptance / Production Ready；
+- 普通微信验证、WeCom 工程实现、商业客户验收是三个不同概念，必须分别表达。
+
+## 25.3 BossHunter 当前架构覆盖
+
+前文“BossHunter + DeepSeek + 内部 Policy / Master 注入”保留为历史探索，不再作为默认实施路径。
+
+BossHunter v2.4 已提供 Local Agent Tool API 后，默认架构改为：
+
+```text
+BossHunter collect / browser / DB / state / throttle / human-confirmation
+        ↓
+pending JD
+        ↓
+External Evaluator
+(OUR_POLICY + BOSSHUNTER_MASTER + ROLE_INDEX + current JD)
+        ↓
+Match / hard gaps / role route / evidence
+        ↓
+POST evaluation back to BossHunter
+        ↓
+ready / filtered
+        ↓
+human confirmation
+        ↓
+BossHunter send
+```
+
+原则：
+
+- BossHunter = execution engine；
+- external evaluator = reasoning / policy layer；
+- 不先修改 BossHunter 内部 Prompt；
+- 不绕过人工确认；
+- Frozen Set 先于 Policy 定制；
+- BossHunter DB 负责 job lifecycle，`jianli` 负责 candidate fact truth；如需外部状态，只保留薄 `MATCH_LEDGER`，不再复制完整 APPLICATION_TRACKER 状态机。
