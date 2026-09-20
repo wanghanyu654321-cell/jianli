@@ -10,7 +10,7 @@
 
 在质量治理中，更关注**错误为什么发生、应该修改哪一层**，而不只记录错了多少。会结合 Case 特征、执行人员理解路径、规则表达和执行流程，区分业务知识不足、Context 缺失、规则边界过宽或执行方式等问题，再推动规则、示例、培训或流程调整。单项任务下游 BPO **10+ 人**、每周约 **5,000–10,000 条任务**；累计参与沉淀 **10+ 份 SOP / 规则 / 执行文档**，部分任务一致性约 **80%→95%**、复杂任务约 **60%→85%**。
 
-数字前台 Agent 项目进一步把这套能力扩展到 Agent Eval：不只判断最终答案，而是继续检查 **Evidence、Routing、Tool / Authority、业务状态和 Handoff**。通过 Frozen Cases、Negative Controls、Badcase 根因定位、Regression 和 Acceptance Harness 判断一次修改是否真的提升版本，而不是把“修掉一个 Badcase”直接等同于 Agent 变好。
+数字前台 Agent 项目进一步把这套能力扩展到 Agent Eval：不只判断最终答案，而是继续检查 **Evidence、Routing、Tool / Authority、业务状态和 Handoff**。通过 Frozen Cases、Negative Controls、Badcase 根因定位、Regression 和 Acceptance Harness 判断一次修改是否真的提升版本，而不是把“修掉一个 Badcase”直接等同于 Agent 变好。项目现已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中使用，因此后续 Eval 也开始从预设 Case / 工程验收进一步进入真实门店 Badcase 与使用反馈的采集阶段。
 
 ## 核心能力
 
@@ -63,7 +63,7 @@ Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜A/B / 灰度观
 
 **线上接待 → Knowledge / FAQ → 预约 / 线索意向 → 轻量业务状态 → Ticket / Handoff → 人工跟进。**
 
-随着 Agent 开始进入业务 Workflow，质量问题不再只是“最终答案对不对”，还需要判断：**什么时候应该回答、什么时候必须停止、Tool 是否有权执行、业务动作有没有真的发生，以及修复一个问题后有没有破坏其他行为。**
+项目已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用。随着 Agent 从工程验证进入真实门店 Workflow，质量问题不再只是“最终答案对不对”，还需要判断：**什么时候应该回答、什么时候必须停止、Tool 是否有权执行、业务动作有没有真的发生，以及修复一个问题后有没有破坏其他行为。**
 
 **技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / Instruction｜Tool Calling｜Agent Runtime｜Eval / Regression / Harness
 
@@ -74,5 +74,6 @@ Data Agent｜Search / Query Intent｜基础 SQL / 查询取数｜A/B / 灰度观
 - **业务结果验收：** 当发现模型文本或 Tool Call 本身不能证明业务动作真正发生后，将 Ticket / Handoff 等动作的成功标准进一步收紧为 **权限通过 → 状态写入 → 持久化 → scoped read-back → 验收**，避免把“模型说完成”误判为真实完成。
 - **评测完整性与 Harness：** 当发现 Case Population、Config / Corpus Drift、Evidence 变化或 Completion State 可能影响结论时，先修 Eval 再判断 Agent；将 Agent Quality 和 Measurement Integrity 分开，降低评测流程本身制造 False-PASS 的风险。
 - **版本治理：** 将目标 Case、Regression、Acceptance 与 Harness Integrity 共同用于阶段性版本判断；不同风险类型分别保留自己的 PASS / FAIL 语义，不用单一综合分数掩盖权限、业务状态或安全问题。
+- **真实场景评测入口：** 完成微信真实部署与门店 POC 后，评测开始具备真实咨询、预约 / 线索、Handoff 和异常 Case 的现场输入条件；后续将真实 Badcase 逐步纳入 Dataset 与 Regression。当前真实使用时间与样本量仍有限，因此不将现阶段 Case 分布包装成 production-distribution benchmark，也不声称已有稳定线上质量指标。
 
-**当前状态：** 已形成 Pre-ICP Engineering Baseline；尚不声称真实客户 POC、Production 或真实线上质量指标。
+**当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；项目已从 Pre-ICP 工程验证进入真实门店使用阶段。长期稳定性、规模化复制、Production SLA 与稳定线上质量指标仍待持续验证。
