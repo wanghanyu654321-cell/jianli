@@ -22,7 +22,7 @@ Base: `resume/v5-grill-complete`
 | R5 | 79 → 79 | 25 → 25 | 无缺失 / 无新增 |
 | R6 | 81 → 81 | 27 → 27 | 无缺失 / 无新增 |
 
-R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今宜 5→3、朗臻 5→3；删除的是重复/低价值 recruiter-facing 展开（如每周任务量、与 R1 弱相关的电商细节），不是删除 FACT / CLAIM。项目仍保留 7 条高价值 Eval 证据。
+R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今宜 5→3；朗臻最终保留 4 条高价值证据，分别覆盖搜索 Query 理解、项目经营管理、跨团队推进、经营问题诊断。删除的是重复/低价值 recruiter-facing 展开，不删除 FACT / CLAIM。项目仍保留 7 条高价值 Eval 证据。
 
 当前新增 / 强化的 Eval 证据：
 - 30-case Safety / 100-case Robustness / 60-case Blind Holdout；
