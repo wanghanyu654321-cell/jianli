@@ -4,8 +4,8 @@
 
 - Source ID: `FCT-001`
 - Current GitHub mirror: `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`
-- Source epoch: `FCT-EPOCH-20260920-02A48ED2`
-- Git blob SHA: `02a48ed2191ba2dbf2245be9e1d29bdcdab72a3e`
+- Source epoch: `FCT-EPOCH-20260920-C8387F27`
+- Git blob SHA: `c8387f2784a786eedd2e7a1bbc05b574c9565ea2`
 - Freeze date: `2026-09-20`
 - Candidate source currency: `CURRENT`
 - Promotion state: `NEWER_UNPROMOTED_CANDIDATE`
@@ -73,20 +73,18 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 
 ## Semantic delta in current epoch
 
-相对 `FCT-EPOCH-20260920-CF6422BF`，本次事实层只发生一项用户明确确认的职位显示口径变化：
+相对 `FCT-EPOCH-20260920-02A48ED2`，本次新增一项用户明确确认的来源属性：
 
-### 杭州今宜职位显示
-- 对外职位统一为：`杭州今宜商贸有限公司｜抖音项目代运营｜2024.11–2025.07`；
-- 项目经营、直播、内容、投流、店铺数据、达人 BD、项目排期和合作方汇报等实际职责继续保留；
-- BD 仍可作为 MaaS / AI 交付方向的 transferable evidence；
-- 不再将“项目运营 / BD”并列写入职位标题；
-- 不因为保留 BD 职责而升级为 AI 售前、商业成交或客户采购经历。
+### 数字前台 Agent 项目来源
+- 简历可明确标识为“个人 Agent 项目 / 个人项目实践”，用于和正式雇佣经历区分；
+- 该来源属性不改变既有微信部署、实体门店 POC、实际使用、Eval / Harness / CI 等已确认事实；
+- 不升级为创业公司经历、商业客户项目、独立手写全部代码或 Production Ready。
 
-Agent delivery / Eval / Harness / CI 等事实相对上一 epoch 无新增事实，只发生 recruiter-facing 表达优化。
+其余 Agent delivery / Eval / Harness / CI 与工作经历事实不发生新增事实变化。
 
 ## Downstream state
 
-- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-02A48ED2`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
+- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-C8387F27`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
 - `ONLINE-MAIN` / R1：已吸收当前可对外表达的交付与 Eval 事实。
 - R2–R6：保持既有角色差异，不因本次文档消歧或 R1 Eval 增强而重构。
 - `CANONICAL_TIMELINE.md`: 日期、顺序与空档未变化；今宜职位显示按用户最新确认统一为“抖音项目代运营”。Timeline Gate 保持 PASS。
