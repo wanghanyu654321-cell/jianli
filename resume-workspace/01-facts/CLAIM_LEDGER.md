@@ -4,8 +4,8 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-FD7E6D3E`
-- Current Git blob SHA: `fd7e6d3e311f442eeab20a901dfa57b59bca3e9f`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-2EDBC835`
+- Current Git blob SHA: `2edbc83531818f26662b1f2a5641b45e25328b37`
 - Previous repository epoch: `FCT-EPOCH-20260920-CF6422BF`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
@@ -35,7 +35,7 @@
 | FCT-18 | 通过热词/长尾词、标题、详情属性等做搜索经营，核心商品搜索排名由百名外到类目前 10 | FCTM-LZ-02~03 | FACT_DOCUMENTED | 不写算法研发。 |
 | FCT-19 | 另一核心单 SKU 日 GMV 约 1,000+→15,000+，约 15 天 | FCTM-LZ-05 | FACT_DOCUMENTED | 与 FCT-18 不强行建立同商品/单一因果。 |
 | FCT-20 | 使用实时经营数据、京东快车、京准通 | FCTM-LZ-18 | FACT_DOCUMENTED | 不补未确认平台工具；不把不同平台玩法写成同一机制。 |
-| FCT-21 | 胖小虎约 5 个跨平台店铺，年度整体 GMV 约 1,200 万–2,000 万，日常约 4–5 万，双 11 月约 200 万 | FCTM-LZ-17 | FACT_DOCUMENTED | 业务盘面与个人贡献分开。 |
+| FCT-21 | 胖小虎约 5 个跨平台店铺，宠物业务年度整体 GMV 约 1,500 万，日常约 4–5 万，双 11 月约 200 万 | FCTM-LZ-17 | FACT_DOCUMENTED | 业务盘面与个人贡献分开。 |
 | FCT-22 | 对胖小虎 GMV、利润率、DSR、月/季目标和渠道结果直接负责 | FCTM-LZ-17 | FACT_DOCUMENTED | 老板做最终经营审查。 |
 | FCT-23 | 参与预算分配、商品/项目生命周期推进，并协同约 5 人小红书团队和约 5 人客服团队 | FCTM-LZ-19~21 | FACT_DOCUMENTED | 协同人数不等于行政直管；不写最终公司级预算权。 |
 | FCT-24 | 数字前台 Agent 为个人 Agent 项目 / 个人项目实践，工程证据源为 `wanghanyu654321-cell/-agent` 当前 `main`；已核验 Runtime、Authority、Governed Knowledge、Durable State、Eval/Harness、Regression/CI、PostgreSQL、FastAPI/pgvector 与 Docker 等能力 | FCTM-AG-00 | REPO_VERIFIED | 个人项目属性用于与正式雇佣经历区分；repo verification 不自动证明 commercial customer deployment、Pilot acceptance、Production Ready，也不写独立手写全部代码。 |
@@ -101,6 +101,6 @@
 - 撤回事实标记 superseded / excluded；
 - 任何受影响的 Resume artifact 必须重新做 Semantic Claim Check。
 
-| FCT-68 | 朗臻职业成长路径为“牙膏品类电商运营 → 宠物项目运营管理”：从一线商品 / 搜索 / 经营工作起步，后续负责约 5 个跨平台店铺的 GMV、利润率、DSR、月 / 季目标和渠道结果，所在宠物业务年度整体 GMV 约 1,200 万–2,000 万，并承担优先级、排期、阶段检查、跨团队协调与项目汇报 | FCTM-LZ-05A, FCTM-LZ-17, FCTM-LZ-20~23 | FACT_DOCUMENTED | 用职业跨度、责任升级和结果证明学习迁移 / 管理能力；不写成公司级负责人、全部团队行政直管或个人独占 1,200 万–2,000 万 GMV。 |
+| FCT-68 | 朗臻职业成长路径为“牙膏品类电商运营 → 宠物项目运营管理”：从一线商品 / 搜索 / 经营工作起步，后续负责约 5 个跨平台店铺的 GMV、利润率、DSR、月 / 季目标和渠道结果，所在宠物业务宠物业务年度整体 GMV 约 1,500 万，并承担优先级、排期、阶段检查、跨团队协调与项目汇报 | FCTM-LZ-05A, FCTM-LZ-17, FCTM-LZ-20~23 | FACT_DOCUMENTED | 用职业跨度、责任升级和结果证明学习迁移 / 管理能力；不写成公司级负责人、全部团队行政直管或个人独占 1,500 万 GMV。 |
 
 | FCT-69 | 朗臻宠物项目中负责小红书策略与运营管理，协同约 5 人团队，通过选题 / 内容测试寻找更有机会形成爆文的方向，对有效主题或内容结构继续复刻、数据验证和迭代 | FCTM-LZ-19 | FACT_DOCUMENTED | 可写新媒体策略、内容测试、爆文方向验证、流程设计与团队协同；不写保证爆文、平台算法能力或本人承担全部执行。 |
