@@ -8,11 +8,12 @@ Base: `resume/v5-grill-complete`
 
 ## Scope
 
-本分支只允许以下三类变化：
+本分支允许以下变化：
 
 1. 中国市场 JD 语言统一；
 2. AI 味 / 解释型表达转为简历化表达；
-3. 新建长期在线主简历 ONLINE-MAIN。
+3. 新建长期在线主简历 ONLINE-MAIN；
+4. 用户在本轮明确补充的新事实，必须先进入 FACT_MASTER / CLAIM_LEDGER，再进入简历。
 
 ## Hard Guardrails
 
@@ -30,6 +31,6 @@ Base: `resume/v5-grill-complete`
 ## Current Step
 
 已进入：
-`术语规范 → ONLINE-MAIN → R1–R6 逐份非破坏性统一 → Claim Check → 完整性复核`
+`术语规范 → ONLINE-MAIN → R1–R6 非破坏性统一 → 新事实入 Fact / Claim → Claim Check → 完整性复核`
 
 Canonical index 暂不修改。
