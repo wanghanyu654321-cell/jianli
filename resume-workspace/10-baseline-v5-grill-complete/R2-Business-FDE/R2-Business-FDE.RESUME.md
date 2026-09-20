@@ -10,7 +10,7 @@
 
 数字前台 Agent 的起点并不是“CRM 太重，所以做一个轻量替代品”，而是观察到很多小型门店 / 服务型商家**线下已有接待能力，但微信等私域入口的线上第一接待存在明显空白**：用户进入私域，不代表商家真正接住了这部分流量，重复咨询、服务状态、预约意向和异常问题仍高度依赖人工即时处理。
 
-因此第一阶段先解决 **有人来能接住、常见问题能回答、预约 / 线索不丢、复杂问题有人接管**，再围绕这条业务链补齐 Knowledge / Evidence、权限控制、真实业务状态、跨服务集成、验收标准和回归机制。渠道层与 Agent Runtime 尽量解耦，后续再根据真实门店现场问题逐步增加轻量能力，而不是预先构建一个复杂大系统。
+因此第一阶段先解决 **有人来能接住、常见问题能回答、预约 / 线索不丢、复杂问题有人接管**，再围绕这条业务链补齐 Knowledge / Evidence、权限控制、真实业务状态、跨服务集成、验收标准和回归机制。项目现已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用；交付判断也因此从“工程侧能否跑通”进一步进入“真实门店 Workflow 能否被接住、异常能否进入人工、业务状态是否真实发生”的现场验证阶段。渠道层与 Agent Runtime 继续保持解耦，后续再根据真实门店使用问题逐步增加轻量能力，而不是预先构建一个复杂大系统。
 
 ## 核心能力
 
@@ -21,7 +21,7 @@
 Agent Workflow｜Knowledge / RAG｜权限控制｜人工接管｜业务状态
 
 **项目实施与交付**  
-API / Service Integration｜PostgreSQL｜Docker｜权限隔离｜Demo / POC
+API / Service Integration｜PostgreSQL｜Docker｜权限隔离｜微信部署 / POC
 
 **验收与持续优化**  
 验收标准｜Badcase｜回归验证｜Harness｜版本治理
@@ -57,7 +57,7 @@ API / Service Integration｜PostgreSQL｜Docker｜权限隔离｜Demo / POC
 
 ## 项目经历
 
-### 数字前台 Agent｜需求分析 → 方案设计 → 系统集成 → POC 准备
+### 数字前台 Agent｜需求分析 → 方案设计 → 微信部署 → POC 交付
 
 **项目背景与业务问题：** 很多实体商家线下已经有人员接待，但微信等私域入口存在明显线上承接空白；用户进入私域后，重复咨询、服务状态、预约意向和异常问题仍高度依赖人工即时处理。因此真正的问题不是“缺一个 CRM”，而是**已有私域流量没有稳定的第一接待能力**。
 
@@ -68,12 +68,14 @@ API / Service Integration｜PostgreSQL｜Docker｜权限隔离｜Demo / POC
 **技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / Instruction｜Tool Calling｜Agent Runtime｜Eval / Regression / Harness
 
 - **需求分析与方案范围：** 第一阶段不重建完整 CRM，也不扩展成全能数字员工，而是先解决“有人能接、常见问题能回答、预约 / 线索意向不丢、复杂问题有人接管”；避免为了展示 Agent 能力无限扩大 Scope。
-- **渠道接入与私域场景：** 微信适配的价值不是增加一个技术 Channel，而是进入目标商家已有的私域流量入口；因此将 Channel / Identity Adapter 与 Agent Runtime 分开，使未来接 WeCom 或其他入口时主要替换适配层，而 Evidence、权限、业务状态和 Eval 核心逻辑保持稳定。
+- **渠道接入与私域场景：** 微信接入的价值不是增加一个技术 Channel，而是进入目标门店已经存在的私域流量入口；因此将 Channel / Identity Adapter 与 Agent Runtime 分开。当前已完成微信真实部署，未来如接 WeCom 或其他入口，主要替换 Channel / Identity Adapter；如接 CRM / 其他业务系统，则主要通过 Business Tool / Adapter 对接，而 Evidence、权限、业务状态和 Eval 核心逻辑尽量保持稳定。
 - **知识与回答边界：** 在实现 Knowledge / RAG 时发现“检索到了”不代表“当前业务可以回答”，因此 Retrieval 只返回 Candidate Evidence，再结合 tenant / store、status / version 和 ambiguity 判断回答、fallback 或转人工。
 - **权限控制与业务动作：** 模型可以理解用户意图并提出动作，但 Identity、Scope、Capability 与最终写操作由服务端控制，防止 Prompt / LLM 输出直接获得业务权限。
 - **业务状态与交付验收：** 在实现 Ticket / Handoff 时发现“模型说完成”或“Tool 被调用”不能证明业务动作真的发生，因此要求服务端完成权限检查、持久化和 scoped read-back 后才确认成功，把 Demo 中的“看起来能用”转成可验证业务结果。
-- **跨服务集成与交付验证：** 已形成 React + Node、HTTP、PostgreSQL、Docker，以及 private FastAPI / pgvector Candidate Evidence service 的跨服务集成；不仅验证 Docker 能启动，也验证 migration、restart persistence、权限隔离和核心 Workflow。
-- **POC 验收准备：** 当前先建立工程侧试点验收标准，包括正常回答、无答案 / 歧义场景、权限隔离、真实状态写入、异常转人工和关键 Integration；这些用于为后续真实客户 POC 做准备，但不能替代客户实际验收。
+- **跨服务集成与可复现交付：** 已形成 React + Node、HTTP、PostgreSQL、Docker，以及 private FastAPI / pgvector Candidate Evidence service 的跨服务集成；交付验证不止检查 Docker 是否能启动，还覆盖 clean environment、依赖启动、migration、restart persistence、权限隔离和核心 Workflow，避免把“本机能跑”误判为可交付。
+- **真实门店 POC 与使用：** 已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用；交付因此从内部 Demo / 工程验收进入真实门店 Workflow 验证。当前能确认的是方案已进入真实使用，不把 POC 完成扩大解释为长期稳定运行、规模化复制、商业成交或上线后业务指标已经成立。
+- **POC 验收逻辑：** POC 不以“模型能回答”作为单一成功标准，而分别检查正常回答、无答案 / 歧义、权限隔离、真实状态写入、异常转人工和关键 Integration；其中“回答正确”和“业务动作真正发生”分开验收，避免语言层通过掩盖业务状态失败。
+- **RAG / 交付边界：** 当前 pgvector / FastAPI / Node 集成能够证明跨服务与向量链路打通，但不等于 production-calibrated retrieval quality 已通过；Hosted Embedding、真实门店分布下的检索质量与长期稳定性仍需继续用真实 Query / Badcase 验证。
 - **后续产品演进：** 第一接待稳定后，再根据真实门店现场暴露的问题决定是否增加服务提醒、定时触达和私域促活等轻量功能，而不是预先构建复杂 CRM / 营销系统。
 
-**当前状态：** Pre-ICP Engineering Baseline；public deployment、Live WeCom、真实客户 POC、Production SLA 和复杂企业系统集成尚未完成。
+**当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；项目已从工程侧 Pre-ICP 验证进入真实门店使用阶段。长期稳定性、规模化复制、Production SLA、Hosted Embedding / production-calibrated retrieval quality、复杂企业系统集成及商业化结果仍待持续验证。
