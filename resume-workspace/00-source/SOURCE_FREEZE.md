@@ -89,7 +89,7 @@ Agent delivery / Eval / Harness / CI 等事实相对上一 epoch 无新增事实
 - `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-02A48ED2`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
 - `ONLINE-MAIN` / R1：已吸收当前可对外表达的交付与 Eval 事实。
 - R2–R6：保持既有角色差异，不因本次文档消歧或 R1 Eval 增强而重构。
-- `CANONICAL_TIMELINE.md`: 未变化；Timeline Gate 保持 PASS。
+- `CANONICAL_TIMELINE.md`: 日期、顺序与空档未变化；今宜职位显示按用户最新确认统一为“抖音项目代运营”。Timeline Gate 保持 PASS。
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json`: **本 working-candidate 阶段故意不修改**；等待用户明确 canonical promotion。
 - `APPLICATION_READY = NO`；当前仍处于 10 秒 HR 审计后的用户复核 / 修订阶段，BossHunter 优化尚未开始，必须等待用户确认简历版本。
 
