@@ -817,13 +817,14 @@ Langfuse 等工具可用于 Agent 可观测、Trace 记录、埋点和评分反�
 ### FCTM-AG-00｜当前主线项目证据定位与核验状态
 当前主线项目引用：
 - GitHub repository：`wanghanyu654321-cell/-agent`；
-- branch / ref：`job-ready/integration-v1`。
+- current ref：`main`。
 
-2026-09-16 已独立查看该 branch 的顶层 README 与 `evals/job-ready-rag` 评测资产结构，因此 Eval 资产和部分交付边界可标记为 `REPO_PARTIALLY_VERIFIED`。
+2026-09-20 已重新核验当前 `main` 的顶层 README、`docs/job-ready/CURRENT_STATE.md`、`docs/job-ready/JOB_SEARCH_SPRINT_V1.md` 与 `evals/governance/manifest.ts`。当前可独立核验的工程证据已经覆盖 Agent Runtime、Authority、Governed Knowledge、Durable State、Eval / Harness、Regression / CI、PostgreSQL、FastAPI / pgvector 与 Docker 等能力及其失败 / 阻塞边界。
 
 边界：
-- 部分仓库核验不等于所有技术栈、架构主张和生产状态均已独立核验；
-- 仓库 README 仍保留 synthetic portfolio / proof application 的证据口径；项目当前交付状态另见 FCTM-AG-05 / FCTM-AG-07。
+- repo verification 证明的是仓库内工程实现 / 验证，不自动证明商业客户部署、Pilot 验收、Production Ready 或长期业务结果；
+- 微信部署、实体门店 POC、开始实际使用等业务事实仍按用户确认后进入 FACT / CLAIM 的口径治理，不能因为工程 repo 的 commercial-claim boundary 而被自动删除；
+- 普通微信端到端验证、WeCom 工程实现、商业客户 / Pilot 验收是三个不同 claim category，必须分开表达。
 
 ### FCTM-AG-01｜本人责任
 本人负责：
@@ -871,29 +872,26 @@ Langfuse 等工具可用于 Agent 可观测、Trace 记录、埋点和评分反�
 - Formal Query Rewrite；
 - Model Routing。
 
-### FCTM-AG-04｜Eval / Frozen Cases / 测试结果与仓库证据
-沉淀：`40 Frozen Cases`。
+### FCTM-AG-04｜Eval / Frozen Cases / 分层回归证据
+早期沉淀：`40 Frozen Cases`，分为 `24 answerable / 8 no-answer / 8 ambiguous`，包含冻结的 gold / expected version / source provenance 与 tenant / store / status / version 等 negative controls。
 
-已核验的 `evals/job-ready-rag` 资产显示：
-- 40 Cases 分为 `24 answerable / 8 no-answer / 8 ambiguous`；
-- Case 带有冻结的 gold / expected version / source provenance 等预期信息；
-- Negative controls 覆盖 tenant isolation、store isolation、unapproved evidence、stale / retired version 等边界；
-- deterministic scoring 包括 Recall@3、Wrong Evidence Rate、No-answer Accuracy、routing、scope / status / version violation 等指标；
-- 该评测包明确保留未决阈值，不声称 overall PASS。
+2026-09-20 重新核验当前 `main` 后，项目 Eval 证据已经不只是一套 40-case regression，还包括：
+- Safety vertical slice：`30-case`；
+- Robustness evaluation：`100-case`；
+- Blind safety holdout：`60-case`；
+- Governed Knowledge：`46/46`；
+- public retrieval / runtime regression 与现有 CI Gates；
+- S1 Thin Evaluation Harness；
+- Durable Acceptance / business-write acceptance；
+- Governance manifest 对不同 domain 保留独立 rubric / gate，不制造一个 blended Agent score。
 
-现有项目测试记录还包括：
-- Safety `30/30`；
-- Robustness `100/100`；
-- Holdout `60/60`；
-- Governed Knowledge `46/46`；
-- Public Top1 `96%`；
-- Recall@3 `100%`；
-- Routed Outcome `100%`。
+历史记录还保留 Public Top1 `96%`、Recall@3 `100%`、Routed Outcome `100%` 等指标，但这些只属于对应评测集 / 实验语境。
 
 边界：
-- `Holdout 60/60` 是分数记法，不是 60 个独立样本的证明；
-- 仅代表当前项目测试 / 评测资产，不是生产流量结果；
-- 不把未独立批准的 retrieval-quality threshold 写成整体 PASS。
+- 当前仓库已明确支持“100-case robustness”与“60-case blind holdout”，不再把 `60/60` 降级解释为仅有分数记法；
+- 测试 / 评测资产不是生产流量结果；
+- retrieval ranking 指标不自动等于 answer authorization；
+- 未获得批准的 semantic / vector retrieval-quality threshold 时，不写 overall retrieval-quality PASS。
 
 ### FCTM-AG-05｜项目当前交付状态与边界
 用户 2026-09-20 最新确认：数字前台 Agent 已完成微信真实部署，并在实体本地生活门店完成 POC；门店已经开始在真实接待场景中实际使用。
@@ -978,6 +976,53 @@ Langfuse 等工具可用于 Agent 可观测、Trace 记录、埋点和评分反�
 表达原则：
 `Real Deployment / Store POC / Actual Use = FACT`
 `Long-term Customer Success / Commercial Success / Production-scale Metrics = NOT YET VERIFIED`
+
+### FCTM-AG-10｜Thin Evaluation Harness / Run Integrity
+当前仓库已实现并核验 S1 Thin Evaluation Harness，主链为：
+
+`Case / Config → Runner → existing service / Runtime → actual result + safe trace projection → Evaluator → Report`
+
+Harness 不进入 production runtime，而是独立的开发 / 评测基础设施。
+
+Run Integrity 会检查：
+- suite / config / corpus 等冻结身份与 hash；
+- receipt / declaration 是否匹配；
+- case population 是否缺失或重复；
+- completion marker 是否完整；
+- interrupted run 是否被错误标记为 complete；
+- malformed / mismatched run 是否 fail closed。
+
+边界：
+- 可写 Eval Harness、Run Integrity、缺失 / 重复 Case、配置 / 数据不一致、运行中断防误判；
+- 不写通用 replay platform、trace database、dashboard 或 scheduler；
+- 不把 Harness 写成生产依赖。
+
+### FCTM-AG-11｜Tool Use / Durable Action Acceptance
+当前仓库的 Acceptance 不只判断最终文本或 Tool Call，而是把“模型判断 / Tool 返回”和“业务动作真正发生”分开。
+
+Ticket / Handoff 等关键动作的验收逻辑包括：
+`authorize → write → persistence → scoped read-back → acceptance`
+
+Harness / evaluator 会检查 final result、grounding evidence 与 authoritative durable state；缺失、重复或无法证明的 durable observation 不应被推断成 PASS。
+
+边界：
+- 可写 Tool Use / Action Acceptance、Durable State、scoped read-back；
+- 不写 exactly-once 或 production-scale reliability 已完成；
+- Tool Call success 不等于业务成功。
+
+### FCTM-AG-12｜Quality Gate / Version Decision 与失败证据保留
+当前项目的 Eval 链路明确为：
+
+`Case / Config → Runtime → Evaluation → Report → Gate → Version Decision`
+
+不同风险域分别保留 Safety、Knowledge、Retrieval、Harness、Runtime 等 Gate；FAILED / BLOCKED / DEFERRED 证据保留，不为了“新方案必须更好”而修改验收标准。
+
+已核验的典型工程判断包括：Semantic Evidence Selector 做过真实模型、unseen holdout、order robustness 与 latency characterization；历史 30 次 latency observation 的 P50 约 `7.35s`、P95 约 `16.67s`，在当前 `10s overall / 2s per-tool` Runtime budget 下未作为同步主路径强依赖。
+
+边界：
+- 可写评测结果参与版本 / 方案取舍，质量或时延不满足时保留失败 / 阻塞结论；
+- 不把历史 latency characterization 写成线上 SLA；
+- 不写 Semantic Selector 已进入当前同步生产主链。
 
 ---
 
