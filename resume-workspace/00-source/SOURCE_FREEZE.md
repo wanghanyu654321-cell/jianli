@@ -4,8 +4,8 @@
 
 - Source ID: `FCT-001`
 - Current GitHub mirror: `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`
-- Source epoch: `FCT-EPOCH-20260920-DE68CC7D`
-- Git blob SHA: `de68cc7d3ca981e411864f4968300c5056247f6d`
+- Source epoch: `FCT-EPOCH-20260920-CF6422BF`
+- Git blob SHA: `cf6422bf96d8b19810b9c2526972ce88dd3af3ba`
 - Freeze date: `2026-09-20`
 - Candidate source currency: `CURRENT`
 - Promotion state: `NEWER_UNPROMOTED_CANDIDATE`
@@ -30,6 +30,12 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 ## Previous epochs
 
 ### Immediate working-candidate predecessor
+- Epoch: `FCT-EPOCH-20260920-DE68CC7D`
+- Git blob SHA: `de68cc7d3ca981e411864f4968300c5056247f6d`
+- Status: `SUPERSEDED_BY_LATEST_REPO_EVAL_VERIFICATION`
+- Reason: 重新核验 `-agent` 当前 main 后，修正项目 repo ref、确认 100-case robustness / 60-case blind holdout，并新增 Thin Evaluation Harness / Run Integrity / Durable Acceptance / Quality Gate 工程证据。
+
+### Earlier working-candidate predecessor
 - Epoch: `FCT-EPOCH-20260916-FE4CB619`
 - Git blob SHA: `fe4cb619cccf99f98813f7dec683b8022ff4f2e5`
 - Status: `SUPERSEDED_BY_20260920_CONFIRMED_DELIVERY_AND_EVAL_FACTS`
@@ -74,7 +80,9 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 - 通过不同 Layer / Path 的意图、工具选择、工具结果、异常处理等关键节点差异沉淀规则；
 - 运行指标（如首 Token 延迟、工具调用数量等）与结构化 Trace / 轨迹评测分层处理；
 - 结构化 Trace 使用“规划 / 决策节点”等可观察行为，不表述为模型私有思维链；
-- Langfuse 仅记录为可观测 / Trace / 埋点 / 评分反馈的方法认知，未确认实际接入前不得写成项目落地事实。
+- Langfuse 仅记录为可观测 / Trace / 埋点 / 评分反馈的方法认知，未确认实际接入前不得写成项目落地事实；
+- 当前 `-agent` main 已重新核验：30-case Safety、100-case robustness、60-case blind holdout、Governed Knowledge、retrieval/runtime regression、Thin Evaluation Harness、Run Integrity、Durable Acceptance 与独立 Quality Gates 均可作为 repo-verified 工程证据；
+- 不使用 blended Agent score 掩盖 Safety / Authority / Durable State 等硬失败；FAILED / BLOCKED / DEFERRED 证据保留。
 
 ### Repository vs business fact boundary
 - `-agent` 工程仓库负责证明仓库内实现 / 验证的工程证据；
@@ -84,7 +92,7 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 
 ## Downstream state
 
-- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-DE68CC7D`，吸收微信部署 / 门店 POC / 实际使用与开放题 / 轨迹评测的新确认事实。
+- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-CF6422BF`，在既有交付 / 开放题 / 轨迹评测事实上新增当前 main 可核验的 Harness / Holdout / Durable Acceptance / Quality Gate 工程证据。
 - `ONLINE-MAIN` / R1：已吸收当前可对外表达的交付与 Eval 事实。
 - R2–R6：保持既有角色差异，不因本次文档消歧或 R1 Eval 增强而重构。
 - `CANONICAL_TIMELINE.md`: 未变化；Timeline Gate 保持 PASS。
