@@ -4,8 +4,8 @@
 
 - Source ID: `FCT-001`
 - Current GitHub mirror: `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`
-- Source epoch: `FCT-EPOCH-20260920-CF6422BF`
-- Git blob SHA: `cf6422bf96d8b19810b9c2526972ce88dd3af3ba`
+- Source epoch: `FCT-EPOCH-20260920-02A48ED2`
+- Git blob SHA: `02a48ed2191ba2dbf2245be9e1d29bdcdab72a3e`
 - Freeze date: `2026-09-20`
 - Candidate source currency: `CURRENT`
 - Promotion state: `NEWER_UNPROMOTED_CANDIDATE`
@@ -30,6 +30,12 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 ## Previous epochs
 
 ### Immediate working-candidate predecessor
+- Epoch: `FCT-EPOCH-20260920-CF6422BF`
+- Git blob SHA: `cf6422bf96d8b19810b9c2526972ce88dd3af3ba`
+- Status: `SUPERSEDED_BY_JINYI_TITLE_NORMALIZATION`
+- Reason: 用户明确要求杭州今宜职位统一对外显示为“抖音项目代运营”；BD / 项目推进仍保留为职责证据，不再并列进职位标题。
+
+### Earlier working-candidate predecessor
 - Epoch: `FCT-EPOCH-20260920-DE68CC7D`
 - Git blob SHA: `de68cc7d3ca981e411864f4968300c5056247f6d`
 - Status: `SUPERSEDED_BY_LATEST_REPO_EVAL_VERIFICATION`
@@ -67,37 +73,25 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 
 ## Semantic delta in current epoch
 
-相对 `FCT-EPOCH-20260916-FE4CB619`，本次工作候选 epoch 只吸收用户明确确认的新事实，不从 JD / Skill / 历史旁支推导事实。
+相对 `FCT-EPOCH-20260920-CF6422BF`，本次事实层只发生一项用户明确确认的职位显示口径变化：
 
-### Agent delivery
-- 已完成微信部署；
-- 已完成实体本地生活门店 POC；
-- 门店开始在接待场景中实际使用；
-- 不升级为长期客户成功、持续付费、ROI、规模化、Production SLA 或 commercial customer deployment / Pilot acceptance。
+### 杭州今宜职位显示
+- 对外职位统一为：`杭州今宜商贸有限公司｜抖音项目代运营｜2024.11–2025.07`；
+- 项目经营、直播、内容、投流、店铺数据、达人 BD、项目排期和合作方汇报等实际职责继续保留；
+- BD 仍可作为 MaaS / AI 交付方向的 transferable evidence；
+- 不再将“项目运营 / BD”并列写入职位标题；
+- 不因为保留 BD 职责而升级为 AI 售前、商业成交或客户采购经历。
 
-### Agent Eval
-- 开放题不存在唯一标准答案时，可结合既有指标对比高分 / 低分答案；
-- 通过不同 Layer / Path 的意图、工具选择、工具结果、异常处理等关键节点差异沉淀规则；
-- 运行指标（如首 Token 延迟、工具调用数量等）与结构化 Trace / 轨迹评测分层处理；
-- 结构化 Trace 使用“规划 / 决策节点”等可观察行为，不表述为模型私有思维链；
-- Langfuse 仅记录为可观测 / Trace / 埋点 / 评分反馈的方法认知，未确认实际接入前不得写成项目落地事实；
-- 当前 `-agent` main 已重新核验：30-case Safety、100-case robustness、60-case blind holdout、Governed Knowledge、retrieval/runtime regression、Thin Evaluation Harness、Run Integrity、Durable Acceptance 与独立 Quality Gates 均可作为 repo-verified 工程证据；
-- 不使用 blended Agent score 掩盖 Safety / Authority / Durable State 等硬失败；FAILED / BLOCKED / DEFERRED 证据保留。
-
-### Repository vs business fact boundary
-- `-agent` 工程仓库负责证明仓库内实现 / 验证的工程证据；
-- Resume 的微信部署 / 门店 POC / 实际使用以用户确认后进入 FACT MASTER / CLAIM LEDGER 为准；
-- 工程 repo 的 conservative commercial-claim boundary 不自动否定已确认的 Resume business-use fact；
-- Resume business-use fact 也不得反向升级 repo 为 Production Ready / commercial customer deployment / Pilot acceptance。
+Agent delivery / Eval / Harness / CI 等事实相对上一 epoch 无新增事实，只发生 recruiter-facing 表达优化。
 
 ## Downstream state
 
-- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-CF6422BF`，在既有交付 / 开放题 / 轨迹评测事实上新增当前 main 可核验的 Harness / Holdout / Durable Acceptance / Quality Gate 工程证据。
+- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-02A48ED2`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
 - `ONLINE-MAIN` / R1：已吸收当前可对外表达的交付与 Eval 事实。
 - R2–R6：保持既有角色差异，不因本次文档消歧或 R1 Eval 增强而重构。
 - `CANONICAL_TIMELINE.md`: 未变化；Timeline Gate 保持 PASS。
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json`: **本 working-candidate 阶段故意不修改**；等待用户明确 canonical promotion。
-- `APPLICATION_READY = NO`；当前顺序为文档歧义修复 → 10 秒 HR 审计 → BossHunter 优化调用。
+- `APPLICATION_READY = NO`；当前仍处于 10 秒 HR 审计后的用户复核 / 修订阶段，BossHunter 优化尚未开始，必须等待用户确认简历版本。
 
 ## Rebase contract
 
