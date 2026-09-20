@@ -33,7 +33,7 @@ Base: `resume/v5-grill-complete`
 当前顺序已冻结为：
 
 1. 文档歧义修复：**COMPLETE**；
-2. 10 秒 HR / 平台首屏审计（ONLINE-MAIN + R1）：**USER REVIEW / REVISION IN PROGRESS**；
+2. R1 已按 V5 完整母版原则重新构建：**USER REVIEW IN PROGRESS**；
 3. BossHunter 优化调用：**BLOCKED UNTIL USER APPROVES RESUME**。
 
 当前 working-candidate source epoch：`FCT-EPOCH-20260920-FD7E6D3E`。
@@ -64,3 +64,13 @@ Canonical index / registry 暂不修改；只有用户明确授权 promotion 后
 ## New-Media Evidence Anchor
 
 朗臻宠物项目中的“小红书策略 / 新媒体运营”属于 R1 高价值证据：策略、流程、约 5 人团队协同、内容测试、有效 / 爆文方向验证与复刻迭代不得因 10 秒压缩被删除。
+
+
+## Current R1 Review State
+
+- `R1_REBUILT_FROM_V5_BASELINE = YES`
+- `R1_USER_APPROVED = NO`
+- `ONLINE_NARRATIVE_RESYNC = NOT_RUN`
+- `BOSSHUNTER = BLOCKED`
+
+当前不得继续用 10 秒审计名义压缩 R1 核心职业证据。
