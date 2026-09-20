@@ -74,3 +74,11 @@ Canonical index / registry 暂不修改；只有用户明确授权 promotion 后
 - `BOSSHUNTER = BLOCKED`
 
 当前不得继续用 10 秒审计名义压缩 R1 核心职业证据。
+
+
+## ONLINE Heading Review State
+
+- `ONLINE_HEADINGS_RECRUITER_NATIVE = YES`
+- `PROJECT_TITLE_SCENE_BASED = YES`
+- `CAREER_PROGRESSION_PRESERVED_IN_BODY = YES`
+- `BOSSHUNTER = BLOCKED`
