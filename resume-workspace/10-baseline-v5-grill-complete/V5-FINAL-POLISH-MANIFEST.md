@@ -20,7 +20,7 @@ Base: `resume/v5-grill-complete`
 - 不删除 V5 已确认事实。
 - 不压缩掉 Problem → Signal → Judgment → Action → Trade-off → Result / Verification。
 - 不改变 R1–R6 角色定位和证据权重。
-- 不改变工作时间、岗位名称、数字口径和 ownership。
+- 不擅自改变工作时间、岗位名称、数字口径和 ownership；用户明确确认的职位显示规范化除外，并必须同步 FACT / CLAIM / Timeline。
 - 不把团队结果写成个人结果。
 - 不把微信部署写成企业微信 / 全渠道部署。
 - 不把门店 POC / 实际使用写成长期客户成功、付费、ROI、规模化或 Production SLA。
