@@ -33,15 +33,18 @@ Base: `resume/v5-grill-complete`
 当前顺序已冻结为：
 
 1. 文档歧义修复：**COMPLETE**；
-2. 10 秒 HR / 平台首屏审计（ONLINE-MAIN + R1）：**COMPLETE**；
-3. BossHunter 优化调用：**NEXT**。
+2. 10 秒 HR / 平台首屏审计（ONLINE-MAIN + R1）：**USER REVIEW / REVISION IN PROGRESS**；
+3. BossHunter 优化调用：**BLOCKED UNTIL USER APPROVES RESUME**。
 
-当前 working-candidate source epoch：`FCT-EPOCH-20260920-CF6422BF`。
+当前 working-candidate source epoch：`FCT-EPOCH-20260920-02A48ED2`。
 
 本轮 10 秒审计只做：
 - Bullet 标题改为 JD / HR 扫描词；
 - 清理重复“真实”与模型总结腔；
 - 将当前 repo 已核验的 Holdout / Eval Harness / Run Integrity / Durable Acceptance / Quality Gate 证据按 Fact → Claim → Resume 顺序进入 R1；
-- ONLINE-MAIN 只保留高密度版本，不堆完整工程细节。
+- ONLINE-MAIN 只保留高密度版本，不堆完整工程细节；
+- 今宜职位统一显示为“抖音项目代运营”，BD 职责保留在正文；
+- R1 项目标题使用实际门店场景 / 问题，不改成方法论标题；
+- R1 项目评测 bullet 收敛为 7 个，加入 CI，并同步 ONLINE-MAIN。
 
 Canonical index / registry 暂不修改；只有用户明确授权 promotion 后才进入 canonical 更新。
