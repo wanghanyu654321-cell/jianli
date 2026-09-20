@@ -1710,6 +1710,18 @@ Codex / Hermes 都不是当前前置。
 - 数字前台统一明确为“个人 Agent 项目”；该来源属性不升级为创业 / commercial customer / 独立手写全部代码。
 - 任务周处理量 5,000–10,000 从 ONLINE / R1 首屏与 recruiter-facing 展示移除，不删除事实源。
 
+## 25.1B R1 重建纠偏
+
+前序 10 秒审计一度把 R1 按 Single-JD 短版逻辑压缩，违反 V5 母版原则。当前已经纠偏：
+- R1 以 `resume/v5-grill-complete` 原始 R1 为内容骨架重建；
+- R1 是完整 Role Baseline，不能再以“更像 Eval”为理由删除管理、沟通、协调、新媒体、平台商务、供应链或 0→1 的高价值证据；
+- 朗臻必须显式表现“牙膏品类电商运营 → 宠物项目运营管理”的责任升级；
+- 今宜必须表现第二段新盘 0→1 及千川、内容 / 直播验证、团队协同、达人 BD；
+- 用户长期优势不是单点技能堆叠，而是“进入复杂新环境 → 学会 → 判断问题 → 协调推进 → 做出结果 → 扩大责任范围”的重复事实模式；
+- 学习 / 适应能力通过跨品类、跨渠道、跨岗位和结果证明，不写空泛人格评价；
+- 当前只重建 R1；ONLINE-MAIN 暂不跟随改写，等待用户先审 R1；
+- 用户批准 R1 前，BossHunter 继续冻结。
+
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
 `wanghanyu654321-cell/-agent` 作为工程证据源，可证明仓库内已经实际实现并验证的 Runtime / Authority / Governed Knowledge / Durable State / Eval Harness / Regression / CI / PostgreSQL / FastAPI / pgvector / Docker 等能力。
