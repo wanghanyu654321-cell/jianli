@@ -4,8 +4,8 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-2EDBC835`
-- Current Git blob SHA: `2edbc83531818f26662b1f2a5641b45e25328b37`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-0CF4BE37`
+- Current Git blob SHA: `0cf4be3700a6ed3bc63d407e5e9e8828fa5d88ca`
 - Previous repository epoch: `FCT-EPOCH-20260920-CF6422BF`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
@@ -104,3 +104,5 @@
 | FCT-68 | 朗臻职业成长路径为“牙膏品类电商运营 → 宠物项目运营管理”：从一线商品 / 搜索 / 经营工作起步，后续负责约 5 个跨平台店铺的 GMV、利润率、DSR、月 / 季目标和渠道结果，所在宠物业务年度整体 GMV 约 1,500 万，并承担优先级、排期、阶段检查、跨团队协调与项目汇报 | FCTM-LZ-05A, FCTM-LZ-17, FCTM-LZ-20~23 | FACT_DOCUMENTED | 用职业跨度、责任升级和结果证明学习迁移 / 管理能力；不写成公司级负责人、全部团队行政直管或个人独占 1,500 万 GMV。 |
 
 | FCT-69 | 朗臻宠物项目中负责小红书策略与运营管理，协同约 5 人团队，通过选题 / 内容测试寻找更有机会形成爆文的方向，对有效主题或内容结构继续复刻、数据验证和迭代 | FCTM-LZ-19 | FACT_DOCUMENTED | 可写新媒体策略、内容测试、爆文方向验证、流程设计与团队协同；不写保证爆文、平台算法能力或本人承担全部执行。 |
+
+| FCT-70 | 所服务的淘天 Data Agent 位于搜推侧；可用于表达搜推侧 Data Agent 评测及搜索 / 推荐链路相关性，但不写搜索 / 推荐算法研发、策略 Owner 或算法实现 | FCTM-RR-00, FCTM-RR-17 | FACT_USER_CONFIRMED | 用于招聘侧明确业务归属与关键词匹配，不扩大技术 ownership。 |
