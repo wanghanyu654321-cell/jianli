@@ -36,7 +36,7 @@ Base: `resume/v5-grill-complete`
 2. 10 秒 HR / 平台首屏审计（ONLINE-MAIN + R1）：**USER REVIEW / REVISION IN PROGRESS**；
 3. BossHunter 优化调用：**BLOCKED UNTIL USER APPROVES RESUME**。
 
-当前 working-candidate source epoch：`FCT-EPOCH-20260920-02A48ED2`。
+当前 working-candidate source epoch：`FCT-EPOCH-20260920-C8387F27`。
 
 本轮 10 秒审计只做：
 - Bullet 标题改为 JD / HR 扫描词；
@@ -45,6 +45,11 @@ Base: `resume/v5-grill-complete`
 - ONLINE-MAIN 只保留高密度版本，不堆完整工程细节；
 - 今宜职位统一显示为“抖音项目代运营”，BD 职责保留在正文；
 - R1 项目标题使用实际门店场景 / 问题，不改成方法论标题；
-- R1 项目评测 bullet 收敛为 7 个，加入 CI，并同步 ONLINE-MAIN。
+- R1 项目评测 bullet 保持 7 个高价值证据，标题进一步改为评测集设计 / 边界测试 / Bad Case / 版本回归 / Tool Use / 执行轨迹分析 / 自动化回归与 CI；
+- R1 电商经历只保留与 Query、数据诊断、验证方法和 0→1 结果最相关的 6 条；
+- ONLINE-MAIN 核心能力拆分正式工作证据与个人 Agent 项目证据；
+- 人瑞正式职位统一恢复为“评测专家（淘天 Data Agent）”；
+- 数字前台明确标识为个人 Agent 项目；
+- `Search / Query Intent` 已从 R1 recruiter-facing 表达中移除。
 
 Canonical index / registry 暂不修改；只有用户明确授权 promotion 后才进入 canonical 更新。
