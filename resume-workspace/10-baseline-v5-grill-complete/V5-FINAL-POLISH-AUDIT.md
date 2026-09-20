@@ -8,8 +8,8 @@ Base: `resume/v5-grill-complete`
 验证本轮“中国市场语言统一 + 简历化表达 + 用户新确认评测事实补充”没有通过压缩或改写破坏 V5 原有事实、数字和角色结构。
 
 当前事实源：
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-C8387F27`
-- FACT blob: `c8387f2784a786eedd2e7a1bbc05b574c9565ea2`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-78D15E87`
+- FACT blob: `78d15e8773ad1e66c57a27f731379adfd804e743`
 
 ## Structural Check
 
@@ -37,7 +37,7 @@ R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今�
 
 本轮已按顺序更新：
 1. `FACT_MASTER_CURRENT.md`：保留 FCTM-RR-24~27，并新增 / 更新 FCTM-AG-00、FCTM-AG-04、FCTM-AG-10~12；
-2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-C8387F27`；
+2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-78D15E87`；
 3. R1：正式工作与个人项目证据分层展示；Action Acceptance → Tool Use，Trajectory Eval → 执行轨迹分析，Eval Dataset → 评测集设计，Negative Cases → 边界测试，Eval Harness / CI → 自动化回归 / CI；项目标题保持实际场景并增加“个人 Agent 项目”来源属性；
 4. ONLINE-MAIN：个人优势压为两段并前置三类最高价值证据；核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”，避免 CI / Quality Gate 来源混淆；
 5. Langfuse 保持边界：当前只确认方法用途，**未写成已实际接入 / 已搭建平台**。
@@ -106,3 +106,17 @@ R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今�
 - `V5-FINAL-FULLTEXT.md`
 
 ONLINE-MAIN 仍是派生在线主简历，不替代 R1–R6。
+
+
+## R1 Core Evidence Preservation
+
+本轮用户明确要求以下五类核心价值在后续 R1 优化中不得因“10 秒压缩”被误删：
+1. 正式 AI / Agent 评测能力；
+2. 沟通与规则转译能力；
+3. 跨团队协调与项目推进能力；
+4. 从执行到项目管理的责任升级；
+5. 两段 0→1 有结果经历。
+
+朗臻必须保留成长路径：牙膏品类电商运营 → 宠物项目运营管理 → 约 5 个跨平台店铺 → 业务年度整体 GMV 约 1,200 万–2,000 万，并保留优先级、排期、阶段检查、跨团队协调和项目汇报证据。
+
+“学习能力 / 适应能力”不直接写成空泛自评，而通过跨品类、跨渠道、跨岗位责任升级和可验证结果体现。
