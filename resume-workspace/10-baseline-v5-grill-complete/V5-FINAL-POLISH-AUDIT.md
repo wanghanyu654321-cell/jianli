@@ -27,7 +27,7 @@ R1 相对原 V5 bullet 总数保持不变；项目内部从 9 个评测 bullet �
 当前新增 / 强化的 Eval 证据：
 - 30-case Safety / 100-case Robustness / 60-case Blind Holdout；
 - S1 Thin Evaluation Harness / Run Integrity；
-- Tool Use / Durable Action Acceptance；
+- Action Acceptance / Durable State；
 - Quality Gate / Version Decision；
 - 保留开放题高低分答案、Layer / Path 与结构化 Trace / 轨迹评测。
 
@@ -84,7 +84,7 @@ R1 相对原 V5 bullet 总数保持不变；项目内部从 9 个评测 bullet �
 - Trace / Trajectory Eval → FCT-62 / FCT-63；
 - 分层 Eval / 100-case Robustness / 60-case Blind Holdout → FCT-27；
 - Eval Harness / CI → FCT-65；
-- Tool Use / Action Acceptance → FCT-66；
+- Action Acceptance → FCT-66；
 - Quality Gate / Version Decision → FCT-67；
 - 今宜职位统一显示与 BD 职责边界 → FCT-09；
 - 微信部署 / 门店 POC / 使用反馈 → FCT-58 / FCT-60。
