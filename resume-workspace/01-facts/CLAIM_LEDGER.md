@@ -4,9 +4,9 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-CF6422BF`
-- Current Git blob SHA: `cf6422bf96d8b19810b9c2526972ce88dd3af3ba`
-- Previous repository epoch: `FCT-EPOCH-20260920-DE68CC7D`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-02A48ED2`
+- Current Git blob SHA: `02a48ed2191ba2dbf2245be9e1d29bdcdab72a3e`
+- Previous repository epoch: `FCT-EPOCH-20260920-CF6422BF`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
 - `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve real WeChat deployment / store POC / actual-use boundaries without upgrading them into unverified production-scale or commercial outcomes.
@@ -23,7 +23,7 @@
 | FCT-06 | 接触 DAU、CTR、转化相关指标、灰度流量、业务水位，并按时间维度观察版本和异常变化 | FCTM-RR-16 | FACT_DOCUMENTED | 不写独立 A/B Owner、完整线上权限或独立策略；不擅自补小时/日等精确时间粒度；eCTR/pCTR/eCVR/pCVR/UVCTR/Lift 暂未确认。 |
 | FCT-07 | 历史约 3% CTR 记忆无法恢复业务、分母和周期 | EX-01 | EXCLUDE | 正式简历禁用。 |
 | FCT-08 | 接触并理解 Query 预处理/理解/Rewrite→Recall→Filter→Coarse Rank→Fine Rank→Rerank→SERP→Feedback/A-B，理解 L1/L2/L3 相关性 | FCTM-RR-17 | FACT_DOCUMENTED | 只写理解/接触，不写算法实现。 |
-| FCT-09 | 杭州今宜负责抖音项目代运营/项目运营/BD，2024.11–2025.07，覆盖项目经营、直播、内容、投流、店铺数据、达人 BD、项目排期和合作方汇报等 | FCTM-TL-02, FCTM-JY-01~26 | FACT_DOCUMENTED | 不拆虚构雇佣主体；运营方案汇报不升级为 AI 售前/POC。 |
+| FCT-09 | 杭州今宜职位统一对外表述为“抖音项目代运营”，2024.11–2025.07；实际工作仍覆盖项目经营、直播、内容、投流、店铺数据、达人 BD、项目排期和合作方汇报等 | FCTM-TL-02, FCTM-JY-01~26 | FACT_DOCUMENTED | BD 属于实际工作内容，可作为 MaaS / 交付迁移证据；不再把“项目运营 / BD”并列进职位标题，不升级为 AI 售前/商业成交。 |
 | FCT-10 | 同一账号属于新盘 0→1：早期月 GMV 约 7 万，接手后首月约 43 万 | FCTM-JY-01 | FACT_DOCUMENTED | 禁止写“成熟差盘救火”；不写未经支持的增长倍数。 |
 | FCT-11 | 另一独立账号负责期间单月 GMV 峰值约 152 万 | FCTM-JY-21 | FACT_DOCUMENTED | 与 FCT-10 分开；不得混为同一增长曲线。 |
 | FCT-12 | 协同约 6 人直播团队，覆盖策略、目标拆解、排期、培训协同、跟播、内容、投流、数据与复盘 | FCTM-JY-22 | FACT_DOCUMENTED | 项目协作规模，不写全部行政直管。 |
