@@ -962,12 +962,17 @@ SOP 是某些反复问题被验证后形成的沉淀，不是所有经历的必�
 - 这是运营 / 项目经营中的 Delivery 与 Stakeholder Communication 证据；
 - 不自动迁移成真实 AI 客户交付、产品 Roadmap Owner 或商业售前成交经历。
 
-### FCTM-XR-05｜Agent 项目已提供 AI Demo / POC 与上线准备证据
-当前主线 Agent 项目已经从单纯项目证明扩展到实际落地目标下的 Demo / POC 交付与上线准备，可为 Business FDE、AI Product、Agent Solution 和 AI Solution 岗位提供更直接的项目交付证据。
+### FCTM-XR-05｜Agent 项目已提供真实部署 / 门店 POC / 实际使用证据
+当前主线 Agent 项目已经从单纯项目证明、Demo / POC 准备进一步进入真实微信部署与实体本地生活门店使用阶段，可为 Business FDE、AI Product、Agent Solution 和 AI Solution 岗位提供更直接的真实交付证据，也为 Agent Eval / AI Commerce 提供真实场景输入。
+
+当前已经确认：
+- 微信真实部署；
+- 实体本地生活门店 POC 完成；
+- 门店开始实际使用。
 
 边界：
-- 该能力迁移不等于已经具备成熟企业售前成交、付费客户交付或生产规模化经验；
-- 正式上线前仍需保持 pre-production / pre-go-live 边界。
+- 该能力迁移不等于已经具备成熟企业售前成交、长期付费客户成功或生产规模化经验；
+- 不把开始使用写成留存、ROI、GMV / 转化提升、Production SLA 或规模化复制已验证。
 
 ---
 
