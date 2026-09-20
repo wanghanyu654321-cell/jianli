@@ -15,7 +15,13 @@
 - `resume-workspace/CURRENT_VERSION_INDEX.md`
 - `resume-workspace/GATE_REGISTRY.json`
 
-这两个文件负责“当前状态”；各版本 Audit 负责“该 artifact 当时的审计记录”。历史 Audit 不得覆盖 current-state registry。
+这两个文件负责**已晋升 canonical state**；各版本 Manifest / Audit 负责说明对应 working candidate artifact 的来源与状态。历史 Audit 不得覆盖 current-state registry；同样，未晋升的 working candidate 也不得被误写成 canonical。
+
+当审查发生在未晋升 working branch（例如 `resume/v5-final-polish`）时，必须同时回答两个问题：
+- canonical registry 当前指向什么；
+- 当前 branch 上是否存在更新但尚未 promotion 的 candidate。
+
+禁止把“candidate 更新”误判为“canonical 已更新”，也禁止因为 canonical registry 较旧，就把经过当前 Fact / Claim 治理的 candidate 自动降级为旧历史状态。
 
 ## 2. Mandatory Review Order
 
@@ -54,19 +60,22 @@ Fact Safety 是硬约束，不是成品质量的替代指标。
 
 ## 4. Source Epoch and Currency
 
-每个事实冻结版本应拥有 source epoch。当前仓库最后一次已知冻结 epoch 为：
+每个事实冻结版本应拥有 source epoch，但**本 Policy 不再硬编码某一个 epoch 为永久“当前值”**，避免 Policy 自身因后续事实更新而变成新的漂移源。
 
-`FCT-EPOCH-20260913-7EAA096A`
+读取顺序：
 
-R1 V3 Audit 已记录：本地 `FCT-001` 在该冻结后再次发生非时间轴指纹变化，因此当前 repository source currency 为：
+1. canonical source epoch / gate state：读取 `CURRENT_VERSION_INDEX.md` 与 `GATE_REGISTRY.json`；
+2. working candidate source epoch：读取当前 branch 的 `FACT_MASTER_CURRENT.md`、对应 Manifest / Audit；
+3. 如果 candidate 比 canonical 更新但尚未 promotion，状态应表达为 **NEWER_UNPROMOTED_CANDIDATE**，而不是自动写成 `STALE_PENDING_REBASE`；
+4. 只有出现未同步的事实变化、Claim Ledger 未重建、或 candidate artifact 未重新 Claim Check 时，才判定真正的 source drift / pending rebase。
 
-`STALE_PENDING_REBASE`
+因此必须区分：
 
-这意味着：
+- **Canonical Currency**：当前正式晋升状态；
+- **Candidate Currency**：当前 working branch 的事实 / Claim / artifact 是否自洽；
+- **Promotion State**：candidate 是否已经正式晋升。
 
-- 已有 Claim Map 可以继续说明“artifact 与仓库 Claim Ledger 的映射完整性”；
-- 但不能据此宣称“仓库 Claim Ledger 已经代表本地最新 FCT-001”；
-- Source Rebase 完成前 `APPLICATION_READY = NO`。
+三者不得合并成一个模糊的“current / stale”标签。
 
 ## 5. Gate Vocabulary and Dependency
 
@@ -148,7 +157,13 @@ Career Substance Gate 不规定固定 bullet 数量。不得为了通过 Gate �
 
 Project 永远不能替代三段正式 Work Experience。
 
-Agent Project 当前仍为 `DOCUMENTED_ONLY / REPO_NOT_VERIFIED`；只有当前任务明确进入 repo verification 阶段时才运行 repo-to-resume。
+Agent Project 已进入 repo verification 阶段，工程仓库可以作为 **engineering evidence source** 使用；但工程仓库与候选人事实源承担不同职责。
+
+- 工程仓库可独立证明：Runtime / Authority / Governed Knowledge / Durable State / Eval Harness / Regression / CI / PostgreSQL / FastAPI / pgvector / Docker 等已经被仓库证据支持的工程能力及其失败 / 阻塞边界。
+- 微信部署、实体门店 POC、开始实际使用等业务落地事实，只有在 FACT MASTER / CLAIM LEDGER 中已由用户确认时才能进入简历；不能因为工程仓库未独立记录商业场景，就擅自删除或降级这些已确认事实。
+- 反过来，工程仓库写明“不声称 commercial customer deployment / Pilot acceptance / Production Ready”时，也不得把简历中的 POC / 实际使用升级成商业客户验收、持续付费、ROI、规模化或 Production SLA。
+
+规则：**repo evidence 负责证明工程实现；FACT / CLAIM 负责治理候选人事实；两者可以互相校验，但不能互相越权。**
 
 ## 10. Evidence Priority
 
