@@ -4,8 +4,8 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-02A48ED2`
-- Current Git blob SHA: `02a48ed2191ba2dbf2245be9e1d29bdcdab72a3e`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-C8387F27`
+- Current Git blob SHA: `c8387f2784a786eedd2e7a1bbc05b574c9565ea2`
 - Previous repository epoch: `FCT-EPOCH-20260920-CF6422BF`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
@@ -38,7 +38,7 @@
 | FCT-21 | 胖小虎约 5 个跨平台店铺，年度整体 GMV 约 1,200 万–2,000 万，日常约 4–5 万，双 11 月约 200 万 | FCTM-LZ-17 | FACT_DOCUMENTED | 业务盘面与个人贡献分开。 |
 | FCT-22 | 对胖小虎 GMV、利润率、DSR、月/季目标和渠道结果直接负责 | FCTM-LZ-17 | FACT_DOCUMENTED | 老板做最终经营审查。 |
 | FCT-23 | 参与预算分配、商品/项目生命周期推进，并协同约 5 人小红书团队和约 5 人客服团队 | FCTM-LZ-19~21 | FACT_DOCUMENTED | 协同人数不等于行政直管；不写最终公司级预算权。 |
-| FCT-24 | 数字前台 Agent 工程证据源为 `wanghanyu654321-cell/-agent` 当前 `main`；已重新核验 README、Job-Ready Current State、Sprint 与 governance manifest，工程证据覆盖 Runtime、Authority、Governed Knowledge、Durable State、Eval/Harness、Regression/CI、PostgreSQL、FastAPI/pgvector 与 Docker 等能力 | FCTM-AG-00 | REPO_VERIFIED | repo verification 证明工程实现/验证，不自动证明 commercial customer deployment、Pilot acceptance、Production Ready；普通微信验证、WeCom 工程实现、商业客户验收分开表达。 |
+| FCT-24 | 数字前台 Agent 为个人 Agent 项目 / 个人项目实践，工程证据源为 `wanghanyu654321-cell/-agent` 当前 `main`；已核验 Runtime、Authority、Governed Knowledge、Durable State、Eval/Harness、Regression/CI、PostgreSQL、FastAPI/pgvector 与 Docker 等能力 | FCTM-AG-00 | REPO_VERIFIED | 个人项目属性用于与正式雇佣经历区分；repo verification 不自动证明 commercial customer deployment、Pilot acceptance、Production Ready，也不写独立手写全部代码。 |
 | FCT-25 | 项目材料描述 Node.js/FastAPI/PostgreSQL16/pgvector/React/Docker Compose/Nginx/Pi Runtime 和权限边界；README 已核到其中多项 | FCTM-AG-02 | REPO_PARTIALLY_VERIFIED | 不据此宣称生产部署；未逐项核验的技术仍按项目材料使用。 |
 | FCT-26 | 项目材料描述 Runtime/Tool-call Budget、工具、词法检索、Evidence Governance、Routing 与 Safety/Authority 边界 | FCTM-AG-03 | DOCUMENTED_ONLY | Hybrid/RRF/Reranker/Formal Query Rewrite/Model Routing 未完整完成。 |
 | FCT-27 | 项目 Eval 从 40 Frozen Cases 扩展到分层回归：40-case answerable/no-answer/ambiguous 集、30-case Safety、100-case robustness、60-case blind holdout、Governed Knowledge 46/46、retrieval/runtime regression、S1 Thin Evaluation Harness 与 CI Gates；不同 domain 独立 gate，不使用 blended Agent score | FCTM-AG-04 | REPO_VERIFIED | 这些是测试/评测资产，不是生产流量；ranking 指标不自动等于 answer authorization；未批准 semantic/vector retrieval-quality threshold 时不写 overall PASS。 |
