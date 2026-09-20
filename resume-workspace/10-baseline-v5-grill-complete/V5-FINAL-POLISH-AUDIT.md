@@ -8,8 +8,8 @@ Base: `resume/v5-grill-complete`
 验证本轮“中国市场语言统一 + 简历化表达 + 用户新确认评测事实补充”没有通过压缩或改写破坏 V5 原有事实、数字和角色结构。
 
 当前事实源：
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-FD7E6D3E`
-- FACT blob: `fd7e6d3e311f442eeab20a901dfa57b59bca3e9f`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-2EDBC835`
+- FACT blob: `2edbc83531818f26662b1f2a5641b45e25328b37`
 
 ## Structural Check
 
@@ -37,7 +37,7 @@ R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今�
 
 本轮已按顺序更新：
 1. `FACT_MASTER_CURRENT.md`：保留 FCTM-RR-24~27，并新增 / 更新 FCTM-AG-00、FCTM-AG-04、FCTM-AG-10~12；
-2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-FD7E6D3E`；
+2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-2EDBC835`；
 3. R1：正式工作与个人项目证据分层展示；Action Acceptance → Tool Use，Trajectory Eval → 执行轨迹分析，Eval Dataset → 评测集设计，Negative Cases → 边界测试，Eval Harness / CI → 自动化回归 / CI；项目标题保持实际场景并增加“个人 Agent 项目”来源属性；
 4. ONLINE-MAIN：个人优势压为两段并前置三类最高价值证据；核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”，避免 CI / Quality Gate 来源混淆；
 5. Langfuse 保持边界：当前只确认方法用途，**未写成已实际接入 / 已搭建平台**。
@@ -158,3 +158,19 @@ ONLINE-MAIN 仍是派生在线主简历，不替代 R1–R6。
 - 保留消费者反馈 → 产品需求 → 工厂 / 产品开发侧落细；
 - 独立保留平台商务 / 资源协调；
 - 朗臻 Career Progression、0→1、新媒体 / 小红书、项目经营均未删除。
+
+
+## ONLINE-MAIN Rebuild From Corrected V5 Logic
+
+在 R1 回到 V5 完整母版逻辑后，ONLINE-MAIN 重新派生，不再沿用前序“关键词最大公约数式”压缩。
+
+当前 ONLINE 原则：
+- 第一主轴仍是正式 AI / Agent 评测；
+- 第二主轴仍是 FDE / AI 解决方案交付；
+- 第三层仍保留 AI 应用 / AI 产品运营；
+- 电商经历必须继续证明两段 0→1、从执行到项目管理的成长、沟通协调、新媒体运营和业务结果；
+- 个人优势明确展示“传统电商 → 内容电商 → Data Agent 评测 → Agent POC”的能力迁移链；
+- 朗臻显式保留牙膏电商运营 → 项目运营管理、小红书策略、跨团队项目推进、平台商务；
+- 今宜显式保留新盘 0→1、千川数据诊断、内容 / 直播验证、6 人团队协同、达人 BD；
+- Agent 项目保留需求拆解 / 方案边界 / RAG / Tool Use / 权限 / Eval / CI / 微信部署 / 门店 POC，但比 R1 压缩工程细节；
+- ONLINE 仍是派生长期在线版本，不反向覆盖 R1–R6。
