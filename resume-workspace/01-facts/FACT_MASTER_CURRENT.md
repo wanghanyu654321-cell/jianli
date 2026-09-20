@@ -838,20 +838,21 @@ Source ID：`FCT-001`
 - 不把未独立批准的 retrieval-quality threshold 写成整体 PASS。
 
 ### FCTM-AG-05｜项目当前交付状态与边界
-用户最新确认：该项目并非只用于展示，而是基于实际落地目标推进；当前阶段已经形成可运行 Demo，并在进行 Demo / POC 交付与上线前验证，目前等待 ICP 认证 / 备案完成后推进正式上线。
+用户 2026-09-20 最新确认：数字前台 Agent 已完成微信真实部署，并在实体本地生活门店完成 POC；门店已经开始在真实接待场景中实际使用。
 
 当前可以对外表达：
 - 基于实际落地目标推进；
-- 已形成 Demo；
-- 正在进行 Demo / POC 交付与验证；
-- 处于正式上线前阶段；
-- 当前上线阻塞项之一为 ICP 认证 / 备案。
+- 已完成微信真实部署；
+- 已完成实体本地生活门店 POC；
+- 门店已开始实际使用；
+- 项目已从 Demo / Pre-ICP 工程验证进入真实门店使用阶段。
 
 边界：
-- 在正式上线前，不写“已生产上线”；
-- 不写已有规模化真实用户流量；
-- 未确认付费客户、企业采购、售前成交或真实客户生产验收，不自动补充；
-- Demo / POC 交付不自动等于企业客户 POC、商业成交或规模化部署。
+- “微信真实部署”不自动等于 WeCom 或所有渠道均已部署；
+- “完成门店 POC”不自动等于长期客户成功、商业成交或规模化复制；
+- “开始实际使用”不自动等于已验证留存、ROI、效率提升、GMV / 转化增量或 Production SLA；
+- 未确认付费客户、企业采购、长期合同、售前成交或规模化生产使用，不自动补充；
+- Hosted Embedding / production-calibrated retrieval quality、长期稳定性与大流量能力仍需后续验证。
 
 ### FCTM-AG-06｜Prompt / System / Tool Instruction 迭代
 项目中实际调整过：
@@ -865,16 +866,23 @@ Source ID：`FCT-001`
 - 可写 Prompt / Instruction iteration 与评测闭环；
 - 不写未经确认的付费客户 Prompt 调优或生产 Prompt Owner。
 
-### FCTM-AG-07｜Demo / POC 交付与上线准备
-项目当前交付路径可概括为：
-`实际落地目标 → Solution / Workflow / Boundary → Demo → POC 验证 / 交付 → 上线准备 → ICP 认证 / 备案 → 正式上线`
+### FCTM-AG-07｜真实部署 / POC 交付与使用阶段
+项目当前已经走过的主线可概括为：
+`实际落地目标 → Solution / Workflow / Boundary → Demo / 工程验证 → 微信真实部署 → 实体本地生活门店 POC → 门店开始实际使用`
 
 本人在该链路中继续负责 Problem Definition、Solution Boundary、Acceptance / Eval、Badcase、测试验收和项目状态判断，并通过 AI Coding Agent 协作推进实现。
 
+当前阶段重点已经从“能否完成 Demo / POC 准备”转向：
+- 真实门店 Workflow 是否能够稳定承接；
+- 真实咨询 / 预约 / 线索 / Handoff 是否暴露新的 Badcase；
+- 业务状态是否真实发生并可回读；
+- 异常、依赖失败、超时和权限边界是否在现场场景中成立；
+- 后续如何把真实使用反馈回收到 Dataset / Regression / 产品迭代。
+
 边界：
-- 可作为 R2 / R4 / R5 / R6 的直接项目交付证据；
-- 当前仍属于上线前状态，不写已完成生产 Go-live；
-- 未确认真实企业客户、商业合同和规模化生产使用时，不作对应主张。
+- 可作为 R2 / R4 / R5 / R6 的直接真实部署与 POC 证据，也可为 R1 / R3 提供真实场景补强；
+- “已完成微信部署 + 门店 POC + 开始使用”不写成规模化 Production Go-live；
+- 未确认长期稳定性、商业合同、持续付费、规模化复制、Production SLA 或上线后业务指标时，不作对应主张。
 
 ### FCTM-AG-08｜PRD 状态
 该 Agent 项目基于实际落地目标推进，具备整理正式 PRD 的真实产品上下文，包括目标场景、功能范围、Workflow、异常 / 边界场景、优先级与 Acceptance Criteria。
@@ -885,6 +893,33 @@ Source ID：`FCT-001`
 - 可以写已有需求定义、Solution Boundary、Workflow、Acceptance 等事实；
 - 在 PRD 实际产出前，不写“已完成 PRD / 负责 PRD 交付”；
 - PRD 完成并核验后可作为 R4 产品证据进一步补充。
+
+### FCTM-AG-09｜真实微信部署、实体门店 POC 与实际使用
+用户明确确认的最新外部使用事实：
+- 渠道：微信；
+- 场景：实体本地生活门店；
+- 状态：已完成真实部署；
+- POC：已完成；
+- 使用：门店已开始在真实接待场景中实际使用。
+
+这一事实证明：
+- 项目不再只是 synthetic portfolio / 本地 Demo；
+- Agent 已进入真实渠道与真实门店 Workflow；
+- 后续可以基于真实 Query、真实 Badcase、一线人员反馈和实际业务状态继续迭代。
+
+仍未由该事实自动证明：
+- 长期留存或持续付费；
+- 客户 ROI / GMV / 转化 / 效率提升；
+- 大规模真实流量；
+- 高并发容量；
+- Production SLA / On-call；
+- 多门店规模化复制；
+- 企业采购 / 合同成交；
+- Hosted Embedding 或 production-calibrated retrieval quality 已通过。
+
+表达原则：
+`Real Deployment / Store POC / Actual Use = FACT`
+`Long-term Customer Success / Commercial Success / Production-scale Metrics = NOT YET VERIFIED`
 
 ---
 
