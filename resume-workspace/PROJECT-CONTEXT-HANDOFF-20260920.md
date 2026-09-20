@@ -1680,7 +1680,7 @@ Codex / Hermes 都不是当前前置。
 
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
 - `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
-- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-FD7E6D3E`。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-2EDBC835`。
 - candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
 - 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
 - V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
@@ -1721,6 +1721,18 @@ Codex / Hermes 都不是当前前置。
 - 学习 / 适应能力通过跨品类、跨渠道、跨岗位和结果证明，不写空泛人格评价；
 - 当前只重建 R1；ONLINE-MAIN 暂不跟随改写，等待用户先审 R1；
 - 用户批准 R1 前，BossHunter 继续冻结。
+
+## 25.1C ONLINE-MAIN 重建纠偏
+
+R1 恢复 V5 完整母版逻辑后，ONLINE-MAIN 已按纠偏后的 V5 能力链重新派生：
+- 不再把 ONLINE 写成纯关键词最大公约数；
+- 第一视觉仍是 AI 评测 / Agent 评测 → FDE / AI 交付 → AI 应用 / 产品运营；
+- 个人优势必须同时显示正式 AI 评测、Agent POC、两段 0→1、从执行到项目管理的成长与跨团队协调；
+- 朗臻保留牙膏运营 → 项目运营管理、小红书、新媒体、排期 / 协调、平台商务等高价值证据；
+- 今宜保留第二段新盘 0→1、千川、内容 / 直播验证、团队协同、达人 BD；
+- Agent 工程证据在 ONLINE 中压缩展示，但不得只剩技术关键词；
+- ONLINE 仍然只是派生版本，不能反向压缩 R1–R6；
+- 用户批准当前简历前，BossHunter 继续冻结。
 
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
