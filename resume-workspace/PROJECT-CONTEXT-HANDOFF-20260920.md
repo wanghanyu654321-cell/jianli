@@ -1680,7 +1680,7 @@ Codex / Hermes 都不是当前前置。
 
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
 - `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
-- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-78D15E87`。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-FD7E6D3E`。
 - candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
 - 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
 - V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
@@ -1701,6 +1701,8 @@ Codex / Hermes 都不是当前前置。
 - 朗臻成长路径必须显式保留：**牙膏品类电商运营 → 宠物项目运营管理 → 约 5 个跨平台店铺 / 年度整体 GMV 约 1,200 万–2,000 万**；同时保留优先级、项目排期、阶段检查、跨团队协调、方案 / 进展汇报。
 - 用户的“学习 / 适应能力”通过跨品类、跨渠道、跨岗位责任升级和结果体现，不写空泛人格形容词。
 - 今宜产品定位表述聚焦“目标用户 + 核心卖点 + 内容验证 / 迁移”，不再以泛化“需求增长”作为标题逻辑。
+- 今宜该 Bullet 当前改为“内容策略 / 卖点验证”：目标用户 + 核心卖点 → 短视频 / 直播验证 → 有效卖点与视觉表达迁移；不再写过细的“健身轻食目标用户重新调整玉米包”。
+- 朗臻宠物项目的新媒体运营能力必须显式保留：负责小红书策略与运营管理，协同约 5 人团队，建立选题 / 内容测试 / 有效或爆文方向验证 / 复刻 / 数据迭代流程。
 - 当前 10 秒审计第二轮：ONLINE-MAIN 个人优势压为两段，核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”。
 - R1 recruiter-facing 标题优先使用当前 JD 可直接识别的“评测集、边界测试、Bad Case / 根因归因、版本回归、Tool Use、执行轨迹分析、自动化回归 / CI、Quality Gate”；内部工程词如 Eval Harness 保留在正文，不作为连续标题堆叠。
 - R1 电商经历不能只保留搜索 / 数据能力：朗臻的核心高价值证据是从电商运营升级到宠物项目运营管理，必须保留项目经营、目标责任、优先级 / 排期 / 阶段检查、跨团队协调与方案汇报能力；今宜再保留数据诊断 / 产品定位 / 0→1。完整事实继续留在 FACT / CLAIM 和其他 Role Baseline。
