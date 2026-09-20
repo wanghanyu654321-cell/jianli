@@ -36,7 +36,7 @@ Base: `resume/v5-grill-complete`
 2. ONLINE-MAIN + R1–R6 已按 HR-first / Role Evidence 逻辑完成终稿重写：**FINAL DRAFT COMPLETE — USER REVIEW**；
 3. BossHunter 优化调用：**BLOCKED UNTIL USER APPROVES RESUME**。
 
-当前 working-candidate source epoch：`FCT-EPOCH-20260920-2EDBC835`。
+当前 working-candidate source epoch：`FCT-EPOCH-20260920-0CF4BE37`。
 
 本轮 10 秒审计只做：
 - Bullet 标题改为 JD / HR 扫描词；
@@ -103,3 +103,12 @@ Canonical index / registry 暂不修改；只有用户明确授权 promotion 后
 - `FULLTEXT_SYNCED = YES`
 - `USER_FINAL_APPROVAL = PENDING`
 - `BOSSHUNTER = BLOCKED_UNTIL_FINAL_APPROVAL`
+
+
+## Search-side ONLINE State
+
+- `ONLINE_SEARCH_SIDE_ORDERING = COMPLETE`
+- `TAOTIAN_DATA_AGENT_CONTEXT = SEARCH_RECOMMENDATION_SIDE`
+- `ONLINE_SEARCH_QUERY_AND_AB = SEPARATE`
+- `ONLINE_FIRST_THREE_RENRUI = DATA_AGENT_SEARCH_AB`
+- `USER_FINAL_APPROVAL = PENDING`
