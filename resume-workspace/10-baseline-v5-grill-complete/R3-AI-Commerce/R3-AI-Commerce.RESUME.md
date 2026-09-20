@@ -10,7 +10,7 @@
 
 在朗臻从单品和搜索运营逐步承担宠物项目经营，负责约 **5 个跨平台店铺**的 GMV、利润率、DSR 与渠道结果，业务年度整体 GMV 约 **1,200 万–2,000 万**；在今宜参与抖音新盘 0→1，本人直接承担投流和数据诊断，并参与产品定位、内容 / 直播、达人冷启动与团队推进，同一新盘账号月 GMV 从早期约 **7 万提升至接手首月约 43 万**。
 
-后续淘天 Data Agent 评测进一步进入 Query、Recall、Relevance、商品语义和 Search 链路，使过去从业务侧理解用户需求和商品匹配的经验，进一步延伸到 AI 系统如何理解、召回和判断这些需求。数字前台 Agent 则作为 AI 应用补充，证明已进入 Agent / Knowledge / Service Workflow 场景，但不替代正式 Commerce 经营经历。
+后续淘天 Data Agent 评测进一步进入 Query、Recall、Relevance、商品语义和 Search 链路，使过去从业务侧理解用户需求和商品匹配的经验，进一步延伸到 AI 系统如何理解、召回和判断这些需求。数字前台 Agent 则作为 AI 应用补充，现已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用，使 Merchant / Service Agent 不再只停留在个人工程 Demo；但 R3 的主证明仍然来自正式 Commerce 经营经历，不把尚未形成的 AI 商业增量结果提前包装成已验证成果。
 
 ## 核心能力
 
@@ -62,10 +62,13 @@ Data Agent｜Query / Recall / Relevance｜Agent Workflow｜Merchant / Service Ag
 
 ### 数字前台 Agent｜Merchant / Service Agent 场景实践
 
-很多实体商家通过微信等渠道已经拥有私域流量，但“获得流量”并不等于“流量被有效承接”。数字前台项目因此把线上第一接待、Knowledge、预约 / 线索意向和人工接管串成一条最小业务链。
+很多实体商家通过微信等渠道已经拥有私域流量，但“获得流量”并不等于“流量被有效承接”。数字前台项目因此把线上第一接待、Knowledge、预约 / 线索意向和人工接管串成一条最小业务链，并已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中使用。
 
 **技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / Instruction｜Tool Calling｜Agent Runtime｜Eval / Regression / Harness
 
-- **私域流量承接：** 从 Commerce 视角进一步验证，流量进入私域后仍需要第一接待、需求识别和后续承接，否则用户价值并没有真正进入业务流程。
-- **Query / Knowledge 迁移：** 将过去 Search / Query Intent、商品语义和用户需求判断进一步迁移到 Agent Intent、Knowledge 和 Evidence。
-- **智能服务应用：** 当前已形成 Pre-ICP Engineering Baseline，补充 Merchant / Service Agent、Workflow、权限和 Eval 等 AI 应用 Context，但 R3 的主证明仍然来自正式 Commerce 经营经历。
+- **私域流量承接：** 从 Commerce 视角进一步验证，流量进入私域后仍需要第一接待、需求识别和后续承接，否则用户价值并没有真正进入业务流程；微信真实部署后，这一链路开始进入真实门店场景，而不再只是产品假设。
+- **Query / Knowledge 迁移：** 将过去 Search / Query Intent、商品语义和用户需求判断进一步迁移到 Agent Intent、Knowledge 和 Evidence，使原有 Commerce 判断能力能够进入真实 Merchant / Service Agent 场景。
+- **真实商家场景验证：** 已完成实体本地生活门店 POC，门店开始实际使用数字前台承接线上咨询与后续意向；这能够证明方案已进入真实商家 Workflow，但当前真实使用时间与样本仍有限，不声称已经获得 AI 带来的 GMV、转化率或客服效率提升。
+- **智能服务应用：** 当前项目补充 Merchant / Service Agent、Workflow、权限、真实业务状态和 Eval 等 AI 应用 Context；R3 的核心定位仍是“完整 Commerce 经营能力 + 已进入真实商家 Agent 场景”，而不是把个人 Agent 项目替代正式经营经历。
+
+**当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；AI Commerce 侧的长期使用、规模化复制与业务增量指标仍待持续验证。
