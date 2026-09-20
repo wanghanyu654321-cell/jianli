@@ -4,9 +4,9 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-B8B57E32`
-- Current Git blob SHA: `b8b57e32728822fefe2e8a87e1de0678b546dbb3`
-- Previous repository epoch: `FCT-EPOCH-20260920-71B03893`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-DE68CC7D`
+- Current Git blob SHA: `de68cc7d3ca981e411864f4968300c5056247f6d`
+- Previous repository epoch: `FCT-EPOCH-20260920-B8B57E32`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
 - `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve real WeChat deployment / store POC / actual-use boundaries without upgrading them into unverified production-scale or commercial outcomes.
@@ -74,6 +74,10 @@
 | FCT-58 | 数字前台 Agent 已完成微信真实部署，并在实体本地生活门店完成 POC；门店已经开始在真实接待场景中实际使用 | FCTM-AG-05, FCTM-AG-07, FCTM-AG-09 | FACT_DOCUMENTED | 可写 real WeChat deployment、store POC、actual use；不自动写 WeCom 已完成、长期客户成功、商业成交、规模化复制、Production SLA 或上线后业务提升。 |
 | FCT-59 | Agent 项目具备正式 PRD 所需的实际产品上下文，但正式 PRD 尚未作为已完成并核验资产进入事实母版 | FCTM-AG-08, EX-03 | PENDING_ASSET | 可写需求定义、Workflow、Boundary、Acceptance；PRD 实际完成前不得写“已完成 PRD / 负责 PRD 交付”。 |
 | FCT-60 | 微信真实部署 / 门店 POC / 开始实际使用只证明方案进入真实渠道与真实门店 Workflow，不自动证明长期留存、持续付费、ROI、GMV/转化/效率提升、高并发容量、Production SLA、规模化多门店复制或 production-calibrated retrieval quality | FCTM-AG-09 | FACT_DOCUMENTED | 所有上线后业务结果、商业结果和生产级指标必须等真实数据形成后再单独增加 Claim。 |
+| FCT-61 | 人瑞开放题评测通常不存在唯一标准答案，实际会结合指标选取高分/低分答案并比较不同 Layer/Path，观察关键节点差异后沉淀判断规则 | FCTM-RR-24 | FACT_DOCUMENTED | 可写开放题、高低分答案对比、路径差异和规则沉淀；不写统一 Gold Path 或完整人工逐条评审覆盖。 |
+| FCT-62 | Agent 结果指标与轨迹评测需要分层：首 Token 延迟、工具调用数量、KV Cache 等可由简单埋点记录；轨迹评测需要结构化 Trace 暴露意图、规划/决策节点、工具选择、工具结果和错误处理 | FCTM-RR-25 | FACT_DOCUMENTED | “规划/决策节点”指框架暴露的结构化过程信息，不写模型私有思维链；不写本人实现 Trace 框架。 |
+| FCT-63 | 开放题轨迹评测需关注关键节点、路径可比性/相似度及细粒度错误；明显错误可表现为工具执行错误，更隐性的差异可能来自工具选择 | FCTM-RR-26 | FACT_DOCUMENTED | GSB 缩写具体展开未确认；不写唯一标准轨迹或全自动轨迹裁决能力。 |
+| FCT-64 | 理解 Langfuse 等工具在 Agent 可观测、Trace、埋点和评分反馈中的用途，但尚未确认在人瑞或数字前台项目中已实际接入 Langfuse | FCTM-RR-27 | DOCUMENTED_ONLY | 正式简历暂不写“使用 Langfuse 搭建评测平台/已接入 Langfuse”；实际接入后再升级。 |
 
 ## Evidence status vocabulary
 
