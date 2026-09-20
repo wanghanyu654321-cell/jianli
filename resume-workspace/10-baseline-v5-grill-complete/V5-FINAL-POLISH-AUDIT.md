@@ -8,8 +8,8 @@ Base: `resume/v5-grill-complete`
 验证本轮“中国市场语言统一 + 简历化表达 + 用户新确认评测事实补充”没有通过压缩或改写破坏 V5 原有事实、数字和角色结构。
 
 当前事实源：
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-2EDBC835`
-- FACT blob: `2edbc83531818f26662b1f2a5641b45e25328b37`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-0CF4BE37`
+- FACT blob: `0cf4be3700a6ed3bc63d407e5e9e8828fa5d88ca`
 
 ## Structural Check
 
@@ -37,7 +37,7 @@ R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今�
 
 本轮已按顺序更新：
 1. `FACT_MASTER_CURRENT.md`：保留 FCTM-RR-24~27，并新增 / 更新 FCTM-AG-00、FCTM-AG-04、FCTM-AG-10~12；
-2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-2EDBC835`；
+2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-0CF4BE37`；
 3. R1：正式工作与个人项目证据分层展示；Action Acceptance → Tool Use，Trajectory Eval → 执行轨迹分析，Eval Dataset → 评测集设计，Negative Cases → 边界测试，Eval Harness / CI → 自动化回归 / CI；项目标题保持实际场景并增加“个人 Agent 项目”来源属性；
 4. ONLINE-MAIN：个人优势压为两段并前置三类最高价值证据；核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”，避免 CI / Quality Gate 来源混淆；
 5. Langfuse 保持边界：当前只确认方法用途，**未写成已实际接入 / 已搭建平台**。
@@ -257,3 +257,19 @@ ONLINE + R1–R6 已全部重新生成并同步至 V5-FINAL-FULLTEXT。
 - 搜索链路单独覆盖 Query 预处理 / 理解 / Rewrite、召回、Filter、排序、SERP、L1/L2/L3 相关性；
 - 版本效果单独覆盖灰度 / A/B、取数、DAU、CTR、转化、业务水位；
 - 不再以“压缩”为理由合并两条，因为 ONLINE 需要兼顾 AI 评测、AI 搜索 / 搜推策略、AI 电商策略等更宽岗位检索。
+
+
+## ONLINE Search-side Ordering Pass
+
+用户补充确认：所服务的淘天 Data Agent 位于搜推侧。
+
+ONLINE-MAIN recruiter-facing 调整：
+- 求职方向加入 `AI 搜索 / 搜推策略`；
+- 个人优势明确为“淘天搜推侧 Data Agent 评测与质量治理”；
+- 核心能力新增独立 `搜推 / Search 评测`，覆盖 Query 理解 / Rewrite、召回 / Filter / 排序、相关性、L1/L2/L3、A/B / 灰度、DAU / CTR / 转化；
+- 人瑞 Bullet 排序改为：搜推侧 Data Agent 评测 → 搜索 Query 理解 → 版本效果 / A/B → QA / 质量复核 → 开放题 / Path Eval → 规则治理 → Bad Case；
+- 今宜调整为：新盘 0→1 → 千川投流 → 项目推进 → 内容运营 → 达人 BD；
+- 朗臻调整为：项目运营管理 → 搜索增长 / SEO → 跨团队推进 → 小红书运营 → 平台商务；
+- Agent 项目调整为：微信部署 / 门店 POC → 需求拆解 → Agent 评测 / 回归测试 → RAG / 知识问答 → Tool Use / 权限控制。
+
+排序原则：ONLINE 的前 2–3 条先服务 HR 的岗位相关性判断和成果识别，再让专业面试官继续读取方法与深度。
