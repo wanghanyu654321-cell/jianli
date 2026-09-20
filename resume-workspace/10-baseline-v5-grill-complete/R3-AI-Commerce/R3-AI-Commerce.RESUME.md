@@ -28,7 +28,7 @@ Data Agent｜Query / 召回 / 相关性｜Agent 业务流程｜商家 / 服务 A
 
 ## 工作经历
 
-### 杭州人瑞网络科技有限公司｜Data Agent 评测｜2025.09–2026.06
+### 杭州人瑞网络科技有限公司｜评测专家（淘天 Data Agent）｜2025.09–2026.06
 
 - **电商 Query / 相关性：** 参与淘天 Data Agent 的 Query、召回结果、商品相关性和 Agent 输出评测，将用户搜索意图、商品语义及业务规则落实到具体案例判断。
 - **搜索链路理解：** 接触 Query Understanding / Rewrite、召回、Filter、排序、SERP 和反馈链路，并使用 L1/L2/L3 判断商品与需求的匹配程度。
