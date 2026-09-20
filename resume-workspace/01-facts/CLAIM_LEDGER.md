@@ -4,9 +4,9 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-DE68CC7D`
-- Current Git blob SHA: `de68cc7d3ca981e411864f4968300c5056247f6d`
-- Previous repository epoch: `FCT-EPOCH-20260920-B8B57E32`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-CF6422BF`
+- Current Git blob SHA: `cf6422bf96d8b19810b9c2526972ce88dd3af3ba`
+- Previous repository epoch: `FCT-EPOCH-20260920-DE68CC7D`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
 - `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve real WeChat deployment / store POC / actual-use boundaries without upgrading them into unverified production-scale or commercial outcomes.
@@ -38,10 +38,10 @@
 | FCT-21 | 胖小虎约 5 个跨平台店铺，年度整体 GMV 约 1,200 万–2,000 万，日常约 4–5 万，双 11 月约 200 万 | FCTM-LZ-17 | FACT_DOCUMENTED | 业务盘面与个人贡献分开。 |
 | FCT-22 | 对胖小虎 GMV、利润率、DSR、月/季目标和渠道结果直接负责 | FCTM-LZ-17 | FACT_DOCUMENTED | 老板做最终经营审查。 |
 | FCT-23 | 参与预算分配、商品/项目生命周期推进，并协同约 5 人小红书团队和约 5 人客服团队 | FCTM-LZ-19~21 | FACT_DOCUMENTED | 协同人数不等于行政直管；不写最终公司级预算权。 |
-| FCT-24 | 企业客服 Agent / Support Agent 项目证据定位为 `wanghanyu654321-cell/-agent` / `job-ready/integration-v1`；已独立核验顶层 README 与部分 Eval 资产，仓库 README 仍保留 synthetic portfolio / proof application 口径 | FCTM-AG-00 | REPO_PARTIALLY_VERIFIED | 仓库证据口径与用户确认的当前交付状态分层记录；不以 README 自动否定后续 Demo/POC/pre-launch 事实，也不据此宣称生产上线。 |
+| FCT-24 | 数字前台 Agent 工程证据源为 `wanghanyu654321-cell/-agent` 当前 `main`；已重新核验 README、Job-Ready Current State、Sprint 与 governance manifest，工程证据覆盖 Runtime、Authority、Governed Knowledge、Durable State、Eval/Harness、Regression/CI、PostgreSQL、FastAPI/pgvector 与 Docker 等能力 | FCTM-AG-00 | REPO_VERIFIED | repo verification 证明工程实现/验证，不自动证明 commercial customer deployment、Pilot acceptance、Production Ready；普通微信验证、WeCom 工程实现、商业客户验收分开表达。 |
 | FCT-25 | 项目材料描述 Node.js/FastAPI/PostgreSQL16/pgvector/React/Docker Compose/Nginx/Pi Runtime 和权限边界；README 已核到其中多项 | FCTM-AG-02 | REPO_PARTIALLY_VERIFIED | 不据此宣称生产部署；未逐项核验的技术仍按项目材料使用。 |
 | FCT-26 | 项目材料描述 Runtime/Tool-call Budget、工具、词法检索、Evidence Governance、Routing 与 Safety/Authority 边界 | FCTM-AG-03 | DOCUMENTED_ONLY | Hybrid/RRF/Reranker/Formal Query Rewrite/Model Routing 未完整完成。 |
-| FCT-27 | 项目有 40 Frozen Cases；已核验评测集 24 answerable/8 no-answer/8 ambiguous，并包含 gold/version/provenance、negative controls 与 deterministic metrics；另有 Safety 30/30、Robustness 100/100、Holdout 60/60、Governed Knowledge 46/46、Public Top1 96%、Recall@3 100%、Routed Outcome 100% 等记录 | FCTM-AG-04 | REPO_PARTIALLY_VERIFIED | 测试/评测资产不是生产流量；Holdout 60/60 不等于 60 个独立样本；retrieval-quality 未批准 overall PASS threshold。 |
+| FCT-27 | 项目 Eval 从 40 Frozen Cases 扩展到分层回归：40-case answerable/no-answer/ambiguous 集、30-case Safety、100-case robustness、60-case blind holdout、Governed Knowledge 46/46、retrieval/runtime regression、S1 Thin Evaluation Harness 与 CI Gates；不同 domain 独立 gate，不使用 blended Agent score | FCTM-AG-04 | REPO_VERIFIED | 这些是测试/评测资产，不是生产流量；ranking 指标不自动等于 answer authorization；未批准 semantic/vector retrieval-quality threshold 时不写 overall PASS。 |
 | FCT-28 | Agent 项目中本人负责 Problem Definition、架构边界、Acceptance、Eval、Badcase、方案取舍、测试验收和项目状态判断，通过 AI Coding Agent 协作实现 | FCTM-AG-01 | FACT_DOCUMENTED | 不写独立手写全部代码。 |
 | FCT-30 | 时间轴：工作起点 2022.03、毕业 2022.06；朗臻 2022.03–2024.07、今宜 2024.11–2025.07、人瑞 2025.09–2026.06；空档 2024.08–10 与 2025.08 | FCTM-TL-01~04 | FACT_DOCUMENTED | 日期和空档不可变；不写“5 年经验”。 |
 | FCT-31 | 朗臻 0→1 时先以市场/搜索/增长数据判断机会，优先增长细分市场；红海则找产品差异化 | FCTM-LZ-01~04 | FACT_DOCUMENTED | 不升级为公司级战略负责人。 |
@@ -78,10 +78,14 @@
 | FCT-62 | Agent 结果指标与轨迹评测需要分层：首 Token 延迟、工具调用数量、KV Cache 等可由简单埋点记录；轨迹评测需要结构化 Trace 暴露意图、规划/决策节点、工具选择、工具结果和错误处理 | FCTM-RR-25 | FACT_DOCUMENTED | “规划/决策节点”指框架暴露的结构化过程信息，不写模型私有思维链；不写本人实现 Trace 框架。 |
 | FCT-63 | 开放题轨迹评测需关注关键节点、路径可比性/相似度及细粒度错误；明显错误可表现为工具执行错误，更隐性的差异可能来自工具选择 | FCTM-RR-26 | FACT_DOCUMENTED | GSB 缩写具体展开未确认；不写唯一标准轨迹或全自动轨迹裁决能力。 |
 | FCT-64 | 理解 Langfuse 等工具在 Agent 可观测、Trace、埋点和评分反馈中的用途，但尚未确认在人瑞或数字前台项目中已实际接入 Langfuse | FCTM-RR-27 | DOCUMENTED_ONLY | 正式简历暂不写“使用 Langfuse 搭建评测平台/已接入 Langfuse”；实际接入后再升级。 |
+| FCT-65 | 数字前台已实现 S1 Thin Evaluation Harness：Case/Config → Runner → existing service/Runtime → actual result + safe trace projection → Evaluator → Report；Run Integrity 检查 frozen identity/hash、缺失/重复 Case、completion marker、配置/数据不一致与 interrupted run | FCTM-AG-10 | REPO_VERIFIED | Harness 是开发/评测基础设施，不写成 production runtime、通用 replay platform、trace database、dashboard 或 scheduler。 |
+| FCT-66 | Ticket/Handoff 等业务动作的验收不以模型文本或单次 Tool Call 为成功证明，而按 authorize → write → persistence → scoped read-back → acceptance 检查 final result、evidence 与 authoritative durable state | FCTM-AG-11 | REPO_VERIFIED | 可写 Tool Use / Action Acceptance / Durable State；不写 exactly-once 或 production-scale reliability 已完成。 |
+| FCT-67 | 项目质量链路为 Case/Config → Runtime → Evaluation → Report → Gate → Version Decision；FAILED/BLOCKED/DEFERRED 证据保留。Semantic Evidence Selector 历史 latency characterization P50 约 7.35s、P95 约 16.67s，在 10s overall / 2s per-tool budget 下未进入同步主路径 | FCTM-AG-12 | REPO_VERIFIED | 可写 Eval 驱动方案取舍；历史 latency 不是线上 SLA；不写 Semantic Selector 已上线同步主链。 |
 
 ## Evidence status vocabulary
 
 - `FACT_DOCUMENTED`：当前 `FCT-001 / FACT_MASTER_CURRENT.md` 明确支持，可按边界表达。
+- `REPO_VERIFIED`：对应主张已由当前仓库原始文件 / 测试 / Gate 证据独立核验；只覆盖该具体工程主张，不外推到生产、商业或客户结果。
 - `REPO_PARTIALLY_VERIFIED`：对应项目主张已有一部分仓库原始证据被独立核验，但不能外推到未核验技术、生产状态或客户状态。
 - `DOCUMENTED_ONLY`：事实母版有描述，但对应仓库/生产/客户原始证据尚未逐项独立核验；不能升级成已核验实现或生产结果。
 - `PENDING_ASSET`：当前上下文支持该资产方向，但资产本身尚未完成或核验；不得提前按已完成事实使用。
