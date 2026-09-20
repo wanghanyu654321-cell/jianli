@@ -33,7 +33,7 @@ Base: `resume/v5-grill-complete`
 当前顺序已冻结为：
 
 1. 文档歧义修复：**COMPLETE**；
-2. R1 已按 V5 完整母版原则重新构建，ONLINE-MAIN 已按同一能力链重新派生：**USER REVIEW IN PROGRESS**；
+2. ONLINE-MAIN + R1–R6 已按 HR-first / Role Evidence 逻辑完成终稿重写：**FINAL DRAFT COMPLETE — USER REVIEW**；
 3. BossHunter 优化调用：**BLOCKED UNTIL USER APPROVES RESUME**。
 
 当前 working-candidate source epoch：`FCT-EPOCH-20260920-2EDBC835`。
@@ -92,3 +92,14 @@ Canonical index / registry 暂不修改；只有用户明确授权 promotion 后
 - 招聘方进入进一步沟通 / 索要简历后，再使用 R1–R6 或 JD-specific 版本提高对应岗位证据占比。
 - 角色版可以减少弱相关工作细节，但不得删除项目管理、跨团队协同、项目成功、0→1 和复杂问题解决这些通用能力证据。
 - 禁止把 ONLINE 做成所有方向平均分配；禁止把 R1 做成只剩评测关键词。
+
+
+## Final Draft State
+
+- `FINAL_ALL_ROLES_REWRITTEN = YES`
+- `ONLINE_FUNNEL_LOGIC = HR_MATCH_THEN_DIFFERENTIATION`
+- `ROLE_VERSIONS = ROLE_EVIDENCE_UPWEIGHT + TRANSFERABLE_CORE_PRESERVED`
+- `MULTISTORE_GMV = ~15M`
+- `FULLTEXT_SYNCED = YES`
+- `USER_FINAL_APPROVAL = PENDING`
+- `BOSSHUNTER = BLOCKED_UNTIL_FINAL_APPROVAL`
