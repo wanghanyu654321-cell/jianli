@@ -1672,15 +1672,15 @@ Codex / Hermes 都不是当前前置。
    - 再用真实 JD Frozen Set 评估 False Pass / False Reject / Route Error / Fact Hallucination；
    - 只针对观察到的失败补 OUR_POLICY / Router，不先 fork 或重写内部 Prompt。
 
-当前阶段：**STEP 1 — 文档歧义修复**。
+当前阶段：**STEP 3 — BossHunter 优化调用**。STEP 1 文档歧义修复与 STEP 2 10 秒 HR 审计均已完成。
 
-在 STEP 1 完成前，不提前执行 STEP 2 / STEP 3。
+执行顺序保持不变：STEP 1 / STEP 2 已完成后，才进入 STEP 3。
 
 ## 25.1 Canonical 与 Candidate 的唯一解释
 
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
 - `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
-- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-DE68CC7D`。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-CF6422BF`。
 - candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
 - 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
 - V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
