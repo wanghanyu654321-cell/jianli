@@ -4,12 +4,12 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260916-FE4CB619`
-- Current Git blob SHA: `fe4cb619cccf99f98813f7dec683b8022ff4f2e5`
-- Previous repository epoch: `FCT-EPOCH-20260916-04094915`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-71B03893`
+- Current Git blob SHA: `71b038939952ee61854734385b51dfa4055470ba`
+- Previous repository epoch: `FCT-EPOCH-20260916-FE4CB619`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
-- `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve Demo / POC / pre-launch boundaries.
+- `CLAIM_MAPPING_INTEGRITY`: `CURRENT_FOR_FCT_MASTER`; Role Resume artifacts must use the current epoch and preserve real WeChat deployment / store POC / actual-use boundaries without upgrading them into unverified production-scale or commercial outcomes.
 
 本 Ledger 只映射当前 `FACT_MASTER_CURRENT.md` 中的事实，不从旧快照、旧 exclusion、JD、Skill、推测或未确认记忆恢复额外内容。
 
@@ -71,8 +71,9 @@
 | FCT-55 | Agent 项目实际迭代过 Prompt、System Instruction、Tool Instruction，并结合 Badcase/测试结果/通过情况比较版本差异 | FCTM-AG-06 | FACT_DOCUMENTED | 可写 Prompt/Instruction iteration；不写未经确认的付费客户 Prompt 调优。 |
 | FCT-56 | 朗臻和今宜都有需求/事项清单、优先级判断、项目排期与阶段检查 | FCTM-LZ-22, FCTM-JY-25, FCTM-XR-04 | FACT_DOCUMENTED | 不自动升级成 PRD/Roadmap Owner。 |
 | FCT-57 | 朗臻会向老板做运营/项目方案与进展汇报；今宜代运营会向合作方做运营方案/项目进展汇报 | FCTM-LZ-23, FCTM-JY-26, FCTM-XR-04 | FACT_DOCUMENTED | 属于运营/项目方案沟通，不写 AI 技术售前或商业成交。 |
-| FCT-58 | Agent 项目基于实际落地目标推进，已形成可运行 Demo，当前进行 Demo / POC 交付与上线前验证，等待 ICP 认证 / 备案后推进正式上线 | FCTM-AG-05, FCTM-AG-07, FCTM-XR-05 | FACT_DOCUMENTED | 可写 Demo/POC delivery、pre-launch、ICP pending；正式上线前不写 production live；不自动写企业客户 POC、付费客户、售前成交或规模化生产流量。 |
+| FCT-58 | 数字前台 Agent 已完成微信真实部署，并在实体本地生活门店完成 POC；门店已经开始在真实接待场景中实际使用 | FCTM-AG-05, FCTM-AG-07, FCTM-AG-09 | FACT_DOCUMENTED | 可写 real WeChat deployment、store POC、actual use；不自动写 WeCom 已完成、长期客户成功、商业成交、规模化复制、Production SLA 或上线后业务提升。 |
 | FCT-59 | Agent 项目具备正式 PRD 所需的实际产品上下文，但正式 PRD 尚未作为已完成并核验资产进入事实母版 | FCTM-AG-08, EX-03 | PENDING_ASSET | 可写需求定义、Workflow、Boundary、Acceptance；PRD 实际完成前不得写“已完成 PRD / 负责 PRD 交付”。 |
+| FCT-60 | 微信真实部署 / 门店 POC / 开始实际使用只证明方案进入真实渠道与真实门店 Workflow，不自动证明长期留存、持续付费、ROI、GMV/转化/效率提升、高并发容量、Production SLA、规模化多门店复制或 production-calibrated retrieval quality | FCTM-AG-09 | FACT_DOCUMENTED | 所有上线后业务结果、商业结果和生产级指标必须等真实数据形成后再单独增加 Claim。 |
 
 ## Evidence status vocabulary
 
