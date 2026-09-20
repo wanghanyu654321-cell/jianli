@@ -148,3 +148,13 @@ ONLINE-MAIN 仍是派生在线主简历，不替代 R1–R6。
 - Agent 项目叠加后续已确认的 Blind Holdout、Trace、Eval Harness、CI、Quality Gate、微信部署 / 门店 POC / 实际使用；
 - 周处理量 5,000–10,000 条仍保留在 Fact / Claim，但按用户最新判断不强制进入 recruiter-facing R1；
 - 本轮不修改 ONLINE-MAIN；待用户审完 R1 后再决定是否同步 ONLINE 的叙事调整。
+
+
+## Langzhen Management Compression
+
+用户确认允许对朗臻做结构压缩，但不能删除能力证据。本轮将“供应链 / 经营保障”和“用户反馈 / 产品协作”合并进“项目管理 / 跨团队推进”：
+- 保留优先级、排期、阶段检查、跨团队协调、项目汇报；
+- 保留大促备货、入出库、跨仓调拨等供应链推进；
+- 保留消费者反馈 → 产品需求 → 工厂 / 产品开发侧落细；
+- 独立保留平台商务 / 资源协调；
+- 朗臻 Career Progression、0→1、新媒体 / 小红书、项目经营均未删除。
