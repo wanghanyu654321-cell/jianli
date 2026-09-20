@@ -14,11 +14,16 @@ Before judging whether any resume is current, complete or application-ready, rea
 
 Core rule: **Fact Safety ≠ Resume Quality.** Directory names, filenames, Claim Ledger completeness, pipeline structure, historical Audit files or previous chat context are not proof that a resume is current or recruiter-ready.
 
-## Current branch interpretation
+## Canonical vs working-candidate interpretation
 
-The active review branch is `resume/baseline-v2-r1-r3`. The repository default branch `main` does not contain the current V2/V3 working state and must not be used as the source of truth for current resume review.
+This repository currently has two intentionally separate state layers:
 
-Current recruiter-facing artifacts are indexed only in `CURRENT_VERSION_INDEX.md`.
+- **Canonical registry state**: `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` still point to `resume/baseline-v2-r1-r3`. This remains the last explicitly promoted canonical baseline.
+- **Working candidate state**: branch `resume/v5-final-polish` contains the newer, unpromoted candidate facts and recruiter-facing artifacts derived from `FCT-EPOCH-20260920-DE68CC7D`, including `ONLINE-MAIN` and R1–R6 under `resume-workspace/10-baseline-v5-grill-complete/`.
+
+A newer working candidate does **not** become canonical merely because its facts or artifacts are newer. Canonical promotion requires an explicit promotion decision; until then, do not rewrite the canonical registry to point at the candidate.
+
+Version labels such as V5 / V6 are historical artifact names, not a reliable recency ordering. Determine currency from **source epoch + artifact status + promotion state**, not from the numeric version label alone.
 
 ## Contents
 
@@ -36,9 +41,12 @@ Current recruiter-facing artifacts are indexed only in `CURRENT_VERSION_INDEX.md
 
 ## Current source status
 
-The last repository-known FCT-001 freeze is `FCT-EPOCH-20260913-7EAA096A` / SHA256 `7EAA096A…CDDDEB`. A later R1 V3 source reread recorded a further non-timeline local fingerprint change. Therefore the repository source currency is currently `STALE_PENDING_REBASE`.
+Do not collapse canonical state and working-candidate state into one source-currency label.
 
-Existing Claim Maps may still demonstrate mapping integrity to the repository Claim Ledger, but they do not prove that the Ledger contains the latest local FCT-001 state. Final application use is blocked until source rebase and affected downstream revalidation complete.
+- **Canonical registry**: its source epoch and gate state are whatever `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` currently declare.
+- **Working candidate on `resume/v5-final-polish`**: `FACT_MASTER_CURRENT.md` is current for the candidate branch, and the latest final-polish audit records `derived_from_source_epoch = FCT-EPOCH-20260920-DE68CC7D` with FACT blob `de68cc7d3ca981e411864f4968300c5056247f6d`.
+
+The working candidate may be newer than the canonical registry while still being **unpromoted**. This is a governance state, not source drift. Do not downgrade the candidate to an old `STALE_PENDING_REBASE` state solely because older policy text or historical audits contain that label.
 
 ## Core governance invariants
 
@@ -56,12 +64,16 @@ Raw personal DOCX/PDF files, local attachments, credentials, environment files a
 
 ## Current high-level state
 
-- Timeline: `PASS`
-- Source currency: `STALE_PENDING_REBASE`
-- R1: V3 / recruiter quality and career substance still `PARTIAL`
-- R2: V2 / V3 editorial rewrite not yet completed
-- R3: V2 / V3 editorial rewrite not yet completed
-- Single-JD: `NOT_RUN`
-- Final ATS: `NOT_RUN`
-- Final Render: `NOT_RUN`
-- Application Ready: `NO`
+**Canonical registry layer**
+- Remains intentionally unmodified until explicit promotion.
+- Single-JD / ATS / Render / Application Ready must be read from `CURRENT_VERSION_INDEX.md` and `GATE_REGISTRY.json`.
+
+**Working candidate layer — `resume/v5-final-polish`**
+- Fact source: `FCT-EPOCH-20260920-DE68CC7D`.
+- `FACT_MASTER_CURRENT.md` and `CLAIM_LEDGER.md` contain the current candidate facts / claims.
+- `ONLINE-MAIN` plus R1–R6 in `resume-workspace/10-baseline-v5-grill-complete/` are the current unpromoted recruiter-facing candidate artifacts.
+- Final-polish integrity audit: completed for the current candidate artifacts.
+- Canonical promotion: **NOT YET PERFORMED**.
+- Single-JD tailoring: **NOT RUN for the current application stage**.
+- 10-second recruiter audit: **NEXT AFTER DOCUMENT AMBIGUITY CLEANUP**.
+- Application Ready: **NO** until the remaining review / tailoring / ATS / render gates are completed as required.
