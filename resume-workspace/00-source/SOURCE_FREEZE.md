@@ -4,8 +4,8 @@
 
 - Source ID: `FCT-001`
 - Current GitHub mirror: `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`
-- Source epoch: `FCT-EPOCH-20260920-C8387F27`
-- Git blob SHA: `c8387f2784a786eedd2e7a1bbc05b574c9565ea2`
+- Source epoch: `FCT-EPOCH-20260920-78D15E87`
+- Git blob SHA: `78d15e8773ad1e66c57a27f731379adfd804e743`
 - Freeze date: `2026-09-20`
 - Candidate source currency: `CURRENT`
 - Promotion state: `NEWER_UNPROMOTED_CANDIDATE`
@@ -73,18 +73,21 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 
 ## Semantic delta in current epoch
 
-相对 `FCT-EPOCH-20260920-02A48ED2`，本次新增一项用户明确确认的来源属性：
+相对 `FCT-EPOCH-20260920-C8387F27`，本次新增用户明确确认的朗臻成长路径：
 
-### 数字前台 Agent 项目来源
-- 简历可明确标识为“个人 Agent 项目 / 个人项目实践”，用于和正式雇佣经历区分；
-- 该来源属性不改变既有微信部署、实体门店 POC、实际使用、Eval / Harness / CI 等已确认事实；
-- 不升级为创业公司经历、商业客户项目、独立手写全部代码或 Production Ready。
+### 朗臻成长路径
+- 从牙膏品类电商运营起步；
+- 后续进入宠物项目并逐步承担项目运营管理；
+- 管理阶段负责约 5 个跨平台店铺的 GMV、利润率、DSR、月 / 季目标和渠道结果；
+- 所在宠物业务年度整体 GMV 约 1,200 万–2,000 万；
+- 同时承担优先级、项目排期、阶段检查、跨团队协调和项目汇报。
+- 该路径用于证明“进入新业务 → 学会 → 做出结果 → 扩大责任范围”的事实链；不直接写空泛“学习能力强”。
 
-其余 Agent delivery / Eval / Harness / CI 与工作经历事实不发生新增事实变化。
+其余工作经历、Agent delivery / Eval / Harness / CI 事实不变。
 
 ## Downstream state
 
-- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-C8387F27`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
+- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-78D15E87`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
 - `ONLINE-MAIN` / R1：已吸收当前可对外表达的交付与 Eval 事实。
 - R2–R6：保持既有角色差异，不因本次文档消歧或 R1 Eval 增强而重构。
 - `CANONICAL_TIMELINE.md`: 日期、顺序与空档未变化；今宜职位显示按用户最新确认统一为“抖音项目代运营”。Timeline Gate 保持 PASS。
