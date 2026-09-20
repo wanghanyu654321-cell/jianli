@@ -8,21 +8,21 @@ Base: `resume/v5-grill-complete`
 验证本轮“中国市场语言统一 + 简历化表达 + 用户新确认评测事实补充”没有通过压缩或改写破坏 V5 原有事实、数字和角色结构。
 
 当前事实源：
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-02A48ED2`
-- FACT blob: `02a48ed2191ba2dbf2245be9e1d29bdcdab72a3e`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-C8387F27`
+- FACT blob: `c8387f2784a786eedd2e7a1bbc05b574c9565ea2`
 
 ## Structural Check
 
 | Role | Lines | Bullets | 原 V5 数字 / 日期 Token |
 |---|---:|---:|---|
-| R1 | 80 → 74 | 26 → 26 | 原有数字无缺失；新增 repo-verified 100-case / 60-case / CI 证据 |
+| R1 | 80 → 66 | 26 → 20 | 只压缩 recruiter-facing 展开；Fact/Claim 中原事实与工程证据均保留 |
 | R2 | 82 → 82 | 28 → 28 | 无缺失 / 无新增 |
 | R3 | 75 → 75 | 25 → 25 | 无缺失 / 无新增 |
 | R4 | 81 → 81 | 27 → 27 | 无缺失 / 无新增 |
 | R5 | 79 → 79 | 25 → 25 | 无缺失 / 无新增 |
 | R6 | 81 → 81 | 27 → 27 | 无缺失 / 无新增 |
 
-R1 相对原 V5 bullet 总数保持不变；项目内部从 9 个评测 bullet 收敛为 7 个，通过合并 Case 回流与 Regression、合并 Run Integrity / Quality Gate 到 Eval Harness / CI，减少重复而不删除证据。
+R1 本轮进一步做 10 秒审计减法：人瑞由 9 条收敛为 7 条，今宜 5→3、朗臻 5→3；删除的是重复/低价值 recruiter-facing 展开（如每周任务量、与 R1 弱相关的电商细节），不是删除 FACT / CLAIM。项目仍保留 7 条高价值 Eval 证据。
 
 当前新增 / 强化的 Eval 证据：
 - 30-case Safety / 100-case Robustness / 60-case Blind Holdout；
@@ -37,19 +37,25 @@ R1 相对原 V5 bullet 总数保持不变；项目内部从 9 个评测 bullet �
 
 本轮已按顺序更新：
 1. `FACT_MASTER_CURRENT.md`：保留 FCTM-RR-24~27，并新增 / 更新 FCTM-AG-00、FCTM-AG-04、FCTM-AG-10~12；
-2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-02A48ED2`；
-3. R1：吸收 Holdout / Harness / Action Acceptance / Quality Gate / CI，并将标题收敛为单一主概念；项目标题改为“门店微信接待 / 知识问答 / 预约线索 / 人工接管”，强调实际场景与解决问题，而非方法链；
-4. ONLINE-MAIN：只保留高密度的 Agent Eval / Regression 表达，不堆完整工程数字；
+2. `CLAIM_LEDGER.md`：更新 FCT-24 / FCT-27，新增 FCT-65~67；随后按用户确认将今宜职位统一为“抖音项目代运营”，并绑定 `FCT-EPOCH-20260920-C8387F27`；
+3. R1：正式工作与个人项目证据分层展示；Action Acceptance → Tool Use，Trajectory Eval → 执行轨迹分析，Eval Dataset → 评测集设计，Negative Cases → 边界测试，Eval Harness / CI → 自动化回归 / CI；项目标题保持实际场景并增加“个人 Agent 项目”来源属性；
+4. ONLINE-MAIN：个人优势压为两段并前置三类最高价值证据；核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”，避免 CI / Quality Gate 来源混淆；
 5. Langfuse 保持边界：当前只确认方法用途，**未写成已实际接入 / 已搭建平台**。
 
 ## Language / Reading-Cost Check
+
+额外一致性修复：
+- 人瑞正式职位恢复为 `评测专家（淘天 Data Agent）`，ONLINE 与 R1–R6 全部同步；
+- R1 删除 `Search / Query Intent`，统一为 `Query 理解 / 相关性`；
+- 每周 5,000–10,000 条任务量从 R1 / ONLINE recruiter-facing 展示移除，仍保留在 FACT / CLAIM。
+
 
 统一执行：
 - 中文 JD 常用词优先；
 - FDE、AI 评测保持第一视觉；
 - POC / RAG / Agent / API 等通用关键词保留；
 - Bullet 标题只承担 JD 命中与 HR 扫描，不承担完整 reasoning；
-- R1 项目 bullet 已收敛为 Eval Dataset、Negative Cases、Bad Case / Root Cause、Regression / Holdout、Action Acceptance、Trajectory Eval、Eval Harness / CI；
+- R1 项目 bullet 已收敛为评测集设计、边界测试、Bad Case / 根因归因、版本回归 / Holdout、Tool Use、执行轨迹分析、自动化回归 / CI；
 - “XX 与 XX”类标题优先改为单一主概念；只有两个词均为独立 JD 关键词时保留 `/`；
 - 电商搜索在 ONLINE-MAIN 用“搜索增长 / SEO”，在 R1 用“搜索 Query 理解”，按岗位语言表达同一事实；
 - “真实”仅在第一次需要区分 Demo / 模拟环境时使用，后续改为门店流程、Case、反馈、状态等具体业务词；
@@ -84,7 +90,7 @@ R1 相对原 V5 bullet 总数保持不变；项目内部从 9 个评测 bullet �
 - Trace / Trajectory Eval → FCT-62 / FCT-63；
 - 分层 Eval / 100-case Robustness / 60-case Blind Holdout → FCT-27；
 - Eval Harness / CI → FCT-65；
-- Action Acceptance → FCT-66；
+- Tool Use / 动作验收 → FCT-66；
 - Quality Gate / Version Decision → FCT-67；
 - 今宜职位统一显示与 BD 职责边界 → FCT-09；
 - 微信部署 / 门店 POC / 使用反馈 → FCT-58 / FCT-60。
