@@ -1699,7 +1699,7 @@ Codex / Hermes 都不是当前前置。
 - 用户尚未批准当前版本前，不进入 BossHunter。
 - 当前 10 秒审计第二轮：ONLINE-MAIN 个人优势压为两段，核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”。
 - R1 recruiter-facing 标题优先使用当前 JD 可直接识别的“评测集、边界测试、Bad Case / 根因归因、版本回归、Tool Use、执行轨迹分析、自动化回归 / CI、Quality Gate”；内部工程词如 Eval Harness 保留在正文，不作为连续标题堆叠。
-- R1 电商两段只保留与 Query、数据诊断、验证方法、0→1 结果最相关的内容；完整事实继续留在 FACT / CLAIM 和其他 Role Baseline。
+- R1 电商经历不能只保留搜索 / 数据能力：朗臻的核心高价值证据是从电商运营升级到宠物项目运营管理，必须保留项目经营、目标责任、优先级 / 排期 / 阶段检查、跨团队协调与方案汇报能力；今宜再保留数据诊断 / 产品定位 / 0→1。完整事实继续留在 FACT / CLAIM 和其他 Role Baseline。
 - 人瑞所有简历版本统一使用正式职位显示：`评测专家（淘天 Data Agent）`。
 - 数字前台统一明确为“个人 Agent 项目”；该来源属性不升级为创业 / commercial customer / 独立手写全部代码。
 - 任务周处理量 5,000–10,000 从 ONLINE / R1 首屏与 recruiter-facing 展示移除，不删除事实源。
