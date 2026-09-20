@@ -1680,7 +1680,7 @@ Codex / Hermes 都不是当前前置。
 
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
 - `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
-- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-2EDBC835`。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-0CF4BE37`。
 - candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
 - 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
 - V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
@@ -1804,6 +1804,29 @@ ONLINE 与角色版：
   - `版本效果 / A/B`：灰度 / A/B、取数、DAU、CTR、转化、业务水位。
 - 原因：ONLINE 不是只服务 AI 评测，还需要提高对 AI 搜索 / 搜推策略产品 / AI 电商策略等相邻岗位的关键词检索命中。
 - 角色版可以按岗位比例调整，但不得把已确认的 Search / A-B 两类事实互相覆盖或混写。
+
+## 25.1H 淘天搜推侧 Data Agent 与 ONLINE 排序
+
+用户明确确认：所服务的淘天 Data Agent 位于**搜推侧**。
+
+允许 recruiter-facing：
+- `搜推侧 Data Agent 评测`；
+- `搜索 Query 理解`；
+- `版本效果 / A/B`；
+- Query 预处理 / 理解 / Rewrite、Recall / Filter / 排序 / SERP、L1/L2/L3 相关性；
+- 灰度 / A/B、DAU / CTR / 转化 / 业务水位。
+
+禁止升级：
+- 搜索 / 推荐算法研发；
+- 排序算法实现；
+- 搜推策略 Owner；
+- 独立线上实验 Owner。
+
+ONLINE 当前扫描顺序：
+- 人瑞：搜推侧 Data Agent → Search → A/B → QA → Path Eval → 规则治理 → Bad Case；
+- 今宜：0→1 → 千川 → 项目推进 → 内容 → BD；
+- 朗臻：项目运营管理 → 搜索增长 → 跨团队推进 → 小红书 → 平台商务；
+- Agent 项目：部署 / POC → 需求拆解 → Eval / Regression → RAG → Tool Use。
 
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
