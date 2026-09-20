@@ -16,22 +16,24 @@ Before reviewing, editing, generating, auditing, tailoring, rendering, or changi
 
 Do not use README, historical Status files, directory names, filenames, prior chat context, model memory, or old Audit text to override the two current-state truth sources.
 
-## 2. Mandatory preflight
+## 2. Preflight scope
 
-Before making any repository change, run:
+`python scripts/resume_governance_preflight.py` is a **canonical-registry consistency check**. It validates the branch and state declared by `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json`.
 
-`python scripts/resume_governance_preflight.py`
+- On the canonical branch, or immediately before/after an authorized canonical promotion, run this preflight and require PASS.
+- On an unpromoted working-candidate branch such as `resume/v5-final-polish`, the script is **not** the candidate-state validator because it intentionally rejects a branch that differs from the canonical registry.
+- On a working-candidate branch, verify instead: actual branch → `FACT_MASTER_CURRENT.md` → `CLAIM_LEDGER.md` → candidate Manifest / Audit → target artifact. Do not modify the canonical registry merely to make the canonical preflight pass.
+- If candidate facts / claims / artifact audit disagree with each other, stop and report the ambiguity before editing resume text.
 
-If the command exits non-zero, do not modify resume artifacts and do not claim completion. Resolve the governance inconsistency first or report the blocker.
-
-At the end of any task that changes repository files, run the same preflight again.
+After candidate work, re-check the candidate Manifest / Audit. Run the canonical preflight only when operating on the canonical state or performing an explicitly authorized promotion.
 
 ## 3. Authority boundaries
 
 Current repository state authority:
 
-- `CURRENT_VERSION_INDEX.md`: canonical human-readable current-version index.
-- `GATE_REGISTRY.json`: canonical machine-readable current gate/status registry.
+- `CURRENT_VERSION_INDEX.md`: canonical human-readable **promoted** current-version index.
+- `GATE_REGISTRY.json`: canonical machine-readable **promoted** gate/status registry.
+- A working-candidate branch may contain newer facts / artifacts without changing either canonical file. Newer candidate != promoted canonical.
 
 Candidate fact authority:
 
@@ -43,7 +45,7 @@ If `source_currency != CURRENT`, do not add source-sensitive factual claims and 
 
 ## 4. No silent drift
 
-Never infer the current artifact from the newest-looking path or filename. Use `CURRENT_VERSION_INDEX.md`.
+Never infer canonical currency from the newest-looking path or filename. Use `CURRENT_VERSION_INDEX.md` for promoted canonical state; use the current branch Manifest / Audit plus source epoch for unpromoted candidate state. V5 / V6 numeric labels are not recency authority.
 
 Never collapse these states:
 
@@ -74,7 +76,9 @@ All three formal work experiences must remain present with canonical company nam
 Any final report after repository work must explicitly state:
 
 - repository branch
-- current source epoch
+- canonical branch / promotion state
+- current working-candidate source epoch (when applicable)
+- canonical source epoch
 - source currency
 - target artifact(s)
 - gates affected
