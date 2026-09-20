@@ -82,3 +82,13 @@ Canonical index / registry 暂不修改；只有用户明确授权 promotion 后
 - `PROJECT_TITLE_SCENE_BASED = YES`
 - `CAREER_PROGRESSION_PRESERVED_IN_BODY = YES`
 - `BOSSHUNTER = BLOCKED`
+
+
+## ONLINE / Role Resume Funnel Rule
+
+- ONLINE-MAIN 的第一任务：先让招聘方看到正式 AI / Agent 评测能力，确认存在岗位相关性。
+- ONLINE 的第二任务：用管理、沟通、协调、两段 0→1、项目成功和复杂问题解决能力形成候选人差异化。
+- ONLINE 不需要穷尽 R1–R6 的全部细节。
+- 招聘方进入进一步沟通 / 索要简历后，再使用 R1–R6 或 JD-specific 版本提高对应岗位证据占比。
+- 角色版可以减少弱相关工作细节，但不得删除项目管理、跨团队协同、项目成功、0→1 和复杂问题解决这些通用能力证据。
+- 禁止把 ONLINE 做成所有方向平均分配；禁止把 R1 做成只剩评测关键词。
