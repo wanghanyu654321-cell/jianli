@@ -2,7 +2,8 @@
 
 Branch: `resume/v5-final-polish`
 
-> 仅用于完整审阅；各角色权威文件仍为对应 RESUME.md。
+> 用于完整审阅；各角色权威文件仍为对应 RESUME.md。
+> 在线主简历第一优先方向：AI 评测 / Agent 评测；第二优先方向：FDE / AI 解决方案交付。
 
 
 ---
