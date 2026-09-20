@@ -6,7 +6,7 @@
 
 ## 个人总结
 
-具备从真实业务问题出发设计 Agent Workflow 和工程机制的作品实践，并有 Data Agent 质量治理经历作为业务侧支撑。数字前台 Agent 当前已形成 **Node.js、FastAPI、PostgreSQL / pgvector、React、Docker、Eval / Harness** 的 Pre-ICP Engineering Baseline，但项目重点不是技术栈本身，而是解决几个进入真实业务流程后的核心问题：
+具备从真实业务问题出发设计 Agent Workflow 和工程机制的项目实践，并有 Data Agent 质量治理经历作为业务侧支撑。数字前台 Agent 已形成 **Node.js、FastAPI、PostgreSQL / pgvector、React、Docker、Eval / Harness** 的完整应用链路，并已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用。项目重点不是技术栈本身，而是解决几个进入真实业务流程后的核心问题：
 
 **检索到的信息能不能用、模型有没有权执行、业务动作有没有真的发生、Agent 出错应该修改哪一层、复杂技术方案是否真的满足质量和 Runtime 约束。**
 
@@ -28,13 +28,13 @@ Badcase Attribution｜Regression｜Acceptance Harness｜Runtime Trade-off
 
 ## 项目经历
 
-### 数字前台 Agent｜业务 Failure Mode → 工程机制 → 验证
+### 数字前台 Agent｜业务 Failure Mode → 工程机制 → 微信部署 / POC → 验证
 
 **业务背景：** 面向微信等私域入口的线上第一接待，核心业务链为：
 
 **Knowledge / FAQ → Booking / Service Intent → Durable State → Ticket / Handoff → Human**
 
-项目目标不是做一个“能聊天的 Demo”，而是把真实业务 Failure Mode 转化成可测试的工程机制。
+项目目标不是做一个“能聊天的 Demo”，而是把真实业务 Failure Mode 转化成可测试、可部署、可进入真实门店 Workflow 的工程机制。
 
 **技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / Instruction｜Tool Calling｜Agent Runtime｜Eval / Regression / Harness
 
@@ -48,7 +48,9 @@ Badcase Attribution｜Regression｜Acceptance Harness｜Runtime Trade-off
 - **Badcase 根因分析：** Agent 出错后先判断 Knowledge / Evidence、Prompt、Routing、Tool、Authority 还是 Workflow，再修改对应层，避免长期使用 Prompt 覆盖底层问题。
 - **回归验证与质量门槛：** Frozen Cases、Negative Controls、Holdout、Regression 和业务结果验收共同用于判断 Prompt / RAG / Tool / Workflow 修改是否破坏已有行为。
 - **性能与架构取舍：** Semantic Selector 做过真实模型、unseen holdout、order robustness 和 latency characterization；历史 30 次调用约 **P50 7.35s、P95 16.67s**，与当前 10s overall / 2s per-tool 同步预算不匹配，因此不进入主路径。结论不是“技术没用”，而是当前使用位置不成立。
-- **系统集成与交付验证：** 主干已集成 PostgreSQL、React、Docker、FastAPI / pgvector 和相关 clean-runner Gates，用于证明工程 / 集成闭环；不把这些证据扩大解释为 Production SLA 或真实客户上线。
+- **真实微信部署与门店 POC：** 已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用；这证明系统已经从本地 Demo / 集成测试进入真实渠道、真实身份与真实门店 Workflow，但不把“已经真实使用”扩大解释为高并发、长期稳定运行或 Production SLA 已经成立。
+- **系统集成与交付验证：** 主干已集成 PostgreSQL、React、Docker、FastAPI / pgvector，并完成微信真实渠道接入与门店 POC；工程验证继续覆盖 clean-runner、migration、restart persistence、权限隔离和核心 Workflow，用来区分“系统能启动”“真实渠道能接入”和“业务动作能被正确验收”三个不同层级。
+- **真实使用后的工程验证：** 门店进入实际使用后，后续验证重点转向真实 Query、真实异常、Handoff、状态一致性、超时和依赖失败等现场问题，再将这些问题回收到 Badcase → Root Cause → 修改层 → Regression。当前真实使用时间与样本仍有限，因此不声称已经完成 production-calibrated retrieval、长期可用性或大流量容量验证。
 
 ## 工作经历
 
@@ -72,3 +74,5 @@ Badcase Attribution｜Regression｜Acceptance Harness｜Runtime Trade-off
 - **业务需求与 Search Context：** 长期通过 Search Query、商品属性和用户需求理解商品匹配关系，推动核心商品搜索排名由百名外进入 **细分类目前 10**。
 - **问题定位：** 根据经营数据区分流量、点击、转化、商品和链接问题，再选择不同解决方案，形成“先定位问题，再选工具”的工作习惯。
 - **复杂业务环境：** 后续负责约 5 个跨平台店铺经营结果，并协同内容、客服、供应链、平台和工厂等多角色推进问题解决。
+
+**当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；尚不声称高并发生产验证、长期 On-call / SLA、规模化复制或 production-calibrated retrieval quality 已完成。
