@@ -1,37 +1,37 @@
-# R3｜AI Commerce / 智能电商 / 电商产品与运营
+# R3｜智能电商 / AI 电商 / 电商产品与运营
 
 ## 求职方向
 
-**AI Commerce / 智能电商 / 电商产品与运营**
+**智能电商 / AI 电商 / 电商产品与运营**
 
 ## 个人总结
 
-具备从 **市场需求 → 产品 → Search / Content → Ads → Store / Live → BD → Supply → Data Review** 的完整电商经营经历，覆盖京东货架电商、跨平台宠物项目和抖音内容电商。
+具备从**市场需求 → 产品定位 → 搜索 / 内容 → 投流 → 店铺 / 直播 → 达人 BD → 供应链 → 数据复盘**的完整电商经营经历，覆盖京东货架电商、跨平台宠物项目和抖音内容电商。
 
 在朗臻从单品和搜索运营逐步承担宠物项目经营，负责约 **5 个跨平台店铺**的 GMV、利润率、DSR 与渠道结果，业务年度整体 GMV 约 **1,200 万–2,000 万**；在今宜参与抖音新盘 0→1，本人直接承担投流和数据诊断，并参与产品定位、内容 / 直播、达人冷启动与团队推进，同一新盘账号月 GMV 从早期约 **7 万提升至接手首月约 43 万**。
 
-后续淘天 Data Agent 评测进一步进入 Query、Recall、Relevance、商品语义和 Search 链路，使过去从业务侧理解用户需求和商品匹配的经验，进一步延伸到 AI 系统如何理解、召回和判断这些需求。数字前台 Agent 则作为 AI 应用补充，现已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用，使 Merchant / Service Agent 不再只停留在个人工程 Demo；但 R3 的主证明仍然来自正式 Commerce 经营经历，不把尚未形成的 AI 商业增量结果提前包装成已验证成果。
+后续淘天 Data Agent 评测进一步进入 Query、召回、相关性、商品语义和 Search 链路，使过去从业务侧理解用户需求和商品匹配的经验，进一步延伸到 AI 系统如何理解、召回和判断这些需求。数字前台 Agent 则作为 AI 应用补充，现已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用，使 Merchant / Service Agent 进入真实商家场景；R3 的核心证据仍来自正式电商经营经历，AI 带来的 GMV、转化或效率增量尚需后续真实数据验证。
 
 ## 核心能力
 
 **电商经营与 0→1**  
-Market / Category｜Product Positioning｜GMV / Profit｜Store Operations
+市场 / 类目｜产品定位｜GMV / 利润｜店铺运营
 
 **搜索与增长**  
-Search / Query｜Content / Live｜Ads｜CTR / CVR / ROI
+搜索 / Query｜内容 / 直播｜投流｜CTR / CVR / ROI
 
 **商业与运营管理**  
-BD｜平台合作｜供应链｜库存｜项目推进
+达人 BD｜平台合作｜供应链｜库存｜项目推进
 
-**AI Commerce Context**  
-Data Agent｜Query / Recall / Relevance｜Agent Workflow｜Merchant / Service Agent
+**AI 电商与智能服务场景**  
+Data Agent｜Query / 召回 / 相关性｜Agent 业务流程｜Merchant / Service Agent
 
 ## 工作经历
 
 ### 杭州人瑞网络科技有限公司｜Data Agent 评测｜2025.09–2026.06
 
-- **电商 Query / Relevance：** 参与淘天 Data Agent 的 Query、召回结果、商品相关性和 Agent 输出评测，将用户搜索意图、商品语义及业务规则落实到具体 Case 判断。
-- **搜索链路理解：** 接触 Query Understanding / Rewrite、Recall、Filter、排序、SERP 和反馈链路，并使用 L1/L2/L3 判断商品与需求的匹配程度。
+- **电商 Query / 相关性：** 参与淘天 Data Agent 的 Query、召回结果、商品相关性和 Agent 输出评测，将用户搜索意图、商品语义及业务规则落实到具体 Case 判断。
+- **搜索链路理解：** 接触 Query Understanding / Rewrite、召回、Filter、排序、SERP 和反馈链路，并使用 L1/L2/L3 判断商品与需求的匹配程度。
 - **复杂 Badcase 与业务 Context：** 对判断分歧区分业务 Context、规则边界和执行理解等问题，再推动判断口径持续收敛。
 - **质量规模与结果：** 单项任务下游 BPO **10+ 人、每周约 5,000–10,000 条**；部分任务一致性约 **80%→95%**，复杂任务约 **60%→85%**。
 - **版本与业务指标观察：** 参与执行层灰度 / A/B 和数据取数，结合 DAU、CTR、转化、业务水位观察版本效果。
@@ -64,11 +64,11 @@ Data Agent｜Query / Recall / Relevance｜Agent Workflow｜Merchant / Service Ag
 
 很多实体商家通过微信等渠道已经拥有私域流量，但“获得流量”并不等于“流量被有效承接”。数字前台项目因此把线上第一接待、Knowledge、预约 / 线索意向和人工接管串成一条最小业务链，并已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中使用。
 
-**技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / Instruction｜Tool Calling｜Agent Runtime｜Eval / Regression / Harness
+**技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / 指令｜工具调用｜Agent 运行时｜Eval / 回归测试 / Harness
 
 - **私域流量承接：** 从 Commerce 视角进一步验证，流量进入私域后仍需要第一接待、需求识别和后续承接，否则用户价值并没有真正进入业务流程；微信真实部署后，这一链路开始进入真实门店场景，而不再只是产品假设。
-- **Query / Knowledge 迁移：** 将过去 Search / Query Intent、商品语义和用户需求判断进一步迁移到 Agent Intent、Knowledge 和 Evidence，使原有 Commerce 判断能力能够进入真实 Merchant / Service Agent 场景。
-- **真实商家场景验证：** 已完成实体本地生活门店 POC，门店开始实际使用数字前台承接线上咨询与后续意向；这能够证明方案已进入真实商家 Workflow，但当前真实使用时间与样本仍有限，不声称已经获得 AI 带来的 GMV、转化率或客服效率提升。
-- **智能服务应用：** 当前项目补充 Merchant / Service Agent、Workflow、权限、真实业务状态和 Eval 等 AI 应用 Context；R3 的核心定位仍是“完整 Commerce 经营能力 + 已进入真实商家 Agent 场景”，而不是把个人 Agent 项目替代正式经营经历。
+- **Query / Knowledge 迁移：** 将过去 Search / Query Intent、商品语义和用户需求判断进一步迁移到 Agent Intent、Knowledge 和 证据，使原有 Commerce 判断能力能够进入真实 Merchant / Service Agent 场景。
+- **真实商家场景验证：** 已完成实体本地生活门店 POC，门店开始实际使用数字前台承接线上咨询与后续意向；这能够证明方案已进入真实商家 业务流程，但当前真实使用时间与样本仍有限，不声称已经获得 AI 带来的 GMV、转化率或客服效率提升。
+- **智能服务应用：** 当前项目补充 Merchant / Service Agent、业务流程、权限、真实业务状态和 Eval 等 AI 应用 Context；R3 的核心定位仍是“完整 Commerce 经营能力 + 已进入真实商家 Agent 场景”，而不是把个人 Agent 项目替代正式经营经历。
 
 **当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；AI Commerce 侧的长期使用、规模化复制与业务增量指标仍待持续验证。
