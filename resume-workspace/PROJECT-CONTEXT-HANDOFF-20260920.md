@@ -1797,6 +1797,14 @@ ONLINE 与角色版：
 
 当前 ONLINE + R1–R6 已全部按该逻辑完成终稿重写；用户最终批准前不进入 BossHunter。
 
+## 25.1G ONLINE 搜索 / 策略产品关键词覆盖
+
+- ONLINE 的 Search / A-B 证据必须分开，不再合并：
+  - `搜索 Query 理解`：Query 预处理 / 理解 / Rewrite、召回、Filter、排序、SERP、L1/L2/L3；
+  - `版本效果 / A/B`：灰度 / A/B、取数、DAU、CTR、转化、业务水位。
+- 原因：ONLINE 不是只服务 AI 评测，还需要提高对 AI 搜索 / 搜推策略产品 / AI 电商策略等相邻岗位的关键词检索命中。
+- 角色版可以按岗位比例调整，但不得把已确认的 Search / A-B 两类事实互相覆盖或混写。
+
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
 `wanghanyu654321-cell/-agent` 作为工程证据源，可证明仓库内已经实际实现并验证的 Runtime / Authority / Governed Knowledge / Durable State / Eval Harness / Regression / CI / PostgreSQL / FastAPI / pgvector / Docker 等能力。
