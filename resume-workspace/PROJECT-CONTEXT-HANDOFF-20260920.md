@@ -1672,19 +1672,31 @@ Codex / Hermes 都不是当前前置。
    - 再用真实 JD Frozen Set 评估 False Pass / False Reject / Route Error / Fact Hallucination；
    - 只针对观察到的失败补 OUR_POLICY / Router，不先 fork 或重写内部 Prompt。
 
-当前阶段：**STEP 3 — BossHunter 优化调用**。STEP 1 文档歧义修复与 STEP 2 10 秒 HR 审计均已完成。
+当前阶段：**STEP 2 — 10 秒 HR 审计后的用户复核 / 修订**。STEP 1 文档歧义修复已完成；STEP 3 BossHunter 优化尚未开始，必须等待用户确认当前简历版本。
 
-执行顺序保持不变：STEP 1 / STEP 2 已完成后，才进入 STEP 3。
+执行顺序保持不变：只有用户明确确认 STEP 2 的简历版本后，才进入 STEP 3。
 
 ## 25.1 Canonical 与 Candidate 的唯一解释
 
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
 - `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
-- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-CF6422BF`。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-02A48ED2`。
 - candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
 - 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
 - V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
   **source_epoch → artifact_status → promotion_state**。
+
+## 25.1A 当前简历编辑规则补充
+
+- 杭州今宜职位统一对外显示：`杭州今宜商贸有限公司｜抖音项目代运营`；BD / 项目推进继续作为职责证据保留，用于 MaaS / AI 交付方向迁移，不并列进职位标题。
+- R1 项目标题必须优先描述**实际场景 / 解决的问题**，不改成“评测方法链”式标题。
+- Bullet 标题默认只保留一个主概念；第二概念若只是解释关系，放正文。
+- 两个词都是独立 JD 高价值关键词时可保留 `/`，例如 `Regression / Holdout`、`Eval Harness / CI`。
+- 电商搜索在 ONLINE-MAIN 用 `搜索增长 / SEO`，在 R1 用 `搜索 Query 理解`。
+- CI 只写已有证据支持的 `CI / 持续集成`，不擅自扩成 CI/CD。
+- 招聘简历正文不主动列“长期付费 / ROI / Production SLA 未验证”式完整负面清单；这些边界继续保留在 FACT / CLAIM / AUDIT 中，Resume 只避免越界主张。
+- ONLINE-MAIN 与 R1 的 recruiter-facing 修改必须同步到 `V5-FINAL-FULLTEXT.md`。
+- 用户尚未批准当前版本前，不进入 BossHunter。
 
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
