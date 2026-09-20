@@ -815,6 +815,8 @@ Langfuse 等工具可用于 Agent 可观测、Trace 记录、埋点和评分反�
 # 5. 企业客服 Agent / Support Agent｜Agent Builder 项目
 
 ### FCTM-AG-00｜当前主线项目证据定位与核验状态
+项目来源属性：用户确认该数字前台 Agent 可在简历中明确标识为**个人 Agent 项目 / 个人项目实践**，用于与正式雇佣经历区分；该标识不改变已确认的微信部署、门店 POC、实际使用事实，也不升级为创业公司、商业客户项目或独立手写全部代码。
+
 当前主线项目引用：
 - GitHub repository：`wanghanyu654321-cell/-agent`；
 - current ref：`main`。
