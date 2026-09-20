@@ -30,7 +30,18 @@ Base: `resume/v5-grill-complete`
 
 ## Current Step
 
-已进入：
-`术语规范 → ONLINE-MAIN → R1–R6 非破坏性统一 → 新事实入 Fact / Claim → Claim Check → 完整性复核`
+当前顺序已冻结为：
 
-Canonical index 暂不修改。
+1. 文档歧义修复：**COMPLETE**；
+2. 10 秒 HR / 平台首屏审计（ONLINE-MAIN + R1）：**COMPLETE**；
+3. BossHunter 优化调用：**NEXT**。
+
+当前 working-candidate source epoch：`FCT-EPOCH-20260920-CF6422BF`。
+
+本轮 10 秒审计只做：
+- Bullet 标题改为 JD / HR 扫描词；
+- 清理重复“真实”与模型总结腔；
+- 将当前 repo 已核验的 Holdout / Eval Harness / Run Integrity / Durable Acceptance / Quality Gate 证据按 Fact → Claim → Resume 顺序进入 R1；
+- ONLINE-MAIN 只保留高密度版本，不堆完整工程细节。
+
+Canonical index / registry 暂不修改；只有用户明确授权 promotion 后才进入 canonical 更新。
