@@ -132,3 +132,19 @@ ONLINE-MAIN 仍是派生在线主简历，不替代 R1–R6。
 - 用于证明新媒体运营、流程设计、团队协同与内容方法能力。
 
 今宜“产品定位” recruiter-facing 表述已改为“内容策略 / 卖点验证”，聚焦目标用户、核心卖点、短视频 / 直播验证和有效表达迁移，不再写过细的品类定位描述。
+
+
+## R1 Rebuild From V5 Baseline
+
+因前序 10 秒审计发生过度压缩，本轮停止继续 patch 当前 R1，改为以 `resume/v5-grill-complete` 原始 R1 为内容骨架重新构建。
+
+重建规则：
+- V5 R1 是完整 Role Baseline，不按 Single-JD 逻辑压缩；
+- 保留 reasoning，标题负责 10 秒扫描；
+- 电商经历不是背景噪声，必须继续证明 0→1、沟通、协调、管理和能力迁移；
+- 朗臻显式保留牙膏电商运营 → 宠物项目运营管理的 Career Progression、小红书策略 / 团队、项目排期 / 跨团队推进、平台商务与供应链；
+- 今宜保留新盘 0→1、千川数据诊断、内容 / 直播验证、6 人团队协同、达人 BD；
+- 人瑞保持正式 AI 评测主线；
+- Agent 项目叠加后续已确认的 Blind Holdout、Trace、Eval Harness、CI、Quality Gate、微信部署 / 门店 POC / 实际使用；
+- 周处理量 5,000–10,000 条仍保留在 Fact / Claim，但按用户最新判断不强制进入 recruiter-facing R1；
+- 本轮不修改 ONLINE-MAIN；待用户审完 R1 后再决定是否同步 ONLINE 的叙事调整。
