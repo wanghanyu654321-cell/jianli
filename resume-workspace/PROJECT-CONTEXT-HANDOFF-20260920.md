@@ -1680,7 +1680,7 @@ Codex / Hermes 都不是当前前置。
 
 - `CURRENT_VERSION_INDEX.md` / `GATE_REGISTRY.json` = **已晋升 canonical registry**。
 - `resume/v5-final-polish` = **更新但尚未晋升的 working candidate**。
-- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-02A48ED2`。
+- working candidate 当前事实 epoch：`FCT-EPOCH-20260920-C8387F27`。
 - candidate 的 `FACT_MASTER_CURRENT.md` / `CLAIM_LEDGER.md` / ONLINE-MAIN / R1–R6 可以比 canonical 更新，但 **newer != promoted**。
 - 在用户明确要求 canonical promotion 前，不修改 canonical index / registry。
 - V5 / V6 只是历史 artifact 命名，不代表时间顺序；以后判断“最新”使用：
@@ -1697,6 +1697,12 @@ Codex / Hermes 都不是当前前置。
 - 招聘简历正文不主动列“长期付费 / ROI / Production SLA 未验证”式完整负面清单；这些边界继续保留在 FACT / CLAIM / AUDIT 中，Resume 只避免越界主张。
 - ONLINE-MAIN 与 R1 的 recruiter-facing 修改必须同步到 `V5-FINAL-FULLTEXT.md`。
 - 用户尚未批准当前版本前，不进入 BossHunter。
+- 当前 10 秒审计第二轮：ONLINE-MAIN 个人优势压为两段，核心能力明确拆分“正式 AI 评测 / 质量治理”与“个人 Agent 项目 / 评测工程”。
+- R1 recruiter-facing 标题优先使用当前 JD 可直接识别的“评测集、边界测试、Bad Case / 根因归因、版本回归、Tool Use、执行轨迹分析、自动化回归 / CI、Quality Gate”；内部工程词如 Eval Harness 保留在正文，不作为连续标题堆叠。
+- R1 电商两段只保留与 Query、数据诊断、验证方法、0→1 结果最相关的内容；完整事实继续留在 FACT / CLAIM 和其他 Role Baseline。
+- 人瑞所有简历版本统一使用正式职位显示：`评测专家（淘天 Data Agent）`。
+- 数字前台统一明确为“个人 Agent 项目”；该来源属性不升级为创业 / commercial customer / 独立手写全部代码。
+- 任务周处理量 5,000–10,000 从 ONLINE / R1 首屏与 recruiter-facing 展示移除，不删除事实源。
 
 ## 25.2 Agent Repo 与 Resume Fact 的边界
 
