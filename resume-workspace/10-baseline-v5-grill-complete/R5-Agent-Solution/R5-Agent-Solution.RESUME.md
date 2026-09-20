@@ -47,7 +47,7 @@ Bad Case｜评测集｜Regression / Holdout｜Eval Harness｜CI｜Quality Gate
 
 ## 工作经历
 
-### 杭州人瑞网络科技有限公司｜评测专家（淘天 Data Agent）｜2025.09–2026.06
+### 杭州人瑞网络科技有限公司｜评测专家（淘天搜推侧 Data Agent）｜2025.09–2026.06
 
 - **Agent / Data 质量评测：** 参与 Query、Data Agent 输出、召回和商品相关性评测，长期处理正常案例、歧义案例和复杂 Bad Case。
 - **规则转译：** 通过案例理解业务上下文、定义和边界，再转化为执行层可理解的标准、案例和判断要求。
