@@ -4,8 +4,8 @@
 
 - Source ID: `FCT-001`
 - Current GitHub mirror: `resume-workspace/01-facts/FACT_MASTER_CURRENT.md`
-- Source epoch: `FCT-EPOCH-20260920-2EDBC835`
-- Git blob SHA: `2edbc83531818f26662b1f2a5641b45e25328b37`
+- Source epoch: `FCT-EPOCH-20260920-0CF4BE37`
+- Git blob SHA: `0cf4be3700a6ed3bc63d407e5e9e8828fa5d88ca`
 - Freeze date: `2026-09-20`
 - Candidate source currency: `CURRENT`
 - Promotion state: `NEWER_UNPROMOTED_CANDIDATE`
@@ -73,18 +73,17 @@ This file describes the **working candidate source freeze on `resume/v5-final-po
 
 ## Semantic delta in current epoch
 
-相对 `FCT-EPOCH-20260920-FD7E6D3E`，本次仅调整朗臻宠物业务规模口径：
+相对 `FCT-EPOCH-20260920-2EDBC835`，本次新增人瑞业务归属事实：
 
-- 用户明确确认：宠物业务年度整体 GMV 统一写为 **约 1,500 万**；
-- 不再使用 `1,200 万–2,000 万` 区间；
-- 该数字仍是宠物业务整体盘面，不能改写为个人独立创造的 GMV；
-- 朗臻约 5 个跨平台店铺、GMV / 利润率 / DSR / 月季目标 / 渠道结果责任边界不变。
+- 用户明确确认：所服务的淘天 Data Agent 位于**搜推侧**；
+- recruiter-facing 可使用 `搜推侧 Data Agent 评测`，并结合既有 FCTM-RR-17 的 Query 预处理 / 理解 / Rewrite、Recall、Filter、Coarse Rank、Fine Rank、Rerank、SERP、Feedback / A-B 与 L1/L2/L3 相关性证据；
+- 不升级为搜索 / 推荐算法研发、搜推策略 Owner、排序算法实现或独立线上策略负责人。
 
-其余事实不变。
+其他事实口径不变。
 
 ## Downstream state
 
-- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-2EDBC835`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
+- `CLAIM_LEDGER.md`: 已重新对齐到 `FCT-EPOCH-20260920-0CF4BE37`；既有 Harness / Holdout / Durable Acceptance / Quality Gate 证据保持不变，并新增今宜职位统一显示边界。
 - `ONLINE-MAIN` / R1：已吸收当前可对外表达的交付与 Eval 事实。
 - R2–R6：保持既有角色差异，不因本次文档消歧或 R1 Eval 增强而重构。
 - `CANONICAL_TIMELINE.md`: 日期、顺序与空档未变化；今宜职位显示按用户最新确认统一为“抖音项目代运营”。Timeline Gate 保持 PASS。
