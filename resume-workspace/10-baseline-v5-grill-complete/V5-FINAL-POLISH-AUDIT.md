@@ -248,3 +248,12 @@ Role Baseline / JD-specific 的评价标准则是：
 - 该数字仍是业务整体盘面，不改写为个人独立创造的 GMV。
 
 ONLINE + R1–R6 已全部重新生成并同步至 V5-FINAL-FULLTEXT。
+
+
+## ONLINE Search / A-B Separation
+
+用户明确要求 ONLINE-MAIN 保留更宽的搜索 / 策略产品关键词覆盖：
+- `搜索 Query 理解` 与 `版本效果 / A/B` 必须作为两条独立 recruiter-facing 证据；
+- 搜索链路单独覆盖 Query 预处理 / 理解 / Rewrite、召回、Filter、排序、SERP、L1/L2/L3 相关性；
+- 版本效果单独覆盖灰度 / A/B、取数、DAU、CTR、转化、业务水位；
+- 不再以“压缩”为理由合并两条，因为 ONLINE 需要兼顾 AI 评测、AI 搜索 / 搜推策略、AI 电商策略等更宽岗位检索。
