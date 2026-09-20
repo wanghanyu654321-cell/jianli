@@ -4,8 +4,8 @@
 
 ## Source epoch binding
 
-- `derived_from_source_epoch`: `FCT-EPOCH-20260920-C8387F27`
-- Current Git blob SHA: `c8387f2784a786eedd2e7a1bbc05b574c9565ea2`
+- `derived_from_source_epoch`: `FCT-EPOCH-20260920-78D15E87`
+- Current Git blob SHA: `78d15e8773ad1e66c57a27f731379adfd804e743`
 - Previous repository epoch: `FCT-EPOCH-20260920-CF6422BF`
 - Known external DOCX fingerprint before this GitHub mirror update: `38A34FF8CF39A4D69AF20FD043C170D15A8DD0A882A8414A5311CF0FE52E140C`
 - `FACT_CURRENCY`: `CURRENT`
@@ -100,3 +100,5 @@
 - 新事实创建新 Claim；
 - 撤回事实标记 superseded / excluded；
 - 任何受影响的 Resume artifact 必须重新做 Semantic Claim Check。
+
+| FCT-68 | 朗臻职业成长路径为“牙膏品类电商运营 → 宠物项目运营管理”：从一线商品 / 搜索 / 经营工作起步，后续负责约 5 个跨平台店铺的 GMV、利润率、DSR、月 / 季目标和渠道结果，所在宠物业务年度整体 GMV 约 1,200 万–2,000 万，并承担优先级、排期、阶段检查、跨团队协调与项目汇报 | FCTM-LZ-05A, FCTM-LZ-17, FCTM-LZ-20~23 | FACT_DOCUMENTED | 用职业跨度、责任升级和结果证明学习迁移 / 管理能力；不写成公司级负责人、全部团队行政直管或个人独占 1,200 万–2,000 万 GMV。 |
