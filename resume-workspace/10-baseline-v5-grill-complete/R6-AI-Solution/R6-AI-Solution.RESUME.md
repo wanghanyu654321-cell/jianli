@@ -1,30 +1,30 @@
-# R6｜AI Solution / AI Pre-sales / Solution Consultant
+# R6｜AI 解决方案 / AI 售前 / 解决方案顾问
 
 ## 求职方向
 
-**AI 解决方案 / AI 售前 / Solution Consultant / AI Solution Delivery**
+**AI 解决方案 / AI 售前 / 解决方案顾问 / AI Solution Delivery**
 
 ## 个人总结
 
 具备业务需求理解、方案沟通和多方约束协调经历。早期在电商和项目经营中直接参与平台、工厂、达人及业务负责人之间的需求和合作条件沟通，长期处理增长、利润、资源投入、产品要求、供应能力和执行效率之间的取舍；能够先理解不同参与方真正关心的结果，再将业务诉求转化为可讨论、可执行的方案。
 
-在朗臻直接参与京东平台合同条件、毛利结构、活动资源和合作方式讨论，并与 To-B 工厂 / 产品开发侧推进具体需求；在今宜直接参与达人 BD、合作条件及冷启动阶段的利润取舍；后续 Data Agent 经历进一步强化复杂业务规则解释、上下游 Context 转译和问题反馈能力。
+在朗臻直接参与京东平台合同条件、毛利结构、活动资源和合作方式讨论，并与 To-B 工厂 / 产品开发侧推进具体需求；在今宜直接参与达人 BD、合作条件及冷启动阶段的利润取舍；后续 Data Agent 经历进一步强化复杂业务规则解释、上下游业务上下文转化和问题反馈能力。
 
-数字前台 Agent 将这些能力进一步迁移到 AI Solution：从**实体商家微信等私域入口的线上第一接待空白**出发，把业务问题翻译成方案范围、技术边界、工程验收与 POC 交付；项目现已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用。同时能够把 Evidence、Authority、Business State、RAG 和 Eval 等技术问题重新翻译成业务方可以理解的“什么能自动做、什么必须停、什么结果才算真正完成”。当前能够证明的是方案已经进入真实门店 Workflow，不把 POC 与开始使用进一步包装成长期付费价值、规模化成交或 ROI 已经验证。
+数字前台 Agent 将这些能力进一步迁移到 AI 解决方案场景：从**实体商家微信等私域入口的线上第一接待空白**出发，将业务问题拆解为方案范围、技术边界、工程验收与 POC 交付；项目现已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用。同时能够把知识依据、权限控制、业务状态、RAG 和评测等技术问题翻译成业务方可以理解的“什么能自动做、什么必须转人工、什么结果才算真正完成”。当前已验证方案进入真实门店业务流程，长期付费价值、规模化成交和 ROI 仍需后续持续验证。
 
 ## 核心能力
 
 **客户需求与方案分析**  
-Customer Need｜场景发现｜需求澄清｜Solution Framing
+客户需求｜场景发现｜需求澄清｜方案定义
 
 **AI 解决方案设计**  
-Agent Workflow｜RAG / Knowledge｜权限控制｜人工接管
+Agent 业务流程｜RAG / 知识库｜权限控制｜人工接管
 
 **真实部署 / POC 与验收**  
-微信部署｜POC 交付｜验收标准｜Integration｜真实使用
+微信部署｜POC 交付｜验收标准｜系统集成｜真实使用
 
 **商务与技术沟通**  
-方案取舍｜平台 / BD｜API / Database｜Tool Calling｜Eval / Harness
+方案取舍｜平台 / BD｜API / 数据库｜工具调用｜评测 / 测试框架
 
 ## 工作经历
 
@@ -59,22 +59,22 @@ Agent Workflow｜RAG / Knowledge｜权限控制｜人工接管
 
 ### 数字前台 Agent｜客户问题 → 解决方案 → 微信部署 → POC 交付
 
-**业务问题与价值判断：** 很多实体商家拥有线下接待能力和微信私域流量，但线上第一接待和后续意向承接较弱。项目因此不是从“我要卖一个 AI Agent”出发，而是先判断业务方真正关心的问题：
+**业务问题与价值判断：** 很多实体商家拥有线下接待能力和微信私域流量，但线上第一接待和后续意向承接较弱。项目先围绕业务方最关心的问题确定方案范围：
 
 **有人来能不能接住、回答能不能信、预约 / 线索会不会丢、动作会不会错、出了问题能不能找到人。**
 
-当前已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用。这能够证明方案已经进入真实业务 Workflow，但仍不能据此断言客户长期为什么购买、持续付费意愿、ROI 或规模化复制已经被验证。
+当前已完成微信真实部署与实体本地生活门店 POC，门店开始在真实接待场景中实际使用。这能够证明方案已经进入真实业务 业务流程，但仍不能据此断言客户长期为什么购买、持续付费意愿、ROI 或规模化复制已经被验证。
 
-**技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / Instruction｜Tool Calling｜Agent Runtime｜Eval / Regression / Harness
+**技术栈：** TypeScript / Node.js｜React｜Python / FastAPI｜PostgreSQL 16 / pgvector｜Docker Compose｜RAG / Knowledge｜Prompt / 指令｜工具调用｜Agent 运行时｜Eval / 回归测试 / Harness
 
-- **客户需求与方案范围：** 第一阶段将 Must-have 收敛为 Knowledge / FAQ、Booking / Service Intent、Ticket / Handoff、权限控制、真实业务状态和人工接管；复杂 Semantic Selector、多 Agent 和更深营销自动化不作为 POC 前置条件，因为当前首先要验证的是线上第一接待能否稳定进入真实门店流程。
+- **客户需求与方案范围：** 第一阶段将 Must-have 收敛为 Knowledge / FAQ、Booking / Service Intent、Ticket / 人工接管、权限控制、真实业务状态和人工接管；复杂 Semantic Selector、多 Agent 和更深营销自动化不作为 POC 前置条件，因为当前首先要验证的是线上第一接待能否稳定进入真实门店流程。
 - **私域渠道与解决方案设计：** 微信接入的意义是进入商家已经存在的私域流量入口，而不是为了增加一个技术 Channel；当前已经完成微信真实部署。后续如接 WeCom 或其他入口，主要增加 Channel / Identity Adapter；接 CRM 或其他业务系统则主要通过 Business Tool / Adapter 扩展，尽量不重写 Agent 核心 Runtime。
-- **技术约束的业务化表达：** 将 Evidence Governance 翻译成“这个回答是不是来自当前门店可以使用的信息”；将 Authority 翻译成“Agent 能理解用户想退款，不代表它有权真正退款”，让技术边界转化为业务方能理解的自动化边界。
+- **技术约束的业务化表达：** 将 证据治理 翻译成“这个回答是不是来自当前门店可以使用的信息”；将 Authority 翻译成“Agent 能理解用户想退款，不代表它有权真正退款”，让技术边界转化为业务方能理解的自动化边界。
 - **隐性技术风险识别：** 客户未必会主动问 scoped read-back、tenant isolation 或 late event，但最终会以“为什么说创建成功系统里却没有”“为什么看到别的门店数据”等方式暴露，因此这些底层约束需要在 Solution 阶段提前处理。
 - **POC 验收标准：** 不接受“效果不错”或单一 90% Accuracy 作为完整验收，而将正常回答、无答案、歧义场景、权限、真实业务动作、人工接管和 Integration 分开判断，因为不同错误类型的业务成本完全不同。
-- **真实门店 POC 与使用：** 已完成微信真实部署和实体本地生活门店 POC，门店开始实际使用；方案因此从 Demo / 工程侧 Acceptance 进入真实门店 Workflow。当前已经验证“方案能够进入真实使用”，但不把这一结果扩大解释为长期客户成功、商业化成交、规模化复制或上线后业务提升。
+- **真实门店 POC 与使用：** 已完成微信真实部署和实体本地生活门店 POC，门店开始实际使用；方案因此从 Demo / 工程侧 Acceptance 进入真实门店 业务流程。当前已经验证“方案能够进入真实使用”，但不把这一结果扩大解释为长期客户成功、商业化成交、规模化复制或上线后业务提升。
 - **工程验收与客户价值边界：** 工程侧 Acceptance、真实部署和门店 POC 已经形成连续证据链，但“系统可用”“门店开始使用”“客户长期愿意持续使用 / 付费”仍是三个不同层级；后两者需要通过持续使用、真实反馈、业务指标与商业过程继续验证。
-- **系统集成与交付边界：** 核心 Runtime 尽量保持稳定；接渠道主要变化 Channel / Identity Adapter，接 CRM / 业务系统主要变化 Business Tool / Adapter，再根据现场问题扩轻量 Workflow，而不是为每个客户重做一套 Agent。
-- **业务与技术沟通：** 能继续讨论 Prompt、RAG、API、Database、Tool Calling、Authority、Runtime 和 Eval 等具体实现问题，同时把这些限制重新翻译成业务方可理解的 Solution Boundary，并在真实 POC 中用验收 Case 而不是技术术语本身证明方案是否成立。
+- **系统集成与交付边界：** 核心 Runtime 尽量保持稳定；接渠道主要变化 Channel / Identity Adapter，接 CRM / 业务系统主要变化 Business Tool / Adapter，再根据现场问题扩轻量 业务流程，而不是为每个客户重做一套 Agent。
+- **业务与技术沟通：** 能继续讨论 Prompt、RAG、API、Database、工具调用、Authority、Runtime 和 Eval 等具体实现问题，同时把这些限制重新翻译成业务方可理解的 Solution Boundary，并在真实 POC 中用验收 Case 而不是技术术语本身证明方案是否成立。
 
-**当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；尚不声称长期客户留存、商业付费 / 成交闭环、规模化复制、Production SLA 或上线后业务 ROI 已完成验证。
+**当前状态：** 已完成微信真实部署与实体本地生活门店 POC，门店开始实际使用；尚不声称长期客户留存、商业付费 / 成交闭环、规模化复制、生产环境 SLA 或上线后业务 ROI 已完成验证。
