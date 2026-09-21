@@ -19,6 +19,9 @@
 **搜推策略 / Search Quality**  
 Query 理解 / Rewrite｜召回 / Filter / 排序｜SERP｜L1/L2/L3 相关性｜Bad Case
 
+**AI 评测 / 质量治理**  
+Data Agent｜QA｜Bad Case｜规则治理｜开放题 / Path Eval｜Eval / Regression
+
 **实验 / 数据判断**  
 灰度 / A/B｜DAU / CTR / 转化｜CTR / CVR / ROI｜对比验证｜问题归因
 
@@ -72,5 +75,5 @@ Query 理解 / Rewrite｜召回 / Filter / 排序｜SERP｜L1/L2/L3 相关性｜
 - **Query / 意图迁移：** 将过去 Search / Query、商品语义和用户需求判断迁移到 Agent 意图识别与知识问答场景，重点判断用户真正要解决的问题，而不是只依据字面关键词匹配。
 - **RAG / 知识边界：** 检索结果只作为候选知识，再结合门店范围、知识状态、版本和歧义决定回答、拒答或转人工，使“召回到内容”与“内容可被业务使用”保持区分。
 - **业务链路设计：** 围绕“咨询 → 预约 / 服务意向 → 轻量业务状态 → Ticket / 人工接管 → 人工跟进”形成最小可运行链路，不把项目停留在单轮问答 Demo。
-- **反馈 / 质量闭环：** 将真实 Query、无答案 / 歧义、异常和人工接管 Case 回流到 Dataset / Regression Set，并结合 Eval / Regression 持续检查修改后是否破坏已有行为。
+- **Agent 评测 / 质量闭环：** 将质量判断从最终答案扩展到知识依据、无答案 / 歧义、Tool Use、权限、业务状态和执行轨迹；将真实 Query、异常和人工接管 Case 回流到 Dataset / Regression Set，并结合 Eval / Regression 持续检查修改后是否破坏已有行为。
 - **Tool Use / 权限边界：** Agent 可以识别意图并提出动作，但最终权限和业务写操作由服务端控制；业务动作需完成权限检查、状态写入、持久化和按权限范围回读后再验收。
