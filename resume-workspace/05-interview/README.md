@@ -15,6 +15,7 @@
 
 ## 文件
 
-- `INTERVIEW_QUESTION_BANK.md`：问题池，按主题去重整理。
+- `CORE_100_INTERVIEW_QUESTIONS.md`：核心 100 题主训练集，含来源簇、模块、当前状态与项目证据边界。
+- `INTERVIEW_QUESTION_BANK.md`：扩展问题池，按主题去重整理。
 - `INTERVIEW_GAP_MAP.md`：问题 → 当前项目/学习计划映射。
 - `INTERVIEW_STATUS.md`：当前准备度与下一步。
