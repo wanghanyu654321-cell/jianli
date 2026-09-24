@@ -52,6 +52,13 @@
 5. **分布式系统基础可能成为意外深挖点**  
    Lease/Fencing/Redis/MySQL consistency 等纳入 P2 专项，不现在打断 POC 主线。
 
+## 核心 100 题训练集
+
+- 主文件：`CORE_100_INTERVIEW_QUESTIONS.md`
+- 已按 P0/P1、M1–M8、当前掌握状态、项目证据/事实边界建立追踪。
+- 后续每完成一个模块或真实面试复盘，只更新对应题状态；不因面经新增而打乱冻结学习顺序。
+- BM25/RRF/Cross-Encoder/MCP/Multi-Agent/Long-term Memory 等仍按 Gap 管理，未实现不得包装为项目事实。
+
 ## 后续每场面试的记录格式
 
 - 岗位 / 公司 / 轮次 / 日期
